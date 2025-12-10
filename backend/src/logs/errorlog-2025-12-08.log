@@ -1,0 +1,208 @@
+[38;5;160m[Mon Dec 08 2025 16:03:20 GMT+0530] : 
+Registration error: Table 'taskcollab.users' doesn't exist
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 16:03:40 GMT+0530] : 
+Registration error: Table 'taskcollab.users' doesn't exist
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 16:05:35 GMT+0530] : 
+Error syncing MySQL models: Referencing column 'assigneeId' and referenced column 'userId' in foreign key constraint 'tasks_ibfk_1' are incompatible.
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:98:12)
+    at async Task.sync (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:942:7)
+    at async Sequelize.sync (/Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:377:9)
+    at async initDb (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/models/index.js:18:5)[0m
+[38;5;160m[Mon Dec 08 2025 16:05:39 GMT+0530] : 
+Error syncing MySQL models: Referencing column 'assigneeId' and referenced column 'userId' in foreign key constraint 'tasks_ibfk_1' are incompatible.
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:98:12)
+    at async Task.sync (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:942:7)
+    at async Sequelize.sync (/Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:377:9)
+    at async initDb (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/models/index.js:18:5)[0m
+[38;5;160m[Mon Dec 08 2025 16:05:40 GMT+0530] : 
+Error syncing MySQL models: Referencing column 'assigneeId' and referenced column 'userId' in foreign key constraint 'tasks_ibfk_1' are incompatible.
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:98:12)
+    at async Task.sync (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:942:7)
+    at async Sequelize.sync (/Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:377:9)
+    at async initDb (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/models/index.js:18:5)[0m
+[38;5;160m[Mon Dec 08 2025 16:06:14 GMT+0530] : 
+Error syncing MySQL models: Referencing column 'assigneeId' and referenced column 'userId' in foreign key constraint 'tasks_ibfk_1' are incompatible.
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:98:12)
+    at async Task.sync (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:942:7)
+    at async Sequelize.sync (/Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:377:9)
+    at async initDb (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/models/index.js:18:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:04:29 GMT+0530] : 
+Error syncing MySQL models: Referencing column 'assigneeId' and referenced column 'userId' in foreign key constraint 'tasks_ibfk_1' are incompatible.
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.createTable (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:98:12)
+    at async Task.sync (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:942:7)
+    at async Sequelize.sync (/Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:377:9)
+    at async initDb (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/models/index.js:18:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:05:43 GMT+0530] : 
+Registration error: Column 'userId' cannot be null
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:07:02 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:07:31 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:08:02 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:18:45 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:18:53 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:19:02 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:20:48 GMT+0530] : 
+Registration error: Field 'userId' doesn't have a default value
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:14)[0m
+[38;5;160m[Mon Dec 08 2025 17:32:58 GMT+0530] : 
+Registration error: Validation error
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async MySQLQueryInterface.insert (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:308:21)
+    at async model.save (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:2490:35)
+    at async User.create (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1362:12)
+    at async register (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:10:22)[0m
+[38;5;160m[Mon Dec 08 2025 17:34:06 GMT+0530] : 
+Login error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:252:11)
+    at file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:279:12)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:24:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:34:18 GMT+0530] : 
+Login error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:252:11)
+    at file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:279:12)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:24:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:37:10 GMT+0530] : 
+Login error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:252:11)
+    at file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:279:12)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:24:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:37:29 GMT+0530] : 
+Login error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:252:11)
+    at file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:279:12)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:24:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:38:10 GMT+0530] : 
+Login error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:252:11)
+    at file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/bcryptjs/index.js:279:12)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:25:33)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)[0m
+[38;5;160m[Mon Dec 08 2025 17:39:29 GMT+0530] : 
+Login error: secretOrPrivateKey must have a value
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:27:27)[0m
+[38;5;160m[Mon Dec 08 2025 17:39:53 GMT+0530] : 
+Login error: secretOrPrivateKey must have a value
+Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/jsonwebtoken/sign.js:111:20)
+    at login (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/authController.js:27:27)[0m

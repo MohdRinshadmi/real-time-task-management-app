@@ -6,7 +6,7 @@ const Task = sequelize.define("Task", {
     title: DataTypes.STRING(255),
     description: DataTypes.TEXT,
     status: DataTypes.ENUM("pending", "in_progress", "completed"),
-    assigneeId: DataTypes.INTEGER,
+    assigneeId: DataTypes.BIGINT.UNSIGNED,
   },
   {
     timestamps: true,
