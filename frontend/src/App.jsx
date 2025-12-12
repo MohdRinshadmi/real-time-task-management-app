@@ -1,8 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Header from './components/Header';
-import TaskBoardNew from './components/TaskBoardNew';
+import MainDashboard from './views/MainDashboard';
 
 const theme = createTheme({
   palette: {
@@ -20,13 +19,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <div className="min-h-screen">
-          <Header />
-          <Routes>
-            <Route path="/" element={<TaskBoardNew />} />
-            <Route path="/tasks" element={<TaskBoardNew />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard" element={<MainDashboard />} />
+          <Route path="/tasks" element={<MainDashboard />} />
+          <Route path="/team" element={<MainDashboard />} />
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );
