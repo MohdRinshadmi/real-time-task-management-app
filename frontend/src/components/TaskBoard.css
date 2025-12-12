@@ -1,4 +1,4 @@
-.task-board {
+/* .task-board {
   max-width: 900px;
   width: 100%;
   margin: 40px auto;
@@ -10,7 +10,7 @@
   box-shadow: 0 8px 32px rgba(91, 104, 244, 0.12);
   padding: 48px;
   animation: fadeInUp 0.6s ease-out;
-}
+} */
 
 @keyframes fadeInUp {
   from {
@@ -23,7 +23,7 @@
   }
 }
 
-.task-board h2 {
+/* .task-board h2 {
   text-align: center;
   margin-bottom: 16px;
   color: #1e293b;
@@ -33,7 +33,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+} */
 
 @keyframes shimmer {
   0%, 100% {
