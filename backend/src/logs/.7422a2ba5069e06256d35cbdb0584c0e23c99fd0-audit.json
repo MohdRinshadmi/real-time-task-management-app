@@ -14,6 +14,16 @@
             "date": 1765255386862,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-09.log",
             "hash": "cccad87623420352bbd6beb03eb52db46c9d72c829332417092639f197a677ad"
+        },
+        {
+            "date": 1765357942682,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-10.log",
+            "hash": "9a6c0c410d50c928a1ea5d26c9d606f95a6fb99538ab124868ca1cb419b259b9"
+        },
+        {
+            "date": 1765517992700,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-12.log",
+            "hash": "3a98cd04816b74417cd181c720fb36cca606a124275484c5b0b3b68a6f7a14d5"
         }
     ],
     "hashType": "sha256"
