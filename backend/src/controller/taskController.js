@@ -1,3 +1,4 @@
+import { logger } from 'sequelize/lib/utils/logger';
 import Task from '../models/taskModel.js';
 
 export const getTasks = async (req, res) => {
@@ -5,6 +6,7 @@ export const getTasks = async (req, res) => {
     const tasks = await Task.findAll();
     res.json({ tasks });
   } catch (err) {
+    logger.error('get tasks error', err);
     res.status(500).json({ error: 'Failed to fetch tasks' });
   }
 };
@@ -20,6 +22,7 @@ export const createTask = async (req, res) => {
     });
     res.status(201).json({ task });
   } catch (err) {
+    logger.error('create task error', err);
     res.status(500).json({ error: 'Failed to create task' });
   }
 };
