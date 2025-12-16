@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import MainDashboard from './views/MainDashboard';
+import MainDashboard from './views/dashboard/MainDashboard';
 
 const theme = createTheme({
   palette: {
