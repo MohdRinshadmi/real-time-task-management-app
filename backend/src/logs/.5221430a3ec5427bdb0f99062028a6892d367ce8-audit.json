@@ -24,6 +24,21 @@
             "date": 1765517992702,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-12.log",
             "hash": "935e3469bd17e81a77a29cb080df2cc491abaabd6fcc0bfc47b05ed42f959251"
+        },
+        {
+            "date": 1765610029854,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-13.log",
+            "hash": "9ca62b5db2781dee984c4ae1df666433c3037bd186e20624aefc5e7ea83cff7f"
+        },
+        {
+            "date": 1765777494106,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-15.log",
+            "hash": "7a7fd95c695a726ccc27af95e6e3edbe9d8b83f0eb793d7465ed4141f2f570a4"
+        },
+        {
+            "date": 1765865000731,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-16.log",
+            "hash": "2b8d6c431429a4147c67eacf242500870bbd3d4941024e179944bd2cfdcd5efd"
         }
     ],
     "hashType": "sha256"
