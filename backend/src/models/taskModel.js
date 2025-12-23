@@ -2,11 +2,14 @@ import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 
 const Task = sequelize.define("Task", {
-    taskId: DataTypes.INTEGER,
+    taskId: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
     title: DataTypes.STRING(255),
     description: DataTypes.TEXT,
     status: DataTypes.ENUM("pending", "in_progress", "completed"),
-    assigneeId: DataTypes.BIGINT.UNSIGNED,
   },
   {
     timestamps: true,

@@ -1,8 +1,7 @@
 import jwt from 'jsonwebtoken';
-import CommonSetting from '../models/commonSettings';
-import logger from '../helper/logger';
-import AccessKey from '../models/accessKey';
-
+import CommonSetting from '../models/commonSettings.js';
+import logger from '../helper/logger.js';
+import AccessKey from '../models/accessKey.js';
 
 export const getJwtToken = async(tokenData) => {
     logger.info("Generating JWT token", tokenData);
@@ -25,7 +24,6 @@ export const getJwtToken = async(tokenData) => {
     return jwt.sign(tokenData, process.env.TOKEN_KEY, { expiresIn });
 };
 
-
 export const setJwtToken = async(accessToken, userId) => {
     const availableToken = await AccessKey.findOne({ where: { userId } });
     try {
@@ -37,14 +35,6 @@ export const setJwtToken = async(accessToken, userId) => {
     } catch (error) {
         logger.debug("error: ", error);
     }
-};
-
-export const getFromDb = async(userId, pendingUserStatus) => {
-    if (!pendingUserStatus) {
-        return await AccessKey.findOne({ where: { userId }, });
-    }
-
-    return await PendingRegistration.findOne({ attributes : [ "id", "userTokens" ], where : { id : userId } });
 };
 
 export const verifyAppToken = async(token) => {
