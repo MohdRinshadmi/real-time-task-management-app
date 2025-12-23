@@ -1,4 +1,4 @@
-import errorCode from "./errorCode";
+import errorCode from "./errorCode.js";
 
 export const successMessage = async(req) => {
       console.log('req.datattataa', req.data);
