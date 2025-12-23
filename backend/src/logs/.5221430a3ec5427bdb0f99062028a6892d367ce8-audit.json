@@ -6,21 +6,6 @@
     "auditLog": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/.5221430a3ec5427bdb0f99062028a6892d367ce8-audit.json",
     "files": [
         {
-            "date": 1765187186575,
-            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-08.log",
-            "hash": "e46950ec597f9ef49e008be2e2b6015e968e5b14a45369cef7b9e536393e60d1"
-        },
-        {
-            "date": 1765255386865,
-            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-09.log",
-            "hash": "0f774965e5ca9da55282af28ec75a4dba95397a0e0553ab10a4eb51d3591bfd7"
-        },
-        {
-            "date": 1765357942684,
-            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-10.log",
-            "hash": "95e0a90a81c20cca53da0e483209d4c102550d19fd513cf5211f659e4eb52f53"
-        },
-        {
             "date": 1765517992702,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-12.log",
             "hash": "935e3469bd17e81a77a29cb080df2cc491abaabd6fcc0bfc47b05ed42f959251"
@@ -39,6 +24,21 @@
             "date": 1765865000731,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-16.log",
             "hash": "2b8d6c431429a4147c67eacf242500870bbd3d4941024e179944bd2cfdcd5efd"
+        },
+        {
+            "date": 1765951665155,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-17.log",
+            "hash": "60db8421e30d3c5b6c8644898e9f252f4eddf5d8a34370e8edc4fb490d5a15c8"
+        },
+        {
+            "date": 1766038002034,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-18.log",
+            "hash": "e76d244872393d7e8ea59f04135ddeb070f66c7d6ef1b4ac85cd599b88327330"
+        },
+        {
+            "date": 1766119230432,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/logfile-2025-12-19.log",
+            "hash": "5cd90054d9bd3104478974fe83fad88e56446a1c2a3bb3caef7b638429417de4"
         }
     ],
     "hashType": "sha256"
