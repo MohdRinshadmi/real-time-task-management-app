@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { Box, Typography, TextField, Card, CardContent, Chip, IconButton } from '@mui/material';
 import { toast, ToastContainer } from 'react-toastify';
 import { useEffect } from 'react';
-import { Select } from 'antd';
 import AddTaskModal from './AddTaskModal';
 import TaskStatCard from './TaskStatCard';
 import axios from 'axios';
 import { CheckCircle, Delete } from '@mui/icons-material';
 import anime from 'animejs';
-const API_URL = 'http://localhost:3000';
+import API from '../../api/api';
+
 const TaskBoard = () => {
   const [newTask, setNewTask] = useState("");
   const [loading, setLoading] = useState(false);
@@ -39,11 +39,13 @@ const TaskBoard = () => {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get(`${API_URL}/api/tasks`);
-      setTasks(res.data.tasks || []);
+      const res = await API.get(`/get-tasks`);
+      console.log('fetch taskkk', res);
+      
+      setTasks(res.data.data.data.tasks || []);
       setLoading(false);
     } catch (error) {
-      console.error('Error fetching tasks:', error);
+      console.log('Error fetching tasks:', error);
       toast.error('Failed to fetch tasks');
       setLoading(false);
     }
@@ -56,7 +58,7 @@ const TaskBoard = () => {
     }
 
     try {
-      const res = await axios.post(`${API_URL}/api/tasks`, {
+      const res = await API.post(`/add-task`, {
         title: newTask,
         status: 'pending',
       });
@@ -97,6 +99,8 @@ const TaskBoard = () => {
   };
 
   const deleteTask = async (task) => {
+    console.log('task id for deleting task', task);
+    
     try {
       await axios.delete(`${API_URL}/api/tasks/${task.id || task._id}`);
       setTasks(tasks.filter((t) => t.id !== task.id && t._id !== task._id));
@@ -107,28 +111,25 @@ const TaskBoard = () => {
     }
   };
 
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'completed':
-        return 'success';
-      case 'in_progress':
-        return 'primary';
-      default:
-        return 'warning';
-    }
-  };
-
   return (
     <div
       className="min-h-screen p-4 md:p-8"
       style={{
         background: 'linear-gradient(180deg, #E6ECFF 0%, #F4F7FF 40%, #FFFFFF 100%)',
+        fontFamily: 'Inter, sans-serif',
       }}
     >
-      <ToastContainer position="top-right" autoClose={3000} />
-
-      <Box sx={{ width: { xs: '95%', sm: '90%', md: '80%' }, mx: 'auto', mt: { xs: 2, md: 6 }, px: { xs: 1, md: 0 } }}>
+      <Box sx={{ width: { xs: '100%', sm: '95%', md: '90%', lg: '85%' }, mx: 'auto', mt: { xs: 2, md: 4 }, px: { xs: 1, md: 0 } }}>
         {/* ---------------- HERO SECTION / LOGIN UI ---------------- */}
+        <Box sx={{ mb: 5 }}>
+          <Typography variant="h4" sx={{ fontWeight: 800, color: '#111827', mb: 1, letterSpacing: '-0.02em' }}>
+            Task Board
+          </Typography>
+          <Typography variant="body1" sx={{ color: '#6B7280', fontSize: '1rem' }}>
+            Manage your tasks and track progress efficiently.
+          </Typography>
+        </Box>
+
         {/* ---------------- STAT CARDS ---------------- */}
         <Box
           sx={{
@@ -139,9 +140,8 @@ const TaskBoard = () => {
               md: 'repeat(2, 1fr)',
               lg: 'repeat(4, 1fr)'
             },
-            gap: { xs: 2.5, sm: 3, md: 3.5 },
+            gap: { xs: 2, sm: 3 },
             mb: { xs: 6, md: 8 },
-            px: { xs: 2, sm: 3, md: 0 },
           }}
         >
           <TaskStatCard
@@ -246,27 +246,28 @@ const TaskBoard = () => {
         {/* ---------------- QUICK ADD ---------------- */}
         <Card
           sx={{
-            mb: { xs: 4, md: 5 },
+            mb: { xs: 4, md: 6 },
             background: '#FFFFFF',
-            boxShadow: 'none',
-            borderRadius: 2,
-            border: '1px solid #E5E7EB',
-            mx: { xs: 2, md: 0 },
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            borderRadius: 4,
+            border: 'none',
+            overflow: 'visible',
           }}
         >
-          <CardContent sx={{ p: { xs: 2, sm: 2.5 } }}>
+          <CardContent sx={{ p: { xs: 3, sm: 4 } }}>
             <Typography
               sx={{
                 fontFamily: 'Inter, sans-serif',
-                fontSize: { xs: '0.875rem', sm: '0.9375rem' },
-                fontWeight: 600,
+                fontSize: { xs: '1rem', sm: '1.125rem' },
+                fontWeight: 700,
                 color: '#111827',
-                mb: 2,
+                mb: 3,
+                letterSpacing: '-0.01em',
               }}
             >
               Quick Add Task
             </Typography>
-            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 1.5, alignItems: 'stretch' }}>
+            <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, alignItems: 'stretch' }}>
               <TextField
                 fullWidth
                 placeholder="What needs to be done?"
@@ -275,37 +276,40 @@ const TaskBoard = () => {
                 onKeyDown={(e) => e.key === 'Enter' && addTask()}
                 sx={{
                   '& .MuiOutlinedInput-root': {
-                    borderRadius: 1.5,
+                    borderRadius: 3,
                     background: '#F9FAFB',
                     border: '1px solid #E5E7EB',
-                    fontSize: { xs: '0.8125rem', sm: '0.875rem' },
+                    fontSize: '0.9375rem',
                     fontFamily: 'Inter, sans-serif',
+                    transition: 'all 0.2s',
                     '& fieldset': { border: 'none' },
-                    '&:hover': { background: '#F3F4F6' },
-                    '&.Mui-focused': { background: '#FFFFFF', borderColor: '#9CA3AF' },
+                    '&:hover': { background: '#F3F4F6', boxShadow: '0 0 0 4px rgba(243, 244, 246, 0.5)' },
+                    '&.Mui-focused': { background: '#FFFFFF', boxShadow: '0 0 0 4px rgba(59, 130, 246, 0.1)', border: '1px solid #3B82F6' },
                   },
-                  '& input': { padding: '10px 12px' },
+                  '& input': { padding: '14px 16px' },
                 }}
               />
 
-              <Box sx={{ display: 'flex', gap: 1.5, flexDirection: { xs: 'row', sm: 'row' } }}>
+              <Box sx={{ display: 'flex', gap: 2, flexDirection: { xs: 'row', sm: 'row' } }}>
                 <button
                   onClick={addTask}
                   style={{
-                    background: '#111827',
+                    background: '#2563EB',
                     border: 'none',
                     color: 'white',
-                    padding: '10px 20px',
-                    borderRadius: 6,
+                    padding: '0 24px',
+                    borderRadius: 12,
                     fontWeight: 600,
                     cursor: 'pointer',
-                    fontSize: '0.8125rem',
+                    fontSize: '0.9375rem',
                     fontFamily: 'Inter, sans-serif',
                     whiteSpace: 'nowrap',
                     transition: 'all 0.2s',
+                    boxShadow: '0 4px 6px -1px rgba(37, 99, 235, 0.2), 0 2px 4px -1px rgba(37, 99, 235, 0.1)',
+                    height: '52px',
                   }}
-                  onMouseEnter={(e) => { e.target.style.background = '#1F2937'; }}
-                  onMouseLeave={(e) => { e.target.style.background = '#111827'; }}
+                  onMouseEnter={(e) => { e.target.style.background = '#1D4ED8'; e.target.style.transform = 'translateY(-1px)'; }}
+                  onMouseLeave={(e) => { e.target.style.background = '#2563EB'; e.target.style.transform = 'translateY(0)'; }}
                 >
                   Add Task
                 </button>
@@ -315,18 +319,19 @@ const TaskBoard = () => {
                   style={{
                     border: '1px solid #E5E7EB',
                     background: '#FFFFFF',
-                    padding: '10px 20px',
-                    borderRadius: 6,
+                    padding: '0 24px',
+                    borderRadius: 12,
                     cursor: 'pointer',
                     fontWeight: 600,
-                    fontSize: '0.8125rem',
+                    fontSize: '0.9375rem',
                     fontFamily: 'Inter, sans-serif',
-                    color: '#374151',
+                    color: '#4B5563',
                     whiteSpace: 'nowrap',
                     transition: 'all 0.2s',
+                    height: '52px',
                   }}
-                  onMouseEnter={(e) => { e.target.style.background = '#F9FAFB'; e.target.style.borderColor = '#D1D5DB'; }}
-                  onMouseLeave={(e) => { e.target.style.background = '#FFFFFF'; e.target.style.borderColor = '#E5E7EB'; }}
+                  onMouseEnter={(e) => { e.target.style.background = '#F9FAFB'; e.target.style.borderColor = '#D1D5DB'; e.target.style.color = '#111827'; }}
+                  onMouseLeave={(e) => { e.target.style.background = '#FFFFFF'; e.target.style.borderColor = '#E5E7EB'; e.target.style.color = '#4B5563'; }}
                 >
                   Detailed
                 </button>
@@ -336,84 +341,109 @@ const TaskBoard = () => {
         </Card>
 
         {/* ---------------- TASK LIST ---------------- */}
-        <Box sx={{ px: { xs: 2, md: 0 } }}>
+        <Box sx={{ px: { xs: 1, md: 0 } }}>
           <Typography
             sx={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: { xs: '0.875rem', sm: '0.9375rem' },
-              fontWeight: 600,
+              fontSize: { xs: '1rem', sm: '1.125rem' },
+              fontWeight: 700,
               color: '#111827',
-              mb: 2.5,
+              mb: 3,
+              letterSpacing: '-0.01em',
             }}
           >
             All Tasks
           </Typography>
           {loading ? (
-            <Box sx={{ textAlign: 'center', py: 8 }}>
-              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: '0.875rem', color: '#9CA3AF' }}>
+            <Box sx={{ textAlign: 'center', py: 12 }}>
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9375rem', color: '#9CA3AF' }}>
                 Loading tasks...
               </Typography>
             </Box>
           ) : tasks.length === 0 ? (
-            <Box sx={{ textAlign: 'center', py: 8 }}>
-              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9375rem', fontWeight: 600, color: '#6B7280', mb: 0.5 }}>
+            <Box sx={{ textAlign: 'center', py: 12, background: '#FFFFFF', borderRadius: 4, border: '1px dashed #E5E7EB' }}>
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', fontWeight: 600, color: '#4B5563', mb: 1 }}>
                 No tasks yet
               </Typography>
-              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8125rem', color: '#9CA3AF' }}>
+              <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: '0.875rem', color: '#9CA3AF' }}>
                 Add your first task to get started
               </Typography>
             </Box>
           ) : (
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
               {tasks.map((task) => (
                 <Card
                   key={task.id || task._id}
                   className="task-card"
                   sx={{
                     background: '#FFFFFF',
-                    borderRadius: 2,
-                    border: '1px solid #E5E7EB',
-                    boxShadow: 'none',
+                    borderRadius: 3,
+                    border: '1px solid rgba(229, 231, 235, 0.5)',
+                    boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
                     transition: 'all 0.2s ease',
-                    '&:hover': { borderColor: '#D1D5DB', boxShadow: '0 2px 8px rgba(0,0,0,0.04)' },
+                    '&:hover': { 
+                      borderColor: 'rgba(209, 213, 219, 0.8)', 
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                      transform: 'translateY(-2px)'
+                    },
                   }}
                 >
-                  <CardContent sx={{ p: { xs: 2, sm: 2.5 } }}>
+                  <CardContent sx={{ p: { xs: 2.5, sm: 3 } }}>
                     <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' }, gap: 2 }}>
                       <Box sx={{ flex: 1, width: '100%' }}>
-                        <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: { xs: '0.875rem', sm: '0.9375rem' }, fontWeight: 600, color: '#111827', mb: 0.5 }}>
-                          {task.title}
-                        </Typography>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
+                          <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: { xs: '0.9375rem', sm: '1rem' }, fontWeight: 600, color: '#111827' }}>
+                            {task.title}
+                          </Typography>
+                          <Chip
+                            label={task.status.replace('_', ' ')}
+                            size="small"
+                            sx={{ 
+                              textTransform: 'capitalize', 
+                              fontWeight: 600, 
+                              fontSize: '0.75rem', 
+                              borderRadius: 1.5,
+                              height: '24px',
+                              bgcolor: task.status === 'completed' ? 'rgba(16, 185, 129, 0.1)' : task.status === 'in_progress' ? 'rgba(59, 130, 246, 0.1)' : 'rgba(245, 158, 11, 0.1)',
+                              color: task.status === 'completed' ? '#059669' : task.status === 'in_progress' ? '#2563EB' : '#D97706',
+                            }}
+                          />
+                        </Box>
 
                         {task.description && (
-                          <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: { xs: '0.8125rem', sm: '0.875rem' }, color: '#6B7280', mb: 1.5, lineHeight: 1.6 }}>
+                          <Typography sx={{ fontFamily: 'Inter, sans-serif', fontSize: { xs: '0.875rem', sm: '0.9375rem' }, color: '#6B7280', lineHeight: 1.6 }}>
                             {task.description}
                           </Typography>
                         )}
-
-                        <Chip
-                          label={task.status.replace('_', ' ')}
-                          size="small"
-                          sx={{ textTransform: 'capitalize', fontWeight: 600, fontSize: '0.75rem', borderRadius: 2 }}
-                          color={getStatusColor(task.status)}
-                        />
                       </Box>
 
                       <Box sx={{ display: 'flex', gap: 1, flexShrink: 0 }}>
                         <IconButton
-                          color="success"
                           onClick={() => markComplete(task)}
-                          sx={{ '&:hover': { background: 'rgba(16, 185, 129, 0.1)', transform: 'scale(1.1)' }, transition: 'all 0.2s' }}
+                          sx={{ 
+                            color: '#10B981',
+                            bgcolor: 'rgba(16, 185, 129, 0.05)',
+                            '&:hover': { bgcolor: 'rgba(16, 185, 129, 0.15)', transform: 'scale(1.05)' }, 
+                            transition: 'all 0.2s',
+                            borderRadius: 2,
+                            p: 1
+                          }}
                         >
-                          <CheckCircle />
+                          <CheckCircle fontSize="small" />
                         </IconButton>
 
                         <IconButton
-                          color="error"
                           onClick={() => deleteTask(task)}
-                          sx={{ '&:hover': { background: 'rgba(239, 68, 68, 0.1)', transform: 'scale(1.1)' }, transition: 'all 0.2s' }}
+                          sx={{ 
+                            color: '#EF4444',
+                            bgcolor: 'rgba(239, 68, 68, 0.05)',
+                            '&:hover': { bgcolor: 'rgba(239, 68, 68, 0.15)', transform: 'scale(1.05)' }, 
+                            transition: 'all 0.2s',
+                            borderRadius: 2,
+                            p: 1
+                          }}
                         >
-                          <Delete />
+                          <Delete fontSize="small" />
                         </IconButton>
                       </Box>
                     </Box>
