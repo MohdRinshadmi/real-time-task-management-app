@@ -15,7 +15,6 @@ Task.belongsTo(User, {
 
 export async function initDb() {
   try {
-    await sequelize.sync({ alter: true });
     console.log("MySQL models synced");
   } catch (error) {
     logger.error("Error syncing MySQL models:", error);
