@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { LogoIcon, MenuIcon, CloseIcon } from '../../../public/svgIcon/headerIcon';
+import { CloseIcon, LogoIcon, MenuIcon } from '../../assets/svgIcon/headerIcon';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,9 +43,9 @@ const Header = () => {
 
         {/* Right: CTA Button & Mobile Menu */}
         <div className="flex items-center gap-4">
-          <button className="hidden sm:block bg-black hover:bg-gray-800 text-white text-sm font-semibold py-2 sm:py-2.5 px-4 sm:px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          <Link to="/register" className="hidden sm:block bg-black hover:bg-gray-800 text-white text-sm font-semibold py-2 sm:py-2.5 px-4 sm:px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
             Register
-          </button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button 
@@ -72,9 +72,13 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <button className="sm:hidden w-full bg-black hover:bg-gray-800 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-300 shadow-md">
+            <Link 
+              to="/register" 
+              className="sm:hidden block w-full text-center bg-black hover:bg-gray-800 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-300 shadow-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Register
-            </button>
+            </Link>
           </div>
         </div>
       )}

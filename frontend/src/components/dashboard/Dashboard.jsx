@@ -1,57 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import anime from 'animejs';
+import React, { useState } from 'react';
+import { loginService } from '../../services/auth/loginService';
+import { setAccessToken } from '../../global/localStorage';
+import { useDispatch } from 'react-redux';
+import { setLoggedIn } from '../../store/store';
 import {
   Box,
-  Card,
-  CardContent,
   Typography,
-  TextField,
-  Chip,
-  IconButton
+  TextField
 } from '@mui/material';
-import { CheckCircle, Delete } from '@mui/icons-material';
-import { ToastContainer, toast } from 'react-toastify';
-import { Modal, Select } from 'antd';
+import { toast } from 'react-toastify';
 import BrandShowCase from './BrandShowCase';
 import StatsSection from './StatsSection';
 
-const API_URL = 'http://localhost:3000';
-
 const Dashboard = () => {
-      const [email, setEmail] = useState('');
-      const [password, setPassword] = useState('');
-      const [showPasswordField, setShowPasswordField] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPasswordField, setShowPasswordField] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
+
+  const handleLogin = async () => {
+    if (!email || !password) {
+      toast.error('Please enter both email and password');
+      return;
+    }
+    setLoading(true);
+    try {
+      const data = await loginService(email, password);
+      console.log('access token login', data.data);
+      if (data && data.data.token) {
+        setAccessToken(data.data.token);
+      }
+      if (typeof data.data.isLoggedIn !== 'undefined') {
+        dispatch(setLoggedIn(data.data.isLoggedIn));
+      }
+      toast.success('Login successful!');
+      setLoading(false);
+      // Redirect or update UI as needed
+    } catch (error) {
+      setLoading(false);
+      console.log('login error', error);
+    }
+  };
   return (
-    <div
-      className="min-h-screen p-4 md:p-8"
-      style={{
-        background: 'linear-gradient(180deg, #E6ECFF 0%, #F4F7FF 40%, #FFFFFF 100%)',
-      }}
-    >
-      <ToastContainer position="top-right" autoClose={3000} />
-
-      
-
+    <div className="min-h-screen p-4 md:p-8" style={{ background: 'linear-gradient(180deg, #E6ECFF 0%, #F4F7FF 40%, #FFFFFF 100%)'}}>
       <Box sx={{ width: { xs: '95%', sm: '90%', md: '80%' }, mx: 'auto', mt: { xs: 2, md: 6 }, px: { xs: 1, md: 0 } }}>
-
          <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 } }}>
           <Box sx={{ position: 'relative', textAlign: 'center', mb: { xs: 6, md: 10 }, minHeight: { xs: 'auto', md: 320 } }}>
-              {/* Floating avatars and notes with lines */}
               {/* Top left note */}
               <div className="hidden md:flex" style={{ position: 'absolute', left: 0, top: 30, display: 'flex', alignItems: 'center', zIndex: 2 }}>
-                <div style={{
-                  background: '#fff',
-                  borderRadius: 16,
-                  boxShadow: '0 8px 32px 0 rgba(91,104,244,0.10), 0 2px 8px #e0e7ff',
-                  padding: '6px 16px',
-                  fontSize: 14,
-                  fontWeight: 500,
-                  color: '#5976c2',
-                  border: '1px solid #e0e7ff',
-                  transform: 'translateY(-18px)',
-                  transition: 'box-shadow 0.3s, transform 0.3s',
-                }}>
+                <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 8px 32px 0 rgba(91,104,244,0.10), 0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5976c2', border: '1px solid #e0e7ff', transform: 'translateY(-18px)', transition: 'box-shadow 0.3s, transform 0.3s' }}>
                   <span role="img" aria-label="file">📤</span> Sending a file project
                 </div>
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" style={{ width: 32, height: 32, borderRadius: '50%', marginLeft: 8, border: '2px solid #fff', boxShadow: '0 1px 4px #c7d2fe' }} />
@@ -172,7 +170,7 @@ const Dashboard = () => {
                 <Typography
                   variant="h3"
                   sx={{
-                    fontWeight: 500,
+                    fontWeight: 400,
                     fontSize: { xs: '1.75rem', sm: '2.3rem', md: '3rem' },
                     color: '#000',
                   }}
@@ -183,7 +181,6 @@ const Dashboard = () => {
 
               {/* Subtitle */}
               <Typography
-                variant="h6"
                 color="text.secondary"
                 sx={{
                   opacity: 0.85,
@@ -251,23 +248,15 @@ const Dashboard = () => {
                     }}
                     sx={{
                       '& .MuiOutlinedInput-root': {
-                        border: 'none',
-                        background: 'transparent',
+                        borderRadius: '24px',
                         boxShadow: 'none',
                         '& fieldset': {
-                          border: 'none',
-                        },
-                        '&:hover fieldset': {
-                          border: 'none',
-                        },
-                        '&.Mui-focused fieldset': {
                           border: 'none',
                         },
                       },
                       '& input': {
                         padding: { xs: '10px 12px', sm: '8px 12px' },
                         fontSize: { xs: '0.875rem', sm: '0.95rem' },
-                        background: 'transparent',
                       },
                     }}
                   />
@@ -337,20 +326,14 @@ const Dashboard = () => {
                       fullWidth
                       placeholder="Enter your password"
                       type="password"
+                      autoComplete="current-password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       sx={{
                         '& .MuiOutlinedInput-root': {
-                          border: 'none',
-                          background: 'transparent',
+                          borderRadius: '24px',
                           boxShadow: 'none',
                           '& fieldset': {
-                            border: 'none',
-                          },
-                          '&:hover fieldset': {
-                            border: 'none',
-                          },
-                          '&.Mui-focused fieldset': {
                             border: 'none',
                           },
                         },
@@ -359,6 +342,10 @@ const Dashboard = () => {
                           fontSize: { xs: '0.875rem', sm: '0.95rem' },
                         },
                       }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') handleLogin();
+                      }}
+                      disabled={loading}
                     />
                     <Box
                       component="button"
@@ -369,33 +356,31 @@ const Dashboard = () => {
                         padding: { xs: '12px 24px', sm: '12px 20px' },
                         borderRadius: { xs: 16, sm: 24 },
                         fontWeight: 600,
-                        cursor: 'pointer',
+                        cursor: loading ? 'not-allowed' : 'pointer',
                         fontSize: { xs: '0.875rem', sm: '0.800rem' },
                         whiteSpace: 'nowrap',
                         transition: 'all 0.3s ease',
                         minWidth: { xs: '100%', sm: '110px' },
+                        opacity: loading ? 0.7 : 1,
                         '&:hover': {
-                          transform: 'scale(1.02)',
+                          transform: loading ? 'none' : 'scale(1.02)',
                         },
                       }}
+                      onClick={handleLogin}
+                      disabled={loading}
                     >
-                      Get Started
+                      {loading ? 'Logging in...' : 'Get Started'}
                     </Box>
                   </Box>
                 )}
               </Box>
             </Box>
           </Box>
-        {/* Brand Showcase */}
+          
         <BrandShowCase />
 
-        {/* Stats Section */}
         <StatsSection />
-
-     
       </Box>
-
-      
     </div>
   );
 };
