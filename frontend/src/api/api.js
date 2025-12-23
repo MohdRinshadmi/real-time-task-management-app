@@ -1,5 +1,5 @@
 import axios from "axios";
-import toast from "react-toastify";
+import { toast } from "react-toastify";
 import BASE_URL from "../config/config";
 
 const instance = axios.create({
@@ -8,14 +8,26 @@ const instance = axios.create({
 
 instance.interceptors.response.use(
   (response) => {
-    if (response.status === 200) {
+    console.log('response from API KIT', response);
+    
+    if (response.status === 200 || response.status) {
       return response;
     }
   },
   (error) => {
+    let shown = false;
+    if (error.response && error.response.data && error.response.data.message) {
+      toast.error(error.response.data.message);
+      shown = true;
+    } else if (error.response && error.response.status === 401) {
+      toast.error("Unauthorized access. Please login again.");
+      shown = true;
+    }
+    if (!shown) {
+      toast.error("An error occurred while processing your request.");
+    }
     console.log("error response from api", error);
-    toast.error("An error occurred while processing your request.");
-    return Promise.reject(error);  
+    return Promise.reject(error.response.data);
   }
 );
 
