@@ -1,0 +1,3497 @@
+[38;5;35m[Fri Dec 26 2025 11:35:11 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 11:35:11 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 11:35:11 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 11:37:46 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 11:37:46 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 11:37:46 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NTcyMjk0LCJleHAiOjE3NjY2NTg2OTR9.yZP4NlMAreJUeJR2CvOTeA0t6IM_YOU7O6uWlREGsJE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-24T10:31:34.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NTcyMjk0LCJleHAiOjE3NjY2NTg2OTR9.yZP4NlMAreJUeJR2CvOTeA0t6IM_YOU7O6uWlREGsJE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-24T10:31:34.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730055,
+  exp: 1766816455
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:20:55.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:20:55.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc[0m
+[38;5;160m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+get tasks error Unknown column 'userId' in 'field list'
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Task.findAll (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1140:21)
+    at async getTasks (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:7:19)[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730055,
+  exp: 1766816455
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:20:55.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:20:55.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc[0m
+[38;5;160m[Fri Dec 26 2025 11:50:55 GMT+0530] : 
+get tasks error Unknown column 'userId' in 'field list'
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Task.findAll (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1140:21)
+    at async getTasks (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:7:19)[0m
+[38;5;35m[Fri Dec 26 2025 11:52:18 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 11:52:18 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 11:52:18 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 11:58:24 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 11:58:24 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 11:58:24 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:20:55.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwMDU1LCJleHAiOjE3NjY4MTY0NTV9.I6Vp2-P9H3o5tsRZq_Rv-oG3KdxIk23aetWdPijeKRc',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:20:55.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730525,
+  exp: 1766816925
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:28:45.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:28:45.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI[0m
+[38;5;160m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+get tasks error Unknown column 'userId' in 'field list'
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Task.findAll (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1140:21)
+    at async getTasks (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:7:19)[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730525,
+  exp: 1766816925
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:28:45.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:28:45.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI[0m
+[38;5;160m[Fri Dec 26 2025 11:58:45 GMT+0530] : 
+get tasks error Unknown column 'userId' in 'field list'
+Error
+    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async MySQLQueryInterface.select (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Task.findAll (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1140:21)
+    at async getTasks (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:7:19)[0m
+[38;5;35m[Fri Dec 26 2025 12:01:39 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 12:01:39 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 12:01:39 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:28:45.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNTI1LCJleHAiOjE3NjY4MTY5MjV9.NnRH5a_51sJ-2-Y9lZtuZFioDMsA-zpoTxt9mTvhHOI',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:28:45.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730707,
+  exp: 1766817107
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730707,
+  exp: 1766817107
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:01:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg[0m
+[38;5;35m[Fri Dec 26 2025 12:02:34 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg[0m
+[38;5;35m[Fri Dec 26 2025 12:02:34 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766730707,
+  exp: 1766817107
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:34 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:34 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg[0m
+[38;5;35m[Fri Dec 26 2025 12:02:34 GMT+0530] : 
+createTask request body: <ref *4> IncomingMessage {
+  _events: {
+    close: undefined,
+    error: undefined,
+    data: undefined,
+    end: undefined,
+    readable: undefined,
+    aborted: undefined
+  },
+  _readableState: ReadableState {
+    highWaterMark: 65536,
+    buffer: [],
+    bufferIndex: 0,
+    length: 0,
+    pipes: [],
+    awaitDrainWriters: null,
+    [Symbol(kState)]: 60295036
+  },
+  _maxListeners: undefined,
+  socket: <ref *3> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _events: {
+      close: [
+        [Function: bound socketOnClose],
+        [Function: onServerResponseClose]
+      ],
+      error: [Function: socketOnError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: [Function: bound socketOnDrain],
+      data: [Function: bound socketOnData],
+      end: [
+        [Function: onReadableStreamEnd],
+        [Function: bound socketOnEnd]
+      ],
+      readable: undefined,
+      timeout: [Function: socketOnTimeout],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _readableState: ReadableState {
+      highWaterMark: 65536,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      [Symbol(kState)]: 193997060
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17563908,
+      [Symbol(kBufferedValue)]: null,
+      [Symbol(kWriteCbValue)]: null,
+      [Symbol(kAfterWriteTickInfoValue)]: null
+    },
+    allowHalfOpen: true,
+    _maxListeners: undefined,
+    _eventsCount: 8,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: <ref *2> Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      keepAliveTimeoutBuffer: 1000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      shouldUpgradeCallback: [Function (anonymous)],
+      _events: [Object: null prototype] {
+        request: <ref *1> [Function: app] {
+          _events: [Object: null prototype] { mount: [Function: onmount] },
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          setMaxListeners: [Function: setMaxListeners],
+          getMaxListeners: [Function: getMaxListeners],
+          emit: [Function: emit],
+          addListener: [Function: addListener],
+          on: [Function: addListener],
+          prependListener: [Function: prependListener],
+          once: [Function: once],
+          prependOnceListener: [Function: prependOnceListener],
+          removeListener: [Function: removeListener],
+          off: [Function: removeListener],
+          removeAllListeners: [Function: removeAllListeners],
+          listeners: [Function: listeners],
+          rawListeners: [Function: rawListeners],
+          listenerCount: [Function: listenerCount],
+          eventNames: [Function: eventNames],
+          init: [Function: init],
+          defaultConfiguration: [Function: defaultConfiguration],
+          handle: [Function: handle],
+          use: [Function: use],
+          route: [Function: route],
+          engine: [Function: engine],
+          param: [Function: param],
+          set: [Function: set],
+          path: [Function: path],
+          enabled: [Function: enabled],
+          disabled: [Function: disabled],
+          enable: [Function: enable],
+          disable: [Function: disable],
+          acl: [Function (anonymous)],
+          bind: [Function (anonymous)],
+          checkout: [Function (anonymous)],
+          connect: [Function (anonymous)],
+          copy: [Function (anonymous)],
+          delete: [Function (anonymous)],
+          get: [Function (anonymous)],
+          head: [Function (anonymous)],
+          link: [Function (anonymous)],
+          lock: [Function (anonymous)],
+          'm-search': [Function (anonymous)],
+          merge: [Function (anonymous)],
+          mkactivity: [Function (anonymous)],
+          mkcalendar: [Function (anonymous)],
+          mkcol: [Function (anonymous)],
+          move: [Function (anonymous)],
+          notify: [Function (anonymous)],
+          options: [Function (anonymous)],
+          patch: [Function (anonymous)],
+          post: [Function (anonymous)],
+          propfind: [Function (anonymous)],
+          proppatch: [Function (anonymous)],
+          purge: [Function (anonymous)],
+          put: [Function (anonymous)],
+          query: [Function (anonymous)],
+          rebind: [Function (anonymous)],
+          report: [Function (anonymous)],
+          search: [Function (anonymous)],
+          source: [Function (anonymous)],
+          subscribe: [Function (anonymous)],
+          trace: [Function (anonymous)],
+          unbind: [Function (anonymous)],
+          unlink: [Function (anonymous)],
+          unlock: [Function (anonymous)],
+          unsubscribe: [Function (anonymous)],
+          all: [Function: all],
+          render: [Function: render],
+          listen: [Function: listen],
+          request: IncomingMessage { app: [Circular *1] },
+          response: ServerResponse { app: [Circular *1] },
+          cache: [Object: null prototype] {},
+          engines: [Object: null prototype] {},
+          settings: [Object: null prototype] {
+            'x-powered-by': true,
+            etag: 'weak',
+            'etag fn': [Function: generateETag],
+            env: 'development',
+            'query parser': 'simple',
+            'query parser fn': [Function: parse],
+            'subdomain offset': 2,
+            'trust proxy': false,
+            'trust proxy fn': [Function: trustNone],
+            view: [Function: View],
+            views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+            'jsonp callback name': 'callback'
+          },
+          locals: [Object: null prototype] {
+            settings: [Object: null prototype] {
+              'x-powered-by': true,
+              etag: 'weak',
+              'etag fn': [Function: generateETag],
+              env: 'development',
+              'query parser': 'simple',
+              'query parser fn': [Function: parse],
+              'subdomain offset': 2,
+              'trust proxy': false,
+              'trust proxy fn': [Function: trustNone],
+              view: [Function: View],
+              views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+              'jsonp callback name': 'callback'
+            }
+          },
+          mountpath: '/',
+          router: [Getter]
+        },
+        connection: [Function: connectionListener],
+        listening: [Function: setupConnectionsTracking],
+        error: [Function: bound onceWrapper] {
+          listener: [Function: f] { called: true, value: undefined }
+        }
+      },
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: TCP {
+        reading: false,
+        onconnection: [Function: onconnection],
+        [Symbol(owner_symbol)]: [Circular *2]
+      },
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 65536,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::3000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 84,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 30346,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 88,
+        [Symbol(triggerId)]: 85,
+        [Symbol(kAsyncContextFrame)]: undefined
+      }
+    },
+    _server: <ref *2> Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      keepAliveTimeoutBuffer: 1000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      shouldUpgradeCallback: [Function (anonymous)],
+      _events: [Object: null prototype] {
+        request: <ref *1> [Function: app] {
+          _events: [Object: null prototype] { mount: [Function: onmount] },
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          setMaxListeners: [Function: setMaxListeners],
+          getMaxListeners: [Function: getMaxListeners],
+          emit: [Function: emit],
+          addListener: [Function: addListener],
+          on: [Function: addListener],
+          prependListener: [Function: prependListener],
+          once: [Function: once],
+          prependOnceListener: [Function: prependOnceListener],
+          removeListener: [Function: removeListener],
+          off: [Function: removeListener],
+          removeAllListeners: [Function: removeAllListeners],
+          listeners: [Function: listeners],
+          rawListeners: [Function: rawListeners],
+          listenerCount: [Function: listenerCount],
+          eventNames: [Function: eventNames],
+          init: [Function: init],
+          defaultConfiguration: [Function: defaultConfiguration],
+          handle: [Function: handle],
+          use: [Function: use],
+          route: [Function: route],
+          engine: [Function: engine],
+          param: [Function: param],
+          set: [Function: set],
+          path: [Function: path],
+          enabled: [Function: enabled],
+          disabled: [Function: disabled],
+          enable: [Function: enable],
+          disable: [Function: disable],
+          acl: [Function (anonymous)],
+          bind: [Function (anonymous)],
+          checkout: [Function (anonymous)],
+          connect: [Function (anonymous)],
+          copy: [Function (anonymous)],
+          delete: [Function (anonymous)],
+          get: [Function (anonymous)],
+          head: [Function (anonymous)],
+          link: [Function (anonymous)],
+          lock: [Function (anonymous)],
+          'm-search': [Function (anonymous)],
+          merge: [Function (anonymous)],
+          mkactivity: [Function (anonymous)],
+          mkcalendar: [Function (anonymous)],
+          mkcol: [Function (anonymous)],
+          move: [Function (anonymous)],
+          notify: [Function (anonymous)],
+          options: [Function (anonymous)],
+          patch: [Function (anonymous)],
+          post: [Function (anonymous)],
+          propfind: [Function (anonymous)],
+          proppatch: [Function (anonymous)],
+          purge: [Function (anonymous)],
+          put: [Function (anonymous)],
+          query: [Function (anonymous)],
+          rebind: [Function (anonymous)],
+          report: [Function (anonymous)],
+          search: [Function (anonymous)],
+          source: [Function (anonymous)],
+          subscribe: [Function (anonymous)],
+          trace: [Function (anonymous)],
+          unbind: [Function (anonymous)],
+          unlink: [Function (anonymous)],
+          unlock: [Function (anonymous)],
+          unsubscribe: [Function (anonymous)],
+          all: [Function: all],
+          render: [Function: render],
+          listen: [Function: listen],
+          request: IncomingMessage { app: [Circular *1] },
+          response: ServerResponse { app: [Circular *1] },
+          cache: [Object: null prototype] {},
+          engines: [Object: null prototype] {},
+          settings: [Object: null prototype] {
+            'x-powered-by': true,
+            etag: 'weak',
+            'etag fn': [Function: generateETag],
+            env: 'development',
+            'query parser': 'simple',
+            'query parser fn': [Function: parse],
+            'subdomain offset': 2,
+            'trust proxy': false,
+            'trust proxy fn': [Function: trustNone],
+            view: [Function: View],
+            views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+            'jsonp callback name': 'callback'
+          },
+          locals: [Object: null prototype] {
+            settings: [Object: null prototype] {
+              'x-powered-by': true,
+              etag: 'weak',
+              'etag fn': [Function: generateETag],
+              env: 'development',
+              'query parser': 'simple',
+              'query parser fn': [Function: parse],
+              'subdomain offset': 2,
+              'trust proxy': false,
+              'trust proxy fn': [Function: trustNone],
+              view: [Function: View],
+              views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+              'jsonp callback name': 'callback'
+            }
+          },
+          mountpath: '/',
+          router: [Getter]
+        },
+        connection: [Function: connectionListener],
+        listening: [Function: setupConnectionsTracking],
+        error: [Function: bound onceWrapper] {
+          listener: [Function: f] { called: true, value: undefined }
+        }
+      },
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: TCP {
+        reading: false,
+        onconnection: [Function: onconnection],
+        [Symbol(owner_symbol)]: [Circular *2]
+      },
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 65536,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::3000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 84,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 30346,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 88,
+        [Symbol(triggerId)]: 85,
+        [Symbol(kAsyncContextFrame)]: undefined
+      }
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *3],
+      incoming: [Circular *4],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      joinDuplicateHeaders: null,
+      [Symbol(resource_symbol)]: HTTPServerAsyncResource {
+        type: 'HTTPINCOMINGMESSAGE',
+        socket: [Circular *3]
+      }
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype] {
+        finish: [Function: bound resOnFinish]
+      },
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *4],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      flush: [Function: flush],
+      write: [Function: write],
+      end: [Function: end],
+      on: [Function: on],
+      writeHead: [Function: writeHead],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Circular *3],
+      [Symbol(kOutHeaders)]: [Object: null prototype] {
+        'x-powered-by': [ 'X-Powered-By', 'Express' ],
+        'access-control-allow-origin': [ 'Access-Control-Allow-Origin', '*' ]
+      },
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    timeout: 0,
+    [Symbol(async_id_symbol)]: 942,
+    [Symbol(kHandle)]: TCP {
+      reading: true,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *3]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: Timeout {
+      _idleTimeout: -1,
+      _idlePrev: null,
+      _idleNext: null,
+      _idleStart: 55287,
+      _onTimeout: null,
+      _timerArgs: undefined,
+      _repeat: null,
+      _destroyed: true,
+      [Symbol(refed)]: false,
+      [Symbol(kHasPrimitive)]: false,
+      [Symbol(asyncId)]: 950,
+      [Symbol(triggerId)]: 946,
+      [Symbol(kAsyncContextFrame)]: undefined
+    },
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  httpVersionMajor: 1,
+  httpVersionMinor: 1,
+  httpVersion: '1.1',
+  complete: true,
+  rawHeaders: [
+    'Host',
+    '192.168.12.28:3000',
+    'Connection',
+    'keep-alive',
+    'Content-Length',
+    '65',
+    'Authorization',
+    'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    'User-Agent',
+    'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36',
+    'Accept',
+    'application/json',
+    'Content-Type',
+    'application/json',
+    'Origin',
+    'http://localhost:5173',
+    'Referer',
+    'http://localhost:5173/',
+    'Accept-Encoding',
+    'gzip, deflate',
+    'Accept-Language',
+    'en-GB,en-US;q=0.9,en;q=0.8'
+  ],
+  rawTrailers: [],
+  joinDuplicateHeaders: null,
+  aborted: false,
+  upgrade: false,
+  url: '/add-task',
+  method: 'POST',
+  statusCode: null,
+  statusMessage: null,
+  client: <ref *3> Socket {
+    connecting: false,
+    _hadError: false,
+    _parent: null,
+    _host: null,
+    _closeAfterHandlingError: false,
+    _events: {
+      close: [
+        [Function: bound socketOnClose],
+        [Function: onServerResponseClose]
+      ],
+      error: [Function: socketOnError],
+      prefinish: undefined,
+      finish: undefined,
+      drain: [Function: bound socketOnDrain],
+      data: [Function: bound socketOnData],
+      end: [
+        [Function: onReadableStreamEnd],
+        [Function: bound socketOnEnd]
+      ],
+      readable: undefined,
+      timeout: [Function: socketOnTimeout],
+      resume: [Function: onSocketResume],
+      pause: [Function: onSocketPause]
+    },
+    _readableState: ReadableState {
+      highWaterMark: 65536,
+      buffer: [],
+      bufferIndex: 0,
+      length: 0,
+      pipes: [],
+      awaitDrainWriters: null,
+      [Symbol(kState)]: 193997060
+    },
+    _writableState: WritableState {
+      highWaterMark: 65536,
+      length: 0,
+      corked: 0,
+      onwrite: [Function: bound onwrite],
+      writelen: 0,
+      bufferedIndex: 0,
+      pendingcb: 0,
+      [Symbol(kState)]: 17563908,
+      [Symbol(kBufferedValue)]: null,
+      [Symbol(kWriteCbValue)]: null,
+      [Symbol(kAfterWriteTickInfoValue)]: null
+    },
+    allowHalfOpen: true,
+    _maxListeners: undefined,
+    _eventsCount: 8,
+    _sockname: null,
+    _pendingData: null,
+    _pendingEncoding: '',
+    server: <ref *2> Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      keepAliveTimeoutBuffer: 1000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      shouldUpgradeCallback: [Function (anonymous)],
+      _events: [Object: null prototype] {
+        request: <ref *1> [Function: app] {
+          _events: [Object: null prototype] { mount: [Function: onmount] },
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          setMaxListeners: [Function: setMaxListeners],
+          getMaxListeners: [Function: getMaxListeners],
+          emit: [Function: emit],
+          addListener: [Function: addListener],
+          on: [Function: addListener],
+          prependListener: [Function: prependListener],
+          once: [Function: once],
+          prependOnceListener: [Function: prependOnceListener],
+          removeListener: [Function: removeListener],
+          off: [Function: removeListener],
+          removeAllListeners: [Function: removeAllListeners],
+          listeners: [Function: listeners],
+          rawListeners: [Function: rawListeners],
+          listenerCount: [Function: listenerCount],
+          eventNames: [Function: eventNames],
+          init: [Function: init],
+          defaultConfiguration: [Function: defaultConfiguration],
+          handle: [Function: handle],
+          use: [Function: use],
+          route: [Function: route],
+          engine: [Function: engine],
+          param: [Function: param],
+          set: [Function: set],
+          path: [Function: path],
+          enabled: [Function: enabled],
+          disabled: [Function: disabled],
+          enable: [Function: enable],
+          disable: [Function: disable],
+          acl: [Function (anonymous)],
+          bind: [Function (anonymous)],
+          checkout: [Function (anonymous)],
+          connect: [Function (anonymous)],
+          copy: [Function (anonymous)],
+          delete: [Function (anonymous)],
+          get: [Function (anonymous)],
+          head: [Function (anonymous)],
+          link: [Function (anonymous)],
+          lock: [Function (anonymous)],
+          'm-search': [Function (anonymous)],
+          merge: [Function (anonymous)],
+          mkactivity: [Function (anonymous)],
+          mkcalendar: [Function (anonymous)],
+          mkcol: [Function (anonymous)],
+          move: [Function (anonymous)],
+          notify: [Function (anonymous)],
+          options: [Function (anonymous)],
+          patch: [Function (anonymous)],
+          post: [Function (anonymous)],
+          propfind: [Function (anonymous)],
+          proppatch: [Function (anonymous)],
+          purge: [Function (anonymous)],
+          put: [Function (anonymous)],
+          query: [Function (anonymous)],
+          rebind: [Function (anonymous)],
+          report: [Function (anonymous)],
+          search: [Function (anonymous)],
+          source: [Function (anonymous)],
+          subscribe: [Function (anonymous)],
+          trace: [Function (anonymous)],
+          unbind: [Function (anonymous)],
+          unlink: [Function (anonymous)],
+          unlock: [Function (anonymous)],
+          unsubscribe: [Function (anonymous)],
+          all: [Function: all],
+          render: [Function: render],
+          listen: [Function: listen],
+          request: IncomingMessage { app: [Circular *1] },
+          response: ServerResponse { app: [Circular *1] },
+          cache: [Object: null prototype] {},
+          engines: [Object: null prototype] {},
+          settings: [Object: null prototype] {
+            'x-powered-by': true,
+            etag: 'weak',
+            'etag fn': [Function: generateETag],
+            env: 'development',
+            'query parser': 'simple',
+            'query parser fn': [Function: parse],
+            'subdomain offset': 2,
+            'trust proxy': false,
+            'trust proxy fn': [Function: trustNone],
+            view: [Function: View],
+            views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+            'jsonp callback name': 'callback'
+          },
+          locals: [Object: null prototype] {
+            settings: [Object: null prototype] {
+              'x-powered-by': true,
+              etag: 'weak',
+              'etag fn': [Function: generateETag],
+              env: 'development',
+              'query parser': 'simple',
+              'query parser fn': [Function: parse],
+              'subdomain offset': 2,
+              'trust proxy': false,
+              'trust proxy fn': [Function: trustNone],
+              view: [Function: View],
+              views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+              'jsonp callback name': 'callback'
+            }
+          },
+          mountpath: '/',
+          router: [Getter]
+        },
+        connection: [Function: connectionListener],
+        listening: [Function: setupConnectionsTracking],
+        error: [Function: bound onceWrapper] {
+          listener: [Function: f] { called: true, value: undefined }
+        }
+      },
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: TCP {
+        reading: false,
+        onconnection: [Function: onconnection],
+        [Symbol(owner_symbol)]: [Circular *2]
+      },
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 65536,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::3000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 84,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 30346,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 88,
+        [Symbol(triggerId)]: 85,
+        [Symbol(kAsyncContextFrame)]: undefined
+      }
+    },
+    _server: <ref *2> Server {
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      requestTimeout: 300000,
+      headersTimeout: 60000,
+      keepAliveTimeout: 5000,
+      keepAliveTimeoutBuffer: 1000,
+      connectionsCheckingInterval: 30000,
+      requireHostHeader: true,
+      joinDuplicateHeaders: undefined,
+      rejectNonStandardBodyWrites: false,
+      shouldUpgradeCallback: [Function (anonymous)],
+      _events: [Object: null prototype] {
+        request: <ref *1> [Function: app] {
+          _events: [Object: null prototype] { mount: [Function: onmount] },
+          _eventsCount: 1,
+          _maxListeners: undefined,
+          setMaxListeners: [Function: setMaxListeners],
+          getMaxListeners: [Function: getMaxListeners],
+          emit: [Function: emit],
+          addListener: [Function: addListener],
+          on: [Function: addListener],
+          prependListener: [Function: prependListener],
+          once: [Function: once],
+          prependOnceListener: [Function: prependOnceListener],
+          removeListener: [Function: removeListener],
+          off: [Function: removeListener],
+          removeAllListeners: [Function: removeAllListeners],
+          listeners: [Function: listeners],
+          rawListeners: [Function: rawListeners],
+          listenerCount: [Function: listenerCount],
+          eventNames: [Function: eventNames],
+          init: [Function: init],
+          defaultConfiguration: [Function: defaultConfiguration],
+          handle: [Function: handle],
+          use: [Function: use],
+          route: [Function: route],
+          engine: [Function: engine],
+          param: [Function: param],
+          set: [Function: set],
+          path: [Function: path],
+          enabled: [Function: enabled],
+          disabled: [Function: disabled],
+          enable: [Function: enable],
+          disable: [Function: disable],
+          acl: [Function (anonymous)],
+          bind: [Function (anonymous)],
+          checkout: [Function (anonymous)],
+          connect: [Function (anonymous)],
+          copy: [Function (anonymous)],
+          delete: [Function (anonymous)],
+          get: [Function (anonymous)],
+          head: [Function (anonymous)],
+          link: [Function (anonymous)],
+          lock: [Function (anonymous)],
+          'm-search': [Function (anonymous)],
+          merge: [Function (anonymous)],
+          mkactivity: [Function (anonymous)],
+          mkcalendar: [Function (anonymous)],
+          mkcol: [Function (anonymous)],
+          move: [Function (anonymous)],
+          notify: [Function (anonymous)],
+          options: [Function (anonymous)],
+          patch: [Function (anonymous)],
+          post: [Function (anonymous)],
+          propfind: [Function (anonymous)],
+          proppatch: [Function (anonymous)],
+          purge: [Function (anonymous)],
+          put: [Function (anonymous)],
+          query: [Function (anonymous)],
+          rebind: [Function (anonymous)],
+          report: [Function (anonymous)],
+          search: [Function (anonymous)],
+          source: [Function (anonymous)],
+          subscribe: [Function (anonymous)],
+          trace: [Function (anonymous)],
+          unbind: [Function (anonymous)],
+          unlink: [Function (anonymous)],
+          unlock: [Function (anonymous)],
+          unsubscribe: [Function (anonymous)],
+          all: [Function: all],
+          render: [Function: render],
+          listen: [Function: listen],
+          request: IncomingMessage { app: [Circular *1] },
+          response: ServerResponse { app: [Circular *1] },
+          cache: [Object: null prototype] {},
+          engines: [Object: null prototype] {},
+          settings: [Object: null prototype] {
+            'x-powered-by': true,
+            etag: 'weak',
+            'etag fn': [Function: generateETag],
+            env: 'development',
+            'query parser': 'simple',
+            'query parser fn': [Function: parse],
+            'subdomain offset': 2,
+            'trust proxy': false,
+            'trust proxy fn': [Function: trustNone],
+            view: [Function: View],
+            views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+            'jsonp callback name': 'callback'
+          },
+          locals: [Object: null prototype] {
+            settings: [Object: null prototype] {
+              'x-powered-by': true,
+              etag: 'weak',
+              'etag fn': [Function: generateETag],
+              env: 'development',
+              'query parser': 'simple',
+              'query parser fn': [Function: parse],
+              'subdomain offset': 2,
+              'trust proxy': false,
+              'trust proxy fn': [Function: trustNone],
+              view: [Function: View],
+              views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+              'jsonp callback name': 'callback'
+            }
+          },
+          mountpath: '/',
+          router: [Getter]
+        },
+        connection: [Function: connectionListener],
+        listening: [Function: setupConnectionsTracking],
+        error: [Function: bound onceWrapper] {
+          listener: [Function: f] { called: true, value: undefined }
+        }
+      },
+      _eventsCount: 4,
+      _maxListeners: undefined,
+      _connections: 1,
+      _handle: TCP {
+        reading: false,
+        onconnection: [Function: onconnection],
+        [Symbol(owner_symbol)]: [Circular *2]
+      },
+      _usingWorkers: false,
+      _workers: [],
+      _unref: false,
+      _listeningId: 2,
+      allowHalfOpen: true,
+      pauseOnConnect: false,
+      noDelay: true,
+      keepAlive: false,
+      keepAliveInitialDelay: 0,
+      highWaterMark: 65536,
+      httpAllowHalfOpen: false,
+      timeout: 0,
+      maxHeadersCount: null,
+      maxRequestsPerSocket: 0,
+      _connectionKey: '6::::3000',
+      [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+      [Symbol(ServerResponse)]: [Function: ServerResponse],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(async_id_symbol)]: 84,
+      [Symbol(kUniqueHeaders)]: null,
+      [Symbol(http.server.connections)]: ConnectionsList {},
+      [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+        _idleTimeout: 30000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 30346,
+        _onTimeout: [Function: bound checkConnections],
+        _timerArgs: undefined,
+        _repeat: 30000,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 88,
+        [Symbol(triggerId)]: 85,
+        [Symbol(kAsyncContextFrame)]: undefined
+      }
+    },
+    parser: HTTPParser {
+      '0': null,
+      '1': [Function: parserOnHeaders],
+      '2': [Function: parserOnHeadersComplete],
+      '3': [Function: parserOnBody],
+      '4': [Function: parserOnMessageComplete],
+      '5': [Function: bound onParserExecute],
+      '6': [Function: bound onParserTimeout],
+      _headers: [],
+      _url: '',
+      socket: [Circular *3],
+      incoming: [Circular *4],
+      outgoing: null,
+      maxHeaderPairs: 2000,
+      _consumed: true,
+      onIncoming: [Function: bound parserOnIncoming],
+      joinDuplicateHeaders: null,
+      [Symbol(resource_symbol)]: HTTPServerAsyncResource {
+        type: 'HTTPINCOMINGMESSAGE',
+        socket: [Circular *3]
+      }
+    },
+    on: [Function: socketListenerWrap],
+    addListener: [Function: socketListenerWrap],
+    prependListener: [Function: socketListenerWrap],
+    setEncoding: [Function: socketSetEncoding],
+    _paused: false,
+    _httpMessage: ServerResponse {
+      _events: [Object: null prototype] {
+        finish: [Function: bound resOnFinish]
+      },
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: false,
+      _last: false,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: true,
+      sendDate: true,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: null,
+      _hasBody: true,
+      _trailer: '',
+      finished: false,
+      _headerSent: false,
+      _closed: false,
+      _header: null,
+      _keepAliveTimeout: 5000,
+      _onPendingData: [Function: bound updateOutgoingData],
+      req: [Circular *4],
+      _sent100: false,
+      _expect_continue: false,
+      _maxRequestsPerSocket: 0,
+      locals: [Object: null prototype] {},
+      flush: [Function: flush],
+      write: [Function: write],
+      end: [Function: end],
+      on: [Function: on],
+      writeHead: [Function: writeHead],
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kChunkedBuffer)]: [],
+      [Symbol(kChunkedLength)]: 0,
+      [Symbol(kSocket)]: [Circular *3],
+      [Symbol(kOutHeaders)]: [Object: null prototype] {
+        'x-powered-by': [ 'X-Powered-By', 'Express' ],
+        'access-control-allow-origin': [ 'Access-Control-Allow-Origin', '*' ]
+      },
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 65536,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    timeout: 0,
+    [Symbol(async_id_symbol)]: 942,
+    [Symbol(kHandle)]: TCP {
+      reading: true,
+      onconnection: null,
+      _consumed: true,
+      [Symbol(owner_symbol)]: [Circular *3]
+    },
+    [Symbol(lastWriteQueueSize)]: 0,
+    [Symbol(timeout)]: Timeout {
+      _idleTimeout: -1,
+      _idlePrev: null,
+      _idleNext: null,
+      _idleStart: 55287,
+      _onTimeout: null,
+      _timerArgs: undefined,
+      _repeat: null,
+      _destroyed: true,
+      [Symbol(refed)]: false,
+      [Symbol(kHasPrimitive)]: false,
+      [Symbol(asyncId)]: 950,
+      [Symbol(triggerId)]: 946,
+      [Symbol(kAsyncContextFrame)]: undefined
+    },
+    [Symbol(kBuffer)]: null,
+    [Symbol(kBufferCb)]: null,
+    [Symbol(kBufferGen)]: null,
+    [Symbol(shapeMode)]: true,
+    [Symbol(kCapture)]: false,
+    [Symbol(kSetNoDelay)]: true,
+    [Symbol(kSetKeepAlive)]: false,
+    [Symbol(kSetKeepAliveInitialDelay)]: 0,
+    [Symbol(kBytesRead)]: 0,
+    [Symbol(kBytesWritten)]: 0
+  },
+  _consuming: true,
+  _dumped: false,
+  res: <ref *5> ServerResponse {
+    _events: [Object: null prototype] { finish: [Function: bound resOnFinish] },
+    _eventsCount: 1,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: false,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: true,
+    sendDate: true,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: null,
+    _hasBody: true,
+    _trailer: '',
+    finished: false,
+    _headerSent: false,
+    _closed: false,
+    _header: null,
+    _keepAliveTimeout: 5000,
+    _onPendingData: [Function: bound updateOutgoingData],
+    req: [Circular *4],
+    _sent100: false,
+    _expect_continue: false,
+    _maxRequestsPerSocket: 0,
+    locals: [Object: null prototype] {},
+    flush: [Function: flush],
+    write: [Function: write],
+    end: [Function: end],
+    on: [Function: on],
+    writeHead: [Function: writeHead],
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kChunkedBuffer)]: [],
+    [Symbol(kChunkedLength)]: 0,
+    [Symbol(kSocket)]: <ref *3> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _closeAfterHandlingError: false,
+      _events: {
+        close: [
+          [Function: bound socketOnClose],
+          [Function: onServerResponseClose]
+        ],
+        error: [Function: socketOnError],
+        prefinish: undefined,
+        finish: undefined,
+        drain: [Function: bound socketOnDrain],
+        data: [Function: bound socketOnData],
+        end: [
+          [Function: onReadableStreamEnd],
+          [Function: bound socketOnEnd]
+        ],
+        readable: undefined,
+        timeout: [Function: socketOnTimeout],
+        resume: [Function: onSocketResume],
+        pause: [Function: onSocketPause]
+      },
+      _readableState: ReadableState {
+        highWaterMark: 65536,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        [Symbol(kState)]: 193997060
+      },
+      _writableState: WritableState {
+        highWaterMark: 65536,
+        length: 0,
+        corked: 0,
+        onwrite: [Function: bound onwrite],
+        writelen: 0,
+        bufferedIndex: 0,
+        pendingcb: 0,
+        [Symbol(kState)]: 17563908,
+        [Symbol(kBufferedValue)]: null,
+        [Symbol(kWriteCbValue)]: null,
+        [Symbol(kAfterWriteTickInfoValue)]: null
+      },
+      allowHalfOpen: true,
+      _maxListeners: undefined,
+      _eventsCount: 8,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: <ref *2> Server {
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        requestTimeout: 300000,
+        headersTimeout: 60000,
+        keepAliveTimeout: 5000,
+        keepAliveTimeoutBuffer: 1000,
+        connectionsCheckingInterval: 30000,
+        requireHostHeader: true,
+        joinDuplicateHeaders: undefined,
+        rejectNonStandardBodyWrites: false,
+        shouldUpgradeCallback: [Function (anonymous)],
+        _events: [Object: null prototype] {
+          request: <ref *1> [Function: app] {
+            _events: [Object: null prototype] { mount: [Function: onmount] },
+            _eventsCount: 1,
+            _maxListeners: undefined,
+            setMaxListeners: [Function: setMaxListeners],
+            getMaxListeners: [Function: getMaxListeners],
+            emit: [Function: emit],
+            addListener: [Function: addListener],
+            on: [Function: addListener],
+            prependListener: [Function: prependListener],
+            once: [Function: once],
+            prependOnceListener: [Function: prependOnceListener],
+            removeListener: [Function: removeListener],
+            off: [Function: removeListener],
+            removeAllListeners: [Function: removeAllListeners],
+            listeners: [Function: listeners],
+            rawListeners: [Function: rawListeners],
+            listenerCount: [Function: listenerCount],
+            eventNames: [Function: eventNames],
+            init: [Function: init],
+            defaultConfiguration: [Function: defaultConfiguration],
+            handle: [Function: handle],
+            use: [Function: use],
+            route: [Function: route],
+            engine: [Function: engine],
+            param: [Function: param],
+            set: [Function: set],
+            path: [Function: path],
+            enabled: [Function: enabled],
+            disabled: [Function: disabled],
+            enable: [Function: enable],
+            disable: [Function: disable],
+            acl: [Function (anonymous)],
+            bind: [Function (anonymous)],
+            checkout: [Function (anonymous)],
+            connect: [Function (anonymous)],
+            copy: [Function (anonymous)],
+            delete: [Function (anonymous)],
+            get: [Function (anonymous)],
+            head: [Function (anonymous)],
+            link: [Function (anonymous)],
+            lock: [Function (anonymous)],
+            'm-search': [Function (anonymous)],
+            merge: [Function (anonymous)],
+            mkactivity: [Function (anonymous)],
+            mkcalendar: [Function (anonymous)],
+            mkcol: [Function (anonymous)],
+            move: [Function (anonymous)],
+            notify: [Function (anonymous)],
+            options: [Function (anonymous)],
+            patch: [Function (anonymous)],
+            post: [Function (anonymous)],
+            propfind: [Function (anonymous)],
+            proppatch: [Function (anonymous)],
+            purge: [Function (anonymous)],
+            put: [Function (anonymous)],
+            query: [Function (anonymous)],
+            rebind: [Function (anonymous)],
+            report: [Function (anonymous)],
+            search: [Function (anonymous)],
+            source: [Function (anonymous)],
+            subscribe: [Function (anonymous)],
+            trace: [Function (anonymous)],
+            unbind: [Function (anonymous)],
+            unlink: [Function (anonymous)],
+            unlock: [Function (anonymous)],
+            unsubscribe: [Function (anonymous)],
+            all: [Function: all],
+            render: [Function: render],
+            listen: [Function: listen],
+            request: IncomingMessage { app: [Circular *1] },
+            response: ServerResponse { app: [Circular *1] },
+            cache: [Object: null prototype] {},
+            engines: [Object: null prototype] {},
+            settings: [Object: null prototype] {
+              'x-powered-by': true,
+              etag: 'weak',
+              'etag fn': [Function: generateETag],
+              env: 'development',
+              'query parser': 'simple',
+              'query parser fn': [Function: parse],
+              'subdomain offset': 2,
+              'trust proxy': false,
+              'trust proxy fn': [Function: trustNone],
+              view: [Function: View],
+              views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+              'jsonp callback name': 'callback'
+            },
+            locals: [Object: null prototype] {
+              settings: [Object: null prototype] {
+                'x-powered-by': true,
+                etag: 'weak',
+                'etag fn': [Function: generateETag],
+                env: 'development',
+                'query parser': 'simple',
+                'query parser fn': [Function: parse],
+                'subdomain offset': 2,
+                'trust proxy': false,
+                'trust proxy fn': [Function: trustNone],
+                view: [Function: View],
+                views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+                'jsonp callback name': 'callback'
+              }
+            },
+            mountpath: '/',
+            router: [Getter]
+          },
+          connection: [Function: connectionListener],
+          listening: [Function: setupConnectionsTracking],
+          error: [Function: bound onceWrapper] {
+            listener: [Function: f] { called: true, value: undefined }
+          }
+        },
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        _connections: 1,
+        _handle: TCP {
+          reading: false,
+          onconnection: [Function: onconnection],
+          [Symbol(owner_symbol)]: [Circular *2]
+        },
+        _usingWorkers: false,
+        _workers: [],
+        _unref: false,
+        _listeningId: 2,
+        allowHalfOpen: true,
+        pauseOnConnect: false,
+        noDelay: true,
+        keepAlive: false,
+        keepAliveInitialDelay: 0,
+        highWaterMark: 65536,
+        httpAllowHalfOpen: false,
+        timeout: 0,
+        maxHeadersCount: null,
+        maxRequestsPerSocket: 0,
+        _connectionKey: '6::::3000',
+        [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+        [Symbol(ServerResponse)]: [Function: ServerResponse],
+        [Symbol(shapeMode)]: false,
+        [Symbol(kCapture)]: false,
+        [Symbol(async_id_symbol)]: 84,
+        [Symbol(kUniqueHeaders)]: null,
+        [Symbol(http.server.connections)]: ConnectionsList {},
+        [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+          _idleTimeout: 30000,
+          _idlePrev: [TimersList],
+          _idleNext: [TimersList],
+          _idleStart: 30346,
+          _onTimeout: [Function: bound checkConnections],
+          _timerArgs: undefined,
+          _repeat: 30000,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 88,
+          [Symbol(triggerId)]: 85,
+          [Symbol(kAsyncContextFrame)]: undefined
+        }
+      },
+      _server: <ref *2> Server {
+        maxHeaderSize: undefined,
+        insecureHTTPParser: undefined,
+        requestTimeout: 300000,
+        headersTimeout: 60000,
+        keepAliveTimeout: 5000,
+        keepAliveTimeoutBuffer: 1000,
+        connectionsCheckingInterval: 30000,
+        requireHostHeader: true,
+        joinDuplicateHeaders: undefined,
+        rejectNonStandardBodyWrites: false,
+        shouldUpgradeCallback: [Function (anonymous)],
+        _events: [Object: null prototype] {
+          request: <ref *1> [Function: app] {
+            _events: [Object: null prototype] { mount: [Function: onmount] },
+            _eventsCount: 1,
+            _maxListeners: undefined,
+            setMaxListeners: [Function: setMaxListeners],
+            getMaxListeners: [Function: getMaxListeners],
+            emit: [Function: emit],
+            addListener: [Function: addListener],
+            on: [Function: addListener],
+            prependListener: [Function: prependListener],
+            once: [Function: once],
+            prependOnceListener: [Function: prependOnceListener],
+            removeListener: [Function: removeListener],
+            off: [Function: removeListener],
+            removeAllListeners: [Function: removeAllListeners],
+            listeners: [Function: listeners],
+            rawListeners: [Function: rawListeners],
+            listenerCount: [Function: listenerCount],
+            eventNames: [Function: eventNames],
+            init: [Function: init],
+            defaultConfiguration: [Function: defaultConfiguration],
+            handle: [Function: handle],
+            use: [Function: use],
+            route: [Function: route],
+            engine: [Function: engine],
+            param: [Function: param],
+            set: [Function: set],
+            path: [Function: path],
+            enabled: [Function: enabled],
+            disabled: [Function: disabled],
+            enable: [Function: enable],
+            disable: [Function: disable],
+            acl: [Function (anonymous)],
+            bind: [Function (anonymous)],
+            checkout: [Function (anonymous)],
+            connect: [Function (anonymous)],
+            copy: [Function (anonymous)],
+            delete: [Function (anonymous)],
+            get: [Function (anonymous)],
+            head: [Function (anonymous)],
+            link: [Function (anonymous)],
+            lock: [Function (anonymous)],
+            'm-search': [Function (anonymous)],
+            merge: [Function (anonymous)],
+            mkactivity: [Function (anonymous)],
+            mkcalendar: [Function (anonymous)],
+            mkcol: [Function (anonymous)],
+            move: [Function (anonymous)],
+            notify: [Function (anonymous)],
+            options: [Function (anonymous)],
+            patch: [Function (anonymous)],
+            post: [Function (anonymous)],
+            propfind: [Function (anonymous)],
+            proppatch: [Function (anonymous)],
+            purge: [Function (anonymous)],
+            put: [Function (anonymous)],
+            query: [Function (anonymous)],
+            rebind: [Function (anonymous)],
+            report: [Function (anonymous)],
+            search: [Function (anonymous)],
+            source: [Function (anonymous)],
+            subscribe: [Function (anonymous)],
+            trace: [Function (anonymous)],
+            unbind: [Function (anonymous)],
+            unlink: [Function (anonymous)],
+            unlock: [Function (anonymous)],
+            unsubscribe: [Function (anonymous)],
+            all: [Function: all],
+            render: [Function: render],
+            listen: [Function: listen],
+            request: IncomingMessage { app: [Circular *1] },
+            response: ServerResponse { app: [Circular *1] },
+            cache: [Object: null prototype] {},
+            engines: [Object: null prototype] {},
+            settings: [Object: null prototype] {
+              'x-powered-by': true,
+              etag: 'weak',
+              'etag fn': [Function: generateETag],
+              env: 'development',
+              'query parser': 'simple',
+              'query parser fn': [Function: parse],
+              'subdomain offset': 2,
+              'trust proxy': false,
+              'trust proxy fn': [Function: trustNone],
+              view: [Function: View],
+              views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+              'jsonp callback name': 'callback'
+            },
+            locals: [Object: null prototype] {
+              settings: [Object: null prototype] {
+                'x-powered-by': true,
+                etag: 'weak',
+                'etag fn': [Function: generateETag],
+                env: 'development',
+                'query parser': 'simple',
+                'query parser fn': [Function: parse],
+                'subdomain offset': 2,
+                'trust proxy': false,
+                'trust proxy fn': [Function: trustNone],
+                view: [Function: View],
+                views: '/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/views',
+                'jsonp callback name': 'callback'
+              }
+            },
+            mountpath: '/',
+            router: [Getter]
+          },
+          connection: [Function: connectionListener],
+          listening: [Function: setupConnectionsTracking],
+          error: [Function: bound onceWrapper] {
+            listener: [Function: f] { called: true, value: undefined }
+          }
+        },
+        _eventsCount: 4,
+        _maxListeners: undefined,
+        _connections: 1,
+        _handle: TCP {
+          reading: false,
+          onconnection: [Function: onconnection],
+          [Symbol(owner_symbol)]: [Circular *2]
+        },
+        _usingWorkers: false,
+        _workers: [],
+        _unref: false,
+        _listeningId: 2,
+        allowHalfOpen: true,
+        pauseOnConnect: false,
+        noDelay: true,
+        keepAlive: false,
+        keepAliveInitialDelay: 0,
+        highWaterMark: 65536,
+        httpAllowHalfOpen: false,
+        timeout: 0,
+        maxHeadersCount: null,
+        maxRequestsPerSocket: 0,
+        _connectionKey: '6::::3000',
+        [Symbol(IncomingMessage)]: [Function: IncomingMessage],
+        [Symbol(ServerResponse)]: [Function: ServerResponse],
+        [Symbol(shapeMode)]: false,
+        [Symbol(kCapture)]: false,
+        [Symbol(async_id_symbol)]: 84,
+        [Symbol(kUniqueHeaders)]: null,
+        [Symbol(http.server.connections)]: ConnectionsList {},
+        [Symbol(http.server.connectionsCheckingInterval)]: Timeout {
+          _idleTimeout: 30000,
+          _idlePrev: [TimersList],
+          _idleNext: [TimersList],
+          _idleStart: 30346,
+          _onTimeout: [Function: bound checkConnections],
+          _timerArgs: undefined,
+          _repeat: 30000,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 88,
+          [Symbol(triggerId)]: 85,
+          [Symbol(kAsyncContextFrame)]: undefined
+        }
+      },
+      parser: HTTPParser {
+        '0': null,
+        '1': [Function: parserOnHeaders],
+        '2': [Function: parserOnHeadersComplete],
+        '3': [Function: parserOnBody],
+        '4': [Function: parserOnMessageComplete],
+        '5': [Function: bound onParserExecute],
+        '6': [Function: bound onParserTimeout],
+        _headers: [],
+        _url: '',
+        socket: [Circular *3],
+        incoming: [Circular *4],
+        outgoing: null,
+        maxHeaderPairs: 2000,
+        _consumed: true,
+        onIncoming: [Function: bound parserOnIncoming],
+        joinDuplicateHeaders: null,
+        [Symbol(resource_symbol)]: HTTPServerAsyncResource {
+          type: 'HTTPINCOMINGMESSAGE',
+          socket: [Circular *3]
+        }
+      },
+      on: [Function: socketListenerWrap],
+      addListener: [Function: socketListenerWrap],
+      prependListener: [Function: socketListenerWrap],
+      setEncoding: [Function: socketSetEncoding],
+      _paused: false,
+      _httpMessage: [Circular *5],
+      timeout: 0,
+      [Symbol(async_id_symbol)]: 942,
+      [Symbol(kHandle)]: TCP {
+        reading: true,
+        onconnection: null,
+        _consumed: true,
+        [Symbol(owner_symbol)]: [Circular *3]
+      },
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: -1,
+        _idlePrev: null,
+        _idleNext: null,
+        _idleStart: 55287,
+        _onTimeout: null,
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: true,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 950,
+        [Symbol(triggerId)]: 946,
+        [Symbol(kAsyncContextFrame)]: undefined
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: false,
+      [Symbol(kSetKeepAliveInitialDelay)]: 0,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      'x-powered-by': [ 'X-Powered-By', 'Express' ],
+      'access-control-allow-origin': [ 'Access-Control-Allow-Origin', '*' ]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 65536,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  next: [Function: next],
+  baseUrl: '/api',
+  originalUrl: '/api/add-task',
+  _parsedUrl: Url {
+    protocol: null,
+    slashes: null,
+    auth: null,
+    host: null,
+    port: null,
+    hostname: null,
+    hash: null,
+    search: null,
+    query: null,
+    pathname: '/add-task',
+    path: '/add-task',
+    href: '/add-task',
+    _raw: '/add-task'
+  },
+  params: [Object: null prototype] {},
+  body: { title: 'poa hdgwh dxadq jqhsijdiw djqhwuhq', status: 'pending' },
+  length: undefined,
+  _eventsCount: 0,
+  route: Route {
+    path: '/add-task',
+    stack: [
+      Layer {
+        handle: [AsyncFunction: default],
+        keys: [],
+        name: 'default',
+        params: undefined,
+        path: undefined,
+        slash: false,
+        matchers: [ [Function: match] ],
+        method: 'post'
+      },
+      Layer {
+        handle: [AsyncFunction: createTask],
+        keys: [],
+        name: 'createTask',
+        params: undefined,
+        path: undefined,
+        slash: false,
+        matchers: [ [Function: match] ],
+        method: 'post'
+      }
+    ],
+    methods: [Object: null prototype] { post: true }
+  },
+  auth: {
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    user: {
+      id: 3,
+      email: 'yasu01@gmail.com',
+      firstName: 'yasu01',
+      iat: 1766730707,
+      exp: 1766817107
+    }
+  },
+  [Symbol(shapeMode)]: true,
+  [Symbol(kCapture)]: false,
+  [Symbol(kHeaders)]: {
+    host: '192.168.12.28:3000',
+    connection: 'keep-alive',
+    'content-length': '65',
+    authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36',
+    accept: 'application/json',
+    'content-type': 'application/json',
+    origin: 'http://localhost:5173',
+    referer: 'http://localhost:5173/',
+    'accept-encoding': 'gzip, deflate',
+    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'
+  },
+  [Symbol(kHeadersCount)]: 22,
+  [Symbol(kTrailers)]: null,
+  [Symbol(kTrailersCount)]: 0
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:34 GMT+0530] : 
+Creating task for user: [0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+User login attempt: { email: 'yasu05@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+Generating JWT token { id: 7, email: 'yasu05@gmail.com', firstName: 'yasu04' }[0m
+[38;5;39m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+Setting JWT token for userId: 7[0m
+[38;5;39m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NDgyNjE4LCJleHAiOjE3NjY1NjkwMTh9.C2DuZDgYGs1K7AfwgK6pRIxczc-qNKZhpoySPEbtqC4',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-23T09:36:58.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NDgyNjE4LCJleHAiOjE3NjY1NjkwMTh9.C2DuZDgYGs1K7AfwgK6pRIxczc-qNKZhpoySPEbtqC4',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-23T09:36:58.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766730768,
+  exp: 1766817168
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T06:32:48.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T06:32:48.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766730768,
+  exp: 1766817168
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T06:32:48.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T06:32:48.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 12:02:48 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k[0m
+[38;5;35m[Fri Dec 26 2025 12:04:15 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 12:04:15 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 12:04:15 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 12:12:03 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 12:12:03 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 12:12:03 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 12:14:12 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 12:14:12 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 12:14:12 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 14:49:10 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 14:49:10 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 14:49:10 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 14:49:30 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 14:49:30 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 14:49:30 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 14:49:41 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 14:49:41 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 14:49:41 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+User login attempt: { email: 'yasu9@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+Generating JWT token { id: 11, email: 'yasu9@gmail.com', firstName: 'yasu9' }[0m
+[38;5;39m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+Setting JWT token for userId: 11[0m
+[38;5;39m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 3,
+    userId: 11,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY1NzE3MzAsImV4cCI6MTc2NjY1ODEzMH0.XEcyqNozeZ9QdRUyqoVSFzTPIkwuyuJzt4-ENI81EAQ',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-24T06:22:42.000Z,
+    updatedAt: 2025-12-24T10:22:10.000Z
+  },
+  _previousDataValues: {
+    id: 3,
+    userId: 11,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY1NzE3MzAsImV4cCI6MTc2NjY1ODEzMH0.XEcyqNozeZ9QdRUyqoVSFzTPIkwuyuJzt4-ENI81EAQ',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-24T06:22:42.000Z,
+    updatedAt: 2025-12-24T10:22:10.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 11,
+  email: 'yasu9@gmail.com',
+  firstName: 'yasu9',
+  iat: 1766743055,
+  exp: 1766829455
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 3,
+    userId: 11,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-24T06:22:42.000Z,
+    updatedAt: 2025-12-26T09:57:35.000Z
+  },
+  _previousDataValues: {
+    id: 3,
+    userId: 11,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-24T06:22:42.000Z,
+    updatedAt: 2025-12-26T09:57:35.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 11,
+  email: 'yasu9@gmail.com',
+  firstName: 'yasu9',
+  iat: 1766743055,
+  exp: 1766829455
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 3,
+    userId: 11,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-24T06:22:42.000Z,
+    updatedAt: 2025-12-26T09:57:35.000Z
+  },
+  _previousDataValues: {
+    id: 3,
+    userId: 11,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-24T06:22:42.000Z,
+    updatedAt: 2025-12-26T09:57:35.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:27:35 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoieWFzdTlAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTkiLCJpYXQiOjE3NjY3NDMwNTUsImV4cCI6MTc2NjgyOTQ1NX0.7-YkMaLM3WFyUHSBA4ci-9hRKmcJXe3wujy5ebdWTVE[0m
+[38;5;35m[Fri Dec 26 2025 15:34:49 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:34:49 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:34:49 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:34:56 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:34:56 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:34:56 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:35:09 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:35:09 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:35:09 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:35:13 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:35:13 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:35:13 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:35:24 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:35:24 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:35:24 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:36:04 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:36:04 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:36:04 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:36:17 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:36:17 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:36:17 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:36:52 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:36:52 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:36:52 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:36:56 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:36:56 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:36:56 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:37:41 GMT+0530] : 
+User login attempt: { email: 'yasu02@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:38:15 GMT+0530] : 
+User login attempt: { email: 'yasu02@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:38:24 GMT+0530] : 
+User login attempt: { email: 'yasu03@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:39:17 GMT+0530] : 
+User login attempt: { email: 'yasu03@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:39:17 GMT+0530] : 
+Generating JWT token { id: 12, email: 'yasu03@gmail.com', firstName: 'yasu03' }[0m
+[38;5;39m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+Setting JWT token for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 12,
+  email: 'yasu03@gmail.com',
+  firstName: 'yasu03',
+  iat: 1766743758,
+  exp: 1766830158
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  _previousDataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[getTasks] Authenticated userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[getTasks] Found 0 tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 12,
+  email: 'yasu03@gmail.com',
+  firstName: 'yasu03',
+  iat: 1766743758,
+  exp: 1766830158
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  _previousDataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[getTasks] Authenticated userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:18 GMT+0530] : 
+[getTasks] Found 0 tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 12,
+  email: 'yasu03@gmail.com',
+  firstName: 'yasu03',
+  iat: 1766743758,
+  exp: 1766830158
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  _previousDataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+createTask request body: { title: 'ggffhfjgjhchggy hggjyhgjyg', status: 'pending' }[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[createTask] Authenticated userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[createTask] Creating task for userId: 12 with title: ggffhfjgjhchggy hggjyhgjyg[0m
+[38;5;35m[Fri Dec 26 2025 15:39:33 GMT+0530] : 
+[createTask] Task created with ID: 10 for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+User login attempt: { email: 'yasu03@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+Generating JWT token { id: 12, email: 'yasu03@gmail.com', firstName: 'yasu03' }[0m
+[38;5;39m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+Setting JWT token for userId: 12[0m
+[38;5;39m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  _previousDataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc1OCwiZXhwIjoxNzY2ODMwMTU4fQ.ZA_rw_a8OJQBYa2Fkpy3uCK8qX6kUmS_BjLjGk2yoUY',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 12,
+  email: 'yasu03@gmail.com',
+  firstName: 'yasu03',
+  iat: 1766743787,
+  exp: 1766830187
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:47.000Z
+  },
+  _previousDataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[getTasks] Authenticated userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[getTasks] Found 1 tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 12,
+  email: 'yasu03@gmail.com',
+  firstName: 'yasu03',
+  iat: 1766743787,
+  exp: 1766830187
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:47.000Z
+  },
+  _previousDataValues: {
+    id: 4,
+    userId: 12,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-26T10:09:18.000Z,
+    updatedAt: 2025-12-26T10:09:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoieWFzdTAzQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6Inlhc3UwMyIsImlhdCI6MTc2Njc0Mzc4NywiZXhwIjoxNzY2ODMwMTg3fQ.0A3Hme4bEey19RD-ROksbXwTkwABAkoyiz4F6yo5dEA[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[getTasks] Authenticated userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:39:47 GMT+0530] : 
+[getTasks] Found 1 tasks for userId: 12[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzMwNzA3LCJleHAiOjE3NjY4MTcxMDd9.7HDtfcM-QYxbCv9HOrkz8Eqz6o8_CRXtiBR8Z5Z1ARg',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T06:31:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766744143,
+  exp: 1766830543
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[getTasks] Authenticated userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[getTasks] Found 0 tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766744143,
+  exp: 1766830543
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[getTasks] Authenticated userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:45:43 GMT+0530] : 
+[getTasks] Found 0 tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:51:16 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:16 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:16 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:51:34 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:34 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:34 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:51:42 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:42 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:42 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:51:49 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:49 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:49 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:51:51 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:51 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:51 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:51:54 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:54 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:54 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:51:56 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:51:56 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:51:56 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:54:56 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:54:56 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:54:56 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:55:05 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:55:05 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:55:05 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:55:14 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:55:14 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:55:14 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:55:51 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 15:55:51 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 15:55:51 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 15:56:18 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:56:18 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766744143,
+  exp: 1766830543
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:56:18 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:56:18 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766744143,
+  exp: 1766830543
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[getTasks] Authenticated userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[getTasks] Found 1 tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766744143,
+  exp: 1766830543
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[getTasks] Authenticated userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:57:58 GMT+0530] : 
+[getTasks] Found 1 tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 15:58:17 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 15:58:17 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766744143,
+  exp: 1766830543
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:58:17 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 15:58:17 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
