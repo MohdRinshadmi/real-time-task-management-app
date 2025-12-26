@@ -5,6 +5,9 @@ import sequelize from "../config/db.js";
 const CommonSettings = sequelize.define("CommonSetting",{
     logoutTime: DataTypes.INTEGER,
     active: DataTypes.INTEGER
+}, 
+{
+    timestamps: false,
 })
 
 export default CommonSettings

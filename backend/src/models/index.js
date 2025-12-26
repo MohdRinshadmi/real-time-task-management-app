@@ -1,32 +1,36 @@
-import User from "./userModel.js";
-import Task from "./taskModel.js";
 import sequelize from "../config/db.js";
 import logger from "../helper/logger.js";
+import User from "./userModel.js";
+import Task from "./taskModel.js";
 
-User.hasMany(Task, {
-  foreignKey: "assigneeId",
-  sourceKey: "userId"
-});
+const initAssociations = () => {
+  User.hasMany(Task, {
+    foreignKey: "assigneeId",
+    sourceKey: "userId",
+    as: "tasks",
+  });
 
-Task.belongsTo(User, {
-  foreignKey: "assigneeId",
-  targetKey: "userId"
-});
+  Task.belongsTo(User, {
+    foreignKey: "assigneeId",
+    targetKey: "userId",
+    as: "assignee",
+  });
+};
 
-export async function initDb() {
+
+export const initDb = async () => {
   try {
-    console.log("MySQL models synced");
+    initAssociations();
+
+    await sequelize.authenticate();
+    logger.info("Database connection established");
+
+    await sequelize.sync({ alter: false });
+    logger.info("MySQL models synced successfully");
   } catch (error) {
-    logger.error("Error syncing MySQL models:", error);
+    logger.error("Database initialization failed", error);
     throw error;
   }
-}
+};
 
-if (import.meta.url === process.argv[1]) {
-  initDb().catch((e) => {
-    console.error(e);
-    process.exit(1);
-  });
-}
-
-export { User, Task };
+export { sequelize, User, Task };
