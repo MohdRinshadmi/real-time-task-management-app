@@ -73,10 +73,10 @@ const TaskBoard = () => {
 
   const createDetailedTask = async () => {
     try {
-      const res = await API.post(`/api/tasks`, taskForm);
+      const res = await API.post(`/create-tasks`, taskForm);
       console.log('create detaikled task response', res);
       
-      setTasks([...tasks, res.data.task]);
+      setTasks([...tasks, res.data.data.data.task]);
       setIsModalOpen(false);
       setTaskForm({ title: '', description: '', status: 'pending' });
       toast.success('Task created successfully!');
