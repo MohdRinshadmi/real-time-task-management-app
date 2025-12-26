@@ -2,6 +2,7 @@ import jwt from 'jsonwebtoken';
 import CommonSetting from '../models/commonSettings.js';
 import logger from '../helper/logger.js';
 import AccessKey from '../models/accessKey.js';
+import PendingRegistration from '../models/pendingRegistration.js';
 
 export const getJwtToken = async(tokenData) => {
     logger.info("Generating JWT token", tokenData);
@@ -21,13 +22,15 @@ export const getJwtToken = async(tokenData) => {
         expiresIn = process.env.TOKEN_EXPIRY;
     }
 
-    return jwt.sign(tokenData, process.env.TOKEN_KEY, { expiresIn });
+    return jwt.sign(tokenData, process.env.JWT_SECRET, { expiresIn });
 };
 
 export const setJwtToken = async(accessToken, userId) => {
     const availableToken = await AccessKey.findOne({ where: { userId } });
+    logger.debug("Setting JWT token for userId:", userId);
     try {
         if (availableToken) {
+            logger.debug("updating token for userId:", availableToken);
             await availableToken.update({ token: accessToken, }, {},);
         } else {
             await AccessKey.create({ userId, token: accessToken, expiry: 1, }, {});
@@ -37,7 +40,13 @@ export const setJwtToken = async(accessToken, userId) => {
     }
 };
 
+// Now checks AccessKey for the token (userId is actually the token string)
+export const getFromDb = async(token) => {
+    return await AccessKey.findOne({ where: { token } });
+};
+
+
 export const verifyAppToken = async(token) => {
-    return jwt.verify(token, process.env.APP_TOKEN_KEY);
+    return jwt.verify(token, process.env.JWT_SECRET);
 };
 
