@@ -7,7 +7,7 @@ export const getTasksService = async () => {
 };
 
 // Create a new task
-export const createTaskService = async (taskData) => {
+export const addTaskService = async (taskData) => {
   const response = await api.post('/add-task', taskData);
   return response.data;
 };

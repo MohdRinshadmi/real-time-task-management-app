@@ -4,7 +4,7 @@ export const getTasksService = async () => {
   return await Task.findAll();
 };
 
-export const createTaskService = async ({ title, description, status, assigneeId }) => {
+export const addTaskService = async ({ title, description, status, assigneeId }) => {
   return await Task.create({
     title,
     description: description || '',
