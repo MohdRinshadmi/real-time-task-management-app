@@ -34,7 +34,12 @@ instance.interceptors.response.use(
 instance.interceptors.request.use((config) => {
     config.headers['Content-Type'] = 'application/json';
     config.headers['Accept'] = 'application/json';
-    config.headers["access-token"] = localStorage.getItem("access-token") || "";
+    const token = localStorage.getItem("access-token") || "";
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`;
+    }
+    // Optionally keep the custom header if needed
+    // config.headers["access-token"] = token;
     return config;
 })
 
