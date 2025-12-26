@@ -1,6 +1,8 @@
+
 import moment from "moment-timezone";
 import { fileURLToPath } from "url";
 import path, { dirname } from "path";
+import util from "util";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import { createLogger, format, transports } from "winston";
@@ -15,10 +17,10 @@ const customFormat = format.printf((info) => {
     if (stack) {
         logMessage = `${message}\n${ stack}`;
     } else {
-        message = typeof message === "object" ? JSON.stringify(message, null, 2) : message;
+        message = typeof message === "object" ? util.inspect(message, { depth: null, colors: false }) : message;
         logMessage = [ message, ...args.map((arg) => {
             if (typeof arg === "object") {
-                return JSON.stringify(arg, null, 2);
+                return util.inspect(arg, { depth: null, colors: false });
             }
             return arg;
         }) ].join(" ");
