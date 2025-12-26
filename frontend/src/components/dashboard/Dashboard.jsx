@@ -27,7 +27,7 @@ const Dashboard = () => {
     setLoading(true);
     try {
       const data = await loginService(email, password);
-      console.log('access token login', data.data);
+      console.log('access token login', data);
       if (data && data.data.token) {
         setAccessToken(data.data.token);
       }

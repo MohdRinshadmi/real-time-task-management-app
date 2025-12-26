@@ -61,6 +61,8 @@ const theme = createTheme({
 function App() {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
   const token = getAccessToken();
+  console.log('get tokennnnnnn', token);
+  
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />

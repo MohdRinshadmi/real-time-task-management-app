@@ -73,7 +73,9 @@ const TaskBoard = () => {
 
   const createDetailedTask = async () => {
     try {
-      const res = await axios.post(`${API_URL}/api/tasks`, taskForm);
+      const res = await API.post(`/api/tasks`, taskForm);
+      console.log('create detaikled task response', res);
+      
       setTasks([...tasks, res.data.task]);
       setIsModalOpen(false);
       setTaskForm({ title: '', description: '', status: 'pending' });
