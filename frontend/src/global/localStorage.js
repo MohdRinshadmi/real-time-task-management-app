@@ -1,6 +1,6 @@
-// src/global/localStorage.js
-
 export const setAccessToken = (token) => {
+  console.log('set access token', token);
+  
   localStorage.setItem('access-token', token);
 };
 
