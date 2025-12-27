@@ -28,11 +28,11 @@ const Dashboard = () => {
     try {
       const data = await loginService(email, password);
       console.log('access token login', data);
-      if (data && data.data.token) {
-        setAccessToken(data.data.token);
+      if (data) {
+        setAccessToken(data.token);
       }
-      if (typeof data.data.isLoggedIn !== 'undefined') {
-        dispatch(setLoggedIn(data.data.isLoggedIn));
+      if (typeof data.isLoggedIn !== 'undefined') {
+        dispatch(setLoggedIn(data.isLoggedIn));
       }
       toast.success('Login successful!');
       setLoading(false);

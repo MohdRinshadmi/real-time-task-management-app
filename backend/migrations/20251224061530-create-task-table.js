@@ -9,10 +9,6 @@ export default {
         autoIncrement: true,
         allowNull: false,
       },
-      userId: {
-        type: Sequelize.BIGINT.UNSIGNED,
-        allowNull: true,
-      },
       title: {
         type: Sequelize.STRING(255),
         allowNull: false,

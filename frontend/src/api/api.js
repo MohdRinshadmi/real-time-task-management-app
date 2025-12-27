@@ -11,7 +11,7 @@ instance.interceptors.response.use(
     console.log('response from API KIT', response);
     
     if (response.status === 200 || response.status) {
-      return response;
+      return response.data;
     }
   },
   (error) => {
