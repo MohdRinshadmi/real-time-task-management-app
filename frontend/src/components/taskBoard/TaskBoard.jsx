@@ -62,7 +62,7 @@ const TaskBoard = () => {
         title: newTask,
         status: 'pending',
       });
-      setTasks([...tasks, res.data.task]);
+      setTasks([...tasks, res.data.data.data.task]);
       setNewTask('');
       toast.success('Task added successfully!');
     } catch (error) {
@@ -102,9 +102,8 @@ const TaskBoard = () => {
 
   const deleteTask = async (task) => {
     console.log('task id for deleting task', task);
-    
     try {
-      await axios.delete(`${API_URL}/api/tasks/${task.id || task._id}`);
+      await API.delete(`/delete-task/${task.taskId}`);
       setTasks(tasks.filter((t) => t.id !== task.id && t._id !== task._id));
       toast.success('Task deleted successfully!');
     } catch (error) {
