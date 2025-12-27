@@ -5,20 +5,17 @@ import { successMessage } from "../helper/response.js";
 export const getTasks = async (req, res, next) => {
   try {
     const userId = req.auth?.user?.id;
-    logger.info(`[getTasks] Authenticated userId: ${userId}`);
-    if (!userId) {
-      logger.error('[getTasks] Unauthorized: User ID missing');
-      return res.status(401).json({ error: "Unauthorized: User ID missing" });
-    }
-    logger.info(`[getTasks] Fetching tasks for userId: ${userId}`);
     const tasks = await Task.findAll({ where: { userId } });
-    logger.info(`[getTasks] Found ${tasks.length} tasks for userId: ${userId}`);
     if (!tasks) {
-      logger.warn(`[getTasks] No tasks found for userId: ${userId}`);
       return res.status(404).json({ error: "No tasks found" });
     }
-    const response = await successMessage({ data: { tasks } });
-    res.json(response);
+      // Map taskId to id for frontend compatibility
+      const tasksWithId = tasks.map(task => ({
+        ...task.dataValues,
+        id: task.taskId
+      }));
+      const response = await successMessage({ data: { tasks: tasksWithId } });
+      res.json(response);
   } catch (err) {
     logger.error("get tasks error", err);
     return next(err);
@@ -29,9 +26,6 @@ export const addTask = async (req, res, next) => {
   try {
     const { title, status } = req.body;
     const userId = req.auth?.user?.id;
-    if (!userId) {
-      return res.status(401).json({ error: "Unauthorized: User ID missing" });
-    }
     const task = await Task.create({ title, status: status || "pending", userId });
     const response = await successMessage({ data: { task } });
     res.status(201).json(response);
@@ -49,8 +43,14 @@ export const createTask = async (req, res, next) => {
       return res.status(401).json({ error: "Unauthorized: User ID missing" });
     }
     const task = await Task.create({ title, description: description || "", status: status || "pending", userId });
-    const response = await successMessage({ data: { task } });
-    res.status(201).json(response);
+      logger.info(`[createTask] Task created with ID: ${task.taskId} for userId: ${userId}`);
+      // Map taskId to id for frontend compatibility
+      const taskWithId = {
+        ...task.dataValues,
+        id: task.taskId
+      };
+      const response = await successMessage({ data: { task: taskWithId } });
+      res.status(201).json(response);
   } catch (err) {
     logger.error("create task error", err);
     return next(err);

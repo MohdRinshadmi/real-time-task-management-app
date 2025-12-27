@@ -3495,3 +3495,1941 @@ MySQL models synced successfully[0m
 }[0m
 [38;5;35m[Fri Dec 26 2025 15:58:17 GMT+0530] : 
 [authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw[0m
+[38;5;35m[Fri Dec 26 2025 17:44:22 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:44:22 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:44:22 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:45:21 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 17:45:21 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 17:45:21 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 17:45:21 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzQ0MTQzLCJleHAiOjE3NjY4MzA1NDN9.LhTC7JY06GKkp0hn1ll093gP6GCPMle_4M2sTF3Y0Dw',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T10:15:43.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751321,
+  exp: 1766837721
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:15:21.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:15:21.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[getTasks] Authenticated userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[getTasks] Found 2 tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751321,
+  exp: 1766837721
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:15:21.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:15:21.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[getTasks] Authenticated userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[getTasks] Fetching tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 17:45:22 GMT+0530] : 
+[getTasks] Found 2 tasks for userId: 3[0m
+[38;5;35m[Fri Dec 26 2025 17:49:28 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:28 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:28 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:49:29 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:29 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:29 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:49:31 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:31 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:31 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:49:33 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:33 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:33 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:49:35 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:35 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:35 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:49:36 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:37 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:37 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:49:51 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 17:49:51 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 17:49:51 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:15:21.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxMzIxLCJleHAiOjE3NjY4Mzc3MjF9.-zVUniU8X9CujDOgkySGDWNTkd5jXsY0uld961cmVc8',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:15:21.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751615,
+  exp: 1766838015
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751615,
+  exp: 1766838015
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:15 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:50:26 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:50:26 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751615,
+  exp: 1766838015
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:26 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:50:26 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751615,
+  exp: 1766838015
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751615,
+  exp: 1766838015
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:51:12 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:51:17 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 17:51:17 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766751615,
+  exp: 1766838015
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:51:17 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 17:51:17 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+User login attempt: { email: 'yasu01@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzUxNjE1LCJleHAiOjE3NjY4MzgwMTV9.48fao3_g5MCjRF9kOhy24H559OI2VLLEnnsk5dsxnY0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T12:20:15.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766755468,
+  exp: 1766841868
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766755468,
+  exp: 1766841868
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:28 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:54:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:54:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766755468,
+  exp: 1766841868
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:54:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:55:01 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:55:01 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766755468,
+  exp: 1766841868
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:01 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:01 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+User login attempt: { email: 'yasu05@gmail.com' }[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+Generating JWT token { id: 7, email: 'yasu05@gmail.com', firstName: 'yasu04' }[0m
+[38;5;39m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+Setting JWT token for userId: 7[0m
+[38;5;39m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T06:32:48.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzMwNzY4LCJleHAiOjE3NjY4MTcxNjh9.fp6hoWZSDzrI8jN2x5EbzJYaYVUR5_4Z18JC-CupW-k',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T06:32:48.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766755518,
+  exp: 1766841918
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:25:18.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:25:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766755518,
+  exp: 1766841918
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:25:18.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:25:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 18:55:18 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0[0m
+[38;5;35m[Fri Dec 26 2025 18:56:27 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:56:27 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:56:27 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:56:47 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:56:47 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:56:47 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:56:52 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:56:52 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:56:52 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:56:59 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:56:59 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:56:59 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:57:15 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:57:15 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:57:15 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:57:30 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:57:30 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:57:30 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:58:06 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:58:06 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:58:06 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:58:14 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:58:14 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:58:14 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:58:22 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:58:22 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:58:22 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:58:28 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:58:28 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:58:28 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:58:44 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:58:44 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:58:44 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:59:27 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:59:27 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:59:27 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:59:37 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:59:37 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:59:37 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 18:59:43 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 18:59:43 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 18:59:43 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU1NDY4LCJleHAiOjE3NjY4NDE4Njh9.Ml2O0VupEfTD1sVCdczMLJ_aVoHEwJz4qYMdDagVpvU',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:24:28.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766756207,
+  exp: 1766842607
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:36:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:36:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766756207,
+  exp: 1766842607
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:36:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:36:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:06:47 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:36:47.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MjA3LCJleHAiOjE3NjY4NDI2MDd9.8Vm1181_22HvuxTA0MpjKeJqUG2_h7U5rCbVNckTeRE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:36:47.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766756326,
+  exp: 1766842726
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:38:46.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:38:46.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766756326,
+  exp: 1766842726
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:38:46.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:38:46.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:08:46 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE[0m
+[38;5;35m[Fri Dec 26 2025 19:10:52 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE[0m
+[38;5;35m[Fri Dec 26 2025 19:10:52 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1766756326,
+  exp: 1766842726
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:10:52 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:38:46.000Z
+  },
+  _previousDataValues: {
+    id: 1,
+    userId: 3,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:19:41.000Z,
+    updatedAt: 2025-12-26T13:38:46.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:10:52 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY2NzU2MzI2LCJleHAiOjE3NjY4NDI3MjZ9.x9V83bRbhTYuYnzhIUr-DN3zJ9KjHYGZ0WSzMPxepAE[0m
+[38;5;160m[Fri Dec 26 2025 19:10:52 GMT+0530] : 
+delete task error WHERE parameter "taskId" has invalid "undefined" value
+Error: WHERE parameter "taskId" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1746:13)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1737:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1735:35)
+    at MySQLQueryGenerator.getWhereConditions (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2078:19)
+    at MySQLQueryGenerator.deleteQuery (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query-generator.js:272:18)
+    at MySQLQueryInterface.bulkDelete (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:403:59)
+    at Task.destroy (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1838:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async deleteTask (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:58:21)[0m
+[38;5;35m[Fri Dec 26 2025 19:11:46 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:11:46 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:11:46 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:11:52 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:11:52 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:11:52 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:13:09 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:13:09 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:13:09 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:13:25 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:13:25 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:13:25 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:13:29 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:13:29 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:13:29 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+Generating JWT token { id: 7, email: 'yasu05@gmail.com', firstName: 'yasu04' }[0m
+[38;5;39m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+Setting JWT token for userId: 7[0m
+[38;5;39m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:25:18.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU1NTE4LCJleHAiOjE3NjY4NDE5MTh9._2fTB0xBXb7tiyu_MheGRAST8PQjVijzKlxMMA-T6z0',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:25:18.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766756622,
+  exp: 1766843022
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766756622,
+  exp: 1766843022
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:42 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA[0m
+[38;5;35m[Fri Dec 26 2025 19:13:51 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA[0m
+[38;5;35m[Fri Dec 26 2025 19:13:51 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766756622,
+  exp: 1766843022
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:51 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:13:51 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+Generating JWT token { id: 7, email: 'yasu05@gmail.com', firstName: 'yasu04' }[0m
+[38;5;39m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+Setting JWT token for userId: 7[0m
+[38;5;39m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+updating token for userId: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjIyLCJleHAiOjE3NjY4NDMwMjJ9.JQlPO6FSJlx2ymuMLuRGQzaPEx-1kS3gVcznd1NuKXA',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:43:42.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766756650,
+  exp: 1766843050
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:44:10.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:44:10.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766756650,
+  exp: 1766843050
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:44:10.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:44:10.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:10 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60[0m
+[38;5;35m[Fri Dec 26 2025 19:14:26 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60[0m
+[38;5;35m[Fri Dec 26 2025 19:14:26 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 7,
+  email: 'yasu05@gmail.com',
+  firstName: 'yasu04',
+  iat: 1766756650,
+  exp: 1766843050
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:26 GMT+0530] : 
+[authMiddleware] DB lookup result: AccessKey {
+  dataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:44:10.000Z
+  },
+  _previousDataValues: {
+    id: 2,
+    userId: 7,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60',
+    mobileToken: null,
+    ip: null,
+    expiry: 1,
+    createdAt: 2025-12-23T06:37:42.000Z,
+    updatedAt: 2025-12-26T13:44:10.000Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [
+      'id',
+      'userId',
+      'token',
+      'mobileToken',
+      'ip',
+      'expiry',
+      'createdAt',
+      'updatedAt'
+    ]
+  },
+  isNewRecord: false
+}[0m
+[38;5;35m[Fri Dec 26 2025 19:14:26 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJ5YXN1MDVAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTA0IiwiaWF0IjoxNzY2NzU2NjUwLCJleHAiOjE3NjY4NDMwNTB9.rk7c3VdAnuMmcMpd1KHlnKh4-O7FCA-VV_P0z96jq60[0m
+[38;5;160m[Fri Dec 26 2025 19:14:26 GMT+0530] : 
+delete task error WHERE parameter "taskId" has invalid "undefined" value
+Error: WHERE parameter "taskId" has invalid "undefined" value
+    at MySQLQueryGenerator.whereItemQuery (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1746:13)
+    at /Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1737:25
+    at Array.forEach (<anonymous>)
+    at MySQLQueryGenerator.whereItemsQuery (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1735:35)
+    at MySQLQueryGenerator.getWhereConditions (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2078:19)
+    at MySQLQueryGenerator.deleteQuery (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query-generator.js:272:18)
+    at MySQLQueryInterface.bulkDelete (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:403:59)
+    at Task.destroy (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1838:42)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async deleteTask (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:63:21)[0m
+[38;5;35m[Fri Dec 26 2025 19:24:46 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:24:46 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:24:46 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Fri Dec 26 2025 19:25:30 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Fri Dec 26 2025 19:25:30 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Fri Dec 26 2025 19:25:30 GMT+0530] : 
+MySQL models synced successfully[0m

@@ -7,6 +7,6 @@ const router = express.Router();
 router.get('/get-tasks', authMiddleware, getTasks);
 router.post('/add-task', authMiddleware, addTask);
 router.post('/create-tasks', authMiddleware, createTask);
-router.delete('/delete-task/:id', authMiddleware, deleteTask);
+router.delete('/delete-task/:taskId', authMiddleware, deleteTask);
 
 export default router;
