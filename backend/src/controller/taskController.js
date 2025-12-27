@@ -10,12 +10,15 @@ export const getTasks = async (req, res, next) => {
       return res.status(404).json({ error: "No tasks found" });
     }
       // Map taskId to id for frontend compatibility
-      const tasksWithId = tasks.map(task => ({
-        ...task.dataValues,
-        id: task.taskId
-      }));
-      const response = await successMessage({ data: { tasks: tasksWithId } });
-      res.json(response);
+// const tasksWithId = tasks.map(task => {
+//   logger.debug(`[getTasks] Mapping taskId to id for task:`, task);
+//   return {
+//     ...task.dataValues,
+//     id: task.taskId
+//   };
+// });
+    const response = await successMessage({ data: { tasks } });
+    res.json(response);
   } catch (err) {
     logger.error("get tasks error", err);
     return next(err);
@@ -36,26 +39,24 @@ export const addTask = async (req, res, next) => {
 };
 
 export const createTask = async (req, res, next) => {
-  try{
-    const { title, description, status } = req.body;
+  try {
     const userId = req.auth?.user?.id;
     if (!userId) {
-      return res.status(401).json({ error: "Unauthorized: User ID missing" });
+      return res.status(401).json({ error: "Unauthorized: User not authenticated" });
     }
-    const task = await Task.create({ title, description: description || "", status: status || "pending", userId });
-      logger.info(`[createTask] Task created with ID: ${task.taskId} for userId: ${userId}`);
-      // Map taskId to id for frontend compatibility
-      const taskWithId = {
-        ...task.dataValues,
-        id: task.taskId
-      };
-      const response = await successMessage({ data: { task: taskWithId } });
-      res.status(201).json(response);
-  } catch (err) {
-    logger.error("create task error", err);
-    return next(err);
+    const { title, description = "", status = "pending" } = req.body;
+    if (!title || typeof title !== "string") {
+      return res.status(400).json({ error: "Validation error: title is required" });
+    }
+    const task = await Task.create({ title: title, description, status, userId });
+    logger.info( `[createTask] Task created | taskId=${task.taskId} | userId=${userId}` );
+    const response = await successMessage({ data: { task: { ...task.get({ plain: true }), id: task.taskId, } } });
+    return res.status(201).json(response);
+  } catch (error) {
+    logger.error("[createTask] Error creating task", { message: error.message, stack: error.stack});
+    return next(error);
   }
-}
+};
 
 export const deleteTask = async (req, res, next) => {
   try {

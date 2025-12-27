@@ -8,6 +8,7 @@ const Task = sequelize.define("Task", {
       autoIncrement: true,
     },
     userId: DataTypes.BIGINT.UNSIGNED,
+    assigneeId: DataTypes.BIGINT.UNSIGNED,
     title: DataTypes.STRING(255),
     description: DataTypes.TEXT,
     status: DataTypes.ENUM("pending", "in_progress", "completed"),
@@ -15,6 +16,7 @@ const Task = sequelize.define("Task", {
   {
     timestamps: true,
     sequelize,
+    tableName: 'Tasks',
   }
 );
 
