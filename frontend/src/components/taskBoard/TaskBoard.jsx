@@ -42,7 +42,7 @@ const TaskBoard = () => {
       const res = await API.get(`/get-tasks`);
       console.log('fetch taskkk', res);
       
-      setTasks(res.data.data.data.tasks || []);
+      setTasks(res.data.data.tasks || []);
       setLoading(false);
     } catch (error) {
       console.log('Error fetching tasks:', error);
@@ -62,7 +62,7 @@ const TaskBoard = () => {
         title: newTask,
         status: 'pending',
       });
-      setTasks([...tasks, res.data.data.data.task]);
+      setTasks([...tasks, res.data.data.task]);
       setNewTask('');
       toast.success('Task added successfully!');
     } catch (error) {
@@ -76,7 +76,7 @@ const TaskBoard = () => {
       const res = await API.post(`/create-tasks`, taskForm);
       console.log('create detaikled task response', res);
       
-      setTasks([...tasks, res.data.data.data.task]);
+      setTasks([...tasks, res.data.data.task]);
       setIsModalOpen(false);
       setTaskForm({ title: '', description: '', status: 'pending' });
       toast.success('Task created successfully!');
