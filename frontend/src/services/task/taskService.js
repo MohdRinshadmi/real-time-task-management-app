@@ -3,6 +3,8 @@ import api from '../../api/api';
 // Get all tasks
 export const getTasksService = async () => {
   const response = await api.get('/get-tasks');
+  console.log('get task serviceeeee', response);
+  
   return response.data;
 };
 
@@ -13,7 +15,7 @@ export const addTaskService = async (taskData) => {
 };
 
 // Delete a task by id
-export const deleteTaskService = async (id) => {
-  const response = await api.delete(`/delete-task/${id}`);
+export const deleteTaskService = async (taskId) => {
+  const response = await api.delete(`/delete-task/${taskId}`);
   return response.data;
 };
