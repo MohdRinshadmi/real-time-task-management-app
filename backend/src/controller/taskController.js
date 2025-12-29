@@ -9,14 +9,6 @@ export const getTasks = async (req, res, next) => {
     if (!tasks) {
       return res.status(404).json({ error: "No tasks found" });
     }
-      // Map taskId to id for frontend compatibility
-// const tasksWithId = tasks.map(task => {
-//   logger.debug(`[getTasks] Mapping taskId to id for task:`, task);
-//   return {
-//     ...task.dataValues,
-//     id: task.taskId
-//   };
-// });
     const response = await successMessage({ data: { tasks } });
     res.json(response);
   } catch (err) {
@@ -61,6 +53,8 @@ export const createTask = async (req, res, next) => {
 export const deleteTask = async (req, res, next) => {
   try {
     const { taskId } = req.params;
+    console.log('iddiddididid', taskId);
+    
     const deleted = await Task.destroy({ where: { taskId } });
     if (deleted) {
       const response = await successMessage({ data: { message: "Task deleted successfully" }, });
