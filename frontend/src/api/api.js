@@ -23,10 +23,7 @@ instance.interceptors.response.use(
       toast.error("Unauthorized access. Please login again.");
       shown = true;
     }
-    if (!shown) {
-      toast.error("An error occurred while processing your request.");
-    }
-    console.log("error response from api", error);
+    // console.log("error response from api", error);
     return Promise.reject(error.response.data);
   }
 );
