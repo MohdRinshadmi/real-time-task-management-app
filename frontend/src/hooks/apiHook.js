@@ -1,0 +1,205 @@
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { toast } from "react-toastify";
+import { loginService } from "../services/auth/loginService";
+import { setLoggedIn } from "../store/store";
+import { setAccessToken } from "../global/localStorage";
+import {
+  addTaskService,
+  getTasksService,
+  deleteTaskService,
+} from "../services/task/taskService";
+import {
+  createDetailedTaskService,
+  updateTaskService,
+} from "../services/task/taskExtraService";
+
+export const ApiHook = {
+  // ---------------------------------------- Login -----------------------------------------
+  CallLoginUser: () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    return useMutation({
+      mutationFn: async ({ email, password }) => {
+        if (!email || !password) {
+          toast.error("Please enter both email and password");
+          throw new Error("Missing credentials");
+        }
+        const data = await loginService(email, password);
+        return data;
+      },
+      onSuccess: (data) => {
+        console.log("on success login", data);
+
+        if (data && data.data.token) {
+          setAccessToken(data.data.token);
+        }
+        if (typeof data.data.isLoggedIn !== "undefined") {
+          dispatch(setLoggedIn(data.data.isLoggedIn));
+        }
+        toast.success("Login successful!");
+        // navigate("/dashboard");
+      },
+      onError: (error) => {
+        console.log("login error", error);
+      },
+    });
+  },
+
+  //   Call2faVerifyOtp: () => {
+  //     const dispatch = useDispatch();
+  //     const navigate = useNavigate();
+
+  //     const mutation = useMutation({
+  //       mutationFn: (credentials) => verify2faOtp(credentials),
+  //       onSuccess: (response) => {
+  //         if (response.status) {
+  //           dispatch(setIsAuthenticated(true));
+  //           dispatch(setLoginResponse(response));
+  //           toast.success("2FA verified successfully!");
+  //           navigate("/dashboard", { replace: true });
+  //         }
+  //       },
+  //       onError: (err) => {
+  //         console.error("ERROR FROM Call2faVerifyOtp:", err);
+  //         toast.error("2FA verification failed");
+  //       },
+  //     });
+
+  //     return mutation;
+  //   },
+
+  //   CallLogout: () => {
+  //     const dispatch = useDispatch();
+  //     const navigate = useNavigate();
+
+  //     const mutation = useMutation({
+  //       mutationFn: () => logout(),
+  //       onSuccess: (data) => {
+  //         if (data.status) {
+  //           dispatch(setLoginResponse(null));
+  //           dispatch(setIsAuthenticated(false));
+  //           dispatch(setTwofaResponse({ isEnabled: false, twoFadata: {} }));
+  //           localStorage.clear();
+  //           toast.success("Logged out successfully!");
+  //           navigate("/login");
+  //           window.location.reload();
+  //         }
+  //       },
+  //       onError: (error) => {
+  //         console.error("Logout error:", error);
+  //         toast.error("Logout failed");
+  //       },
+  //     });
+
+  //     return mutation;
+  //   },
+
+  //   CallForgotPassword: () => {
+  //     const mutation = useMutation({
+  //       mutationFn: (data) => ForgotPassword(data),
+  //       onSuccess: () => {
+  //         toast.success("Forgot password email sent!");
+  //       },
+  //       onError: () => {
+  //         toast.error("Forgot password request failed");
+  //       },
+  //     });
+
+  //     return mutation;
+  //   },
+
+  // ---------------------------------------- Add Task -----------------------------------------
+  addTask: async ({ newTask, tasks, setTasks, setNewTask }) => {
+    if (!newTask.trim()) {
+      toast.warning("Please enter a task title");
+      return;
+    }
+    try {
+      const response = await addTaskService({
+        title: newTask,
+        status: "pending",
+      });
+      console.log("taskkkkkk add taskkkkkk", response);
+      if (response.status) {
+        setTasks([...tasks, response.data.task]);
+        setNewTask("");
+        toast.success("Task added successfully!");
+      } else {
+        toast.error("Failed to add task");
+      }
+    } catch (error) {
+      toast.error("Failed to add task");
+    }
+  },
+
+  // Fetch all tasks
+  fetchTasks: async ({ setTasks, setLoading }) => {
+    setLoading(true);
+    try {
+      const data = await getTasksService();
+      console.log("fetch takssss", data);
+
+      setTasks(data.data.tasks || []);
+    } catch (error) {
+      toast.error("Failed to fetch tasks");
+    } finally {
+      setLoading(false);
+    }
+  },
+
+  // Create a detailed task
+  createDetailedTask: async ({
+    taskForm,
+    tasks,
+    setTasks,
+    setIsModalOpen,
+    setTaskForm,
+  }) => {
+    try {
+      const res = await createDetailedTaskService(taskForm);
+      setTasks([...tasks, res.data.data.task]);
+      setIsModalOpen(false);
+      setTaskForm({ title: "", description: "", status: "pending" });
+      toast.success("Task created successfully!");
+    } catch (error) {
+      toast.error("Failed to create task");
+    }
+  },
+
+  // Mark a task as complete
+  markComplete: async ({ task, tasks, setTasks }) => {
+    try {
+      const res = await updateTaskService(task.id || task._id, {
+        ...task,
+        status: "completed",
+      });
+      setTasks(
+        tasks.map((t) =>
+          t.id === task.id || t._id === task._id ? res.data.data.task : t
+        )
+      );
+      toast.success("Task marked as complete!");
+    } catch (error) {
+      toast.error("Failed to update task");
+    }
+  },
+
+  // Delete a task
+  deleteTask: async ({ task, tasks, setTasks }) => {
+    console.log("delete raskkk apiiiiii", task);
+
+    try {
+      await deleteTaskService(task.taskId);
+      const filteredTasks = tasks.filter((t) => t.taskId !== task.taskId); // <-- return the comparison
+      setTasks(filteredTasks);
+      toast.success("Task deleted successfully!");
+    } catch (error) {
+      toast.error("Failed to delete task");
+    }
+  },
+};
+
+export default ApiHook;

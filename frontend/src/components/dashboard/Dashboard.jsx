@@ -1,47 +1,23 @@
 import React, { useState } from 'react';
-import { loginService } from '../../services/auth/loginService';
-import { setAccessToken } from '../../global/localStorage';
-import { useDispatch } from 'react-redux';
-import { setLoggedIn } from '../../store/store';
 import {
   Box,
   Typography,
   TextField
 } from '@mui/material';
-import { toast } from 'react-toastify';
 import BrandShowCase from './BrandShowCase';
 import StatsSection from './StatsSection';
+import ApiHook from '../../hooks/apiHook';
 
 const Dashboard = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPasswordField, setShowPasswordField] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const dispatch = useDispatch();
+  const loginMutation = ApiHook.CallLoginUser();
 
   const handleLogin = async () => {
-    if (!email || !password) {
-      toast.error('Please enter both email and password');
-      return;
-    }
-    setLoading(true);
-    try {
-      const data = await loginService(email, password);
-      console.log('access token login', data);
-      if (data) {
-        setAccessToken(data.token);
-      }
-      if (typeof data.isLoggedIn !== 'undefined') {
-        dispatch(setLoggedIn(data.isLoggedIn));
-      }
-      toast.success('Login successful!');
-      setLoading(false);
-      // Redirect or update UI as needed
-    } catch (error) {
-      setLoading(false);
-      console.log('login error', error);
-    }
+    await loginMutation.mutateAsync({ email, password });
   };
+  
   return (
     <div className="min-h-screen p-4 md:p-8" style={{ background: 'linear-gradient(180deg, #E6ECFF 0%, #F4F7FF 40%, #FFFFFF 100%)'}}>
       <Box sx={{ width: { xs: '95%', sm: '90%', md: '80%' }, mx: 'auto', mt: { xs: 2, md: 6 }, px: { xs: 1, md: 0 } }}>
@@ -345,7 +321,7 @@ const Dashboard = () => {
                       onKeyDown={(e) => {
                         if (e.key === 'Enter') handleLogin();
                       }}
-                      disabled={loading}
+                      disabled={loginMutation.isLoading}
                     />
                     <Box
                       component="button"
@@ -356,20 +332,20 @@ const Dashboard = () => {
                         padding: { xs: '12px 24px', sm: '12px 20px' },
                         borderRadius: { xs: 16, sm: 24 },
                         fontWeight: 600,
-                        cursor: loading ? 'not-allowed' : 'pointer',
+                        cursor: loginMutation.isLoading ? 'not-allowed' : 'pointer',
                         fontSize: { xs: '0.875rem', sm: '0.800rem' },
                         whiteSpace: 'nowrap',
                         transition: 'all 0.3s ease',
                         minWidth: { xs: '100%', sm: '110px' },
-                        opacity: loading ? 0.7 : 1,
+                        opacity: loginMutation.isLoading ? 0.7 : 1,
                         '&:hover': {
-                          transform: loading ? 'none' : 'scale(1.02)',
+                          transform: loginMutation.isLoading ? 'none' : 'scale(1.02)',
                         },
                       }}
                       onClick={handleLogin}
-                      disabled={loading}
+                      disabled={loginMutation.isLoading}
                     >
-                      {loading ? 'Logging in...' : 'Get Started'}
+                      {loginMutation.isLoading ? 'Logging in...' : 'Get Started'}
                     </Box>
                   </Box>
                 )}
