@@ -30,7 +30,7 @@ export const setJwtToken = async(accessToken, userId) => {
 
 // Now checks AccessKey for the token (userId is actually the token string)
 export const getFromDb = async(token) => {
-    return await AccessKey.findOne({ where: { token } });
+    return await AccessKey.findOne({ token });
 };
 
 
