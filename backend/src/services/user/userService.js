@@ -1,4 +1,4 @@
-import User from '../../models/userModel.js';
+import { User } from '../../nosql/userModel.js';
 
 export const getUsersService = async () => {
   return await User.findAll();

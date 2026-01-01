@@ -6,6 +6,7 @@
     "auditLog": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/.7422a2ba5069e06256d35cbdb0584c0e23c99fd0-audit.json",
     "files": [
         {
+<<<<<<< Updated upstream
             "date": 1766038002032,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-18.log",
             "hash": "7fdf218c26160359636ae2670bcb42dc7ff6f3a95884495733a58e4325915dd3"
@@ -16,6 +17,8 @@
             "hash": "3698274a3f85da4d93e1143354af17dde84c55f869ceba342059f62cff0366a1"
         },
         {
+=======
+>>>>>>> Stashed changes
             "date": 1766468997975,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-23.log",
             "hash": "9995cf70a75ca78d9ce7ff0c08843cab0ae4ebf046b6eb5955741b87cbebc428"
@@ -38,7 +41,16 @@
         {
             "date": 1767089994941,
             "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-30.log",
+<<<<<<< Updated upstream
             "hash": "c9180d7f591315bdf88678c5362177c885cd1afc3d4ceab1a4e99afd95e52c9b"
+=======
+            "hash": "67c0de8570d026efce6f109e3183ce03cddadc3d62aa2bc2fd3f1687adec93df"
+        },
+        {
+            "date": 1767166725223,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/sql-2025-12-31.log",
+            "hash": "1103792523d0ada70f41ea69c9bd4de307cf13bbadc38cd39e6e1c04b6de576b"
+>>>>>>> Stashed changes
         }
     ],
     "hashType": "sha256"

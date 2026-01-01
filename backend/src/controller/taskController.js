@@ -1,11 +1,11 @@
 import logger from "../helper/logger.js";
-import Task from "../models/taskModel.js";
+import { Task } from "../nosql/taskModel.js";
 import { successMessage } from "../helper/response.js";
 
 export const getTasks = async (req, res, next) => {
   try {
     const userId = req.auth?.user?.id;
-    const tasks = await Task.findAll({ where: { userId } });
+    const tasks = await Task.find({ userId });
     if (!tasks) {
       return res.status(404).json({ error: "No tasks found" });
     }

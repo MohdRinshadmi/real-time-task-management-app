@@ -1,9 +1,9 @@
-import Task from '../../models/taskModel.js';
+import { Task } from '../../nosql/taskModel.js';
 
 
 export const getTasksService = async () => {
   try {
-    const tasks = await Task.findAll();
+    const tasks = await Task.find();
     return { status: true, data: tasks };
   } catch (error) {
     console.error('Error fetching tasks:', error);
@@ -17,7 +17,12 @@ export const addTaskService = async ({ title, description, status, assigneeId })
     return { status: false, error: 'Task title is required.' };
   }
   try {
-    const newTask = await Task.create({ title, description: description || '', status: status || 'pending', assigneeId: assigneeId || null });
+    const newTask = await Task.create({
+      title,
+      description: description || '',
+      status: status || 'pending',
+      assigneeId: assigneeId || null,
+    });
     return { status: true, data: newTask };
   } catch (error) {
     console.error('Error creating task:', error);
@@ -28,9 +33,7 @@ export const addTaskService = async ({ title, description, status, assigneeId })
 
 export const deleteTaskService = async (id) => {
   try {
-    const deleted = await Task.destroy({ where: { taskId: id } });
-    console.log('deleted task service', id);
-    
+    const deleted = await Task.findOneAndDelete({ taskId: id });
     if (deleted) {
       return { status: true, message: 'Task deleted successfully.' };
     } else {
@@ -47,9 +50,12 @@ export const updateTaskService = async (id, updateData) => {
     return { status: false, error: 'Task ID is required.' };
   }
   try {
-    const [updated] = await Task.update(updateData, { where: { taskId: id } });
-    if (updated) {
-      const updatedTask = await Task.findOne({ where: { taskId: id } });
+    const updatedTask = await Task.findOneAndUpdate(
+      { taskId: id },
+      updateData,
+      { new: true }
+    );
+    if (updatedTask) {
       return { status: true, data: updatedTask };
     } else {
       return { status: false, error: 'Task not found or not updated.' };

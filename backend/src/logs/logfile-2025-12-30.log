@@ -4,6 +4,7 @@
 Database connection established[0m
 [38;5;35m[Tue Dec 30 2025 15:49:55 GMT+0530] : 
 MySQL models synced successfully[0m
+<<<<<<< Updated upstream
 [38;5;35m[Tue Dec 30 2025 15:50:10 GMT+0530] : 
 [authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
 [38;5;35m[Tue Dec 30 2025 15:50:10 GMT+0530] : 
@@ -242,3 +243,11 @@ updating token for userId: AccessKey {
 }[0m
 [38;5;35m[Tue Dec 30 2025 15:51:54 GMT+0530] : 
 [authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MDkwMTA5LCJleHAiOjE3NjcxNzY1MDl9.jCyIKDGW3M-r8KDrplY8FDqFTTUOjHvx0dEA8UuKuXg[0m
+=======
+[38;5;35m[Tue Dec 30 2025 18:01:12 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Tue Dec 30 2025 18:01:12 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Tue Dec 30 2025 18:01:12 GMT+0530] : 
+MySQL models synced successfully[0m
+>>>>>>> Stashed changes
