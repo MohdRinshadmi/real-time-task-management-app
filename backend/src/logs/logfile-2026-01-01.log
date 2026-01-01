@@ -1,0 +1,209 @@
+[38;5;35m[Thu Jan 01 2026 17:56:36 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Thu Jan 01 2026 17:56:36 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Thu Jan 01 2026 17:56:36 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcwODgwLCJleHAiOjE3NjczNTcyODB9.MGrSXDdp6KJAEQiaSNCcYF--OJkmfjvCMmLnP7TTY4I[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1767270880,
+  exp: 1767357280
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] DB lookup result: null[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Stored token from DB: [0m
+[38;5;160m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Token mismatch or not found in DB.[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcwODgwLCJleHAiOjE3NjczNTcyODB9.MGrSXDdp6KJAEQiaSNCcYF--OJkmfjvCMmLnP7TTY4I[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1767270880,
+  exp: 1767357280
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] DB lookup result: null[0m
+[38;5;35m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Stored token from DB: [0m
+[38;5;160m[Thu Jan 01 2026 18:04:40 GMT+0530] : 
+[authMiddleware] Token mismatch or not found in DB.[0m
+[38;5;35m[Thu Jan 01 2026 18:37:25 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Thu Jan 01 2026 18:37:25 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Thu Jan 01 2026 18:37:25 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Thu Jan 01 2026 18:37:35 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Thu Jan 01 2026 18:37:35 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Thu Jan 01 2026 18:37:35 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+Generating JWT token { id: 3, email: 'yasu01@gmail.com', firstName: 'yasu01' }[0m
+[38;5;39m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+Setting JWT token for userId: 3[0m
+[38;5;39m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+updating token for userId: {
+  _id: new ObjectId('695669e038cb5b59c62a48cc'),
+  userId: 3,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcwODgwLCJleHAiOjE3NjczNTcyODB9.MGrSXDdp6KJAEQiaSNCcYF--OJkmfjvCMmLnP7TTY4I',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1767272870,
+  exp: 1767359270
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] DB lookup result: {
+  _id: new ObjectId('695669e038cb5b59c62a48cc'),
+  userId: 3,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1767272870,
+  exp: 1767359270
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] DB lookup result: {
+  _id: new ObjectId('695669e038cb5b59c62a48cc'),
+  userId: 3,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:37:50 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:38:31 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:38:31 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1767272870,
+  exp: 1767359270
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:38:31 GMT+0530] : 
+[authMiddleware] DB lookup result: {
+  _id: new ObjectId('695669e038cb5b59c62a48cc'),
+  userId: 3,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:38:31 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;160m[Thu Jan 01 2026 18:38:31 GMT+0530] : 
+create task error Task validation failed: taskId: Path `taskId` is required.
+ValidationError: Task validation failed: taskId: Path `taskId` is required.
+    at Document.invalidate (/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/mongoose/lib/document.js:3362:32)
+    at /Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/mongoose/lib/document.js:3123:17
+    at /Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/node_modules/mongoose/lib/schemaType.js:1446:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)[0m
+[38;5;35m[Thu Jan 01 2026 18:39:14 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Thu Jan 01 2026 18:39:14 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Thu Jan 01 2026 18:39:14 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Thu Jan 01 2026 18:39:18 GMT+0530] : 
+[authMiddleware] JWT_SECRET: eHC9rNSsezIQeQqwu++0hXWFOTcnqEUdeOK88w3bn6o=[0m
+[38;5;35m[Thu Jan 01 2026 18:39:18 GMT+0530] : 
+Database connection established[0m
+[38;5;35m[Thu Jan 01 2026 18:39:18 GMT+0530] : 
+MySQL models synced successfully[0m
+[38;5;35m[Thu Jan 01 2026 18:39:21 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:39:21 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 3,
+  email: 'yasu01@gmail.com',
+  firstName: 'yasu01',
+  iat: 1767272870,
+  exp: 1767359270
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:39:21 GMT+0530] : 
+[authMiddleware] DB lookup result: {
+  _id: new ObjectId('695669e038cb5b59c62a48cc'),
+  userId: 3,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:39:21 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ5YXN1MDFAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoieWFzdTAxIiwiaWF0IjoxNzY3MjcyODcwLCJleHAiOjE3NjczNTkyNzB9.u77FAnqivsDKc_RgS850KTTt64ARG_Uxmah78c4JMac[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+Generating JWT token { id: 13, email: 'yasu100@gmail.com', firstName: 'yasu100' }[0m
+[38;5;39m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+Setting JWT token for userId: 13[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoieWFzdTEwMEBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJ5YXN1MTAwIiwiaWF0IjoxNzY3MjczMDM1LCJleHAiOjE3NjczNTk0MzV9.Og5AuVwskH8Htka1UHzqiTFPtoCVcmSrBjyw8PkG2EQ[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 13,
+  email: 'yasu100@gmail.com',
+  firstName: 'yasu100',
+  iat: 1767273035,
+  exp: 1767359435
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] DB lookup result: {
+  _id: new ObjectId('6956724b2b51236fd2d68973'),
+  userId: 13,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoieWFzdTEwMEBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJ5YXN1MTAwIiwiaWF0IjoxNzY3MjczMDM1LCJleHAiOjE3NjczNTk0MzV9.Og5AuVwskH8Htka1UHzqiTFPtoCVcmSrBjyw8PkG2EQ',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoieWFzdTEwMEBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJ5YXN1MTAwIiwiaWF0IjoxNzY3MjczMDM1LCJleHAiOjE3NjczNTk0MzV9.Og5AuVwskH8Htka1UHzqiTFPtoCVcmSrBjyw8PkG2EQ[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] Incoming token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoieWFzdTEwMEBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJ5YXN1MTAwIiwiaWF0IjoxNzY3MjczMDM1LCJleHAiOjE3NjczNTk0MzV9.Og5AuVwskH8Htka1UHzqiTFPtoCVcmSrBjyw8PkG2EQ[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] Decoded JWT: {
+  id: 13,
+  email: 'yasu100@gmail.com',
+  firstName: 'yasu100',
+  iat: 1767273035,
+  exp: 1767359435
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] DB lookup result: {
+  _id: new ObjectId('6956724b2b51236fd2d68973'),
+  userId: 13,
+  token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoieWFzdTEwMEBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJ5YXN1MTAwIiwiaWF0IjoxNzY3MjczMDM1LCJleHAiOjE3NjczNTk0MzV9.Og5AuVwskH8Htka1UHzqiTFPtoCVcmSrBjyw8PkG2EQ',
+  expiry: 1,
+  __v: 0
+}[0m
+[38;5;35m[Thu Jan 01 2026 18:40:35 GMT+0530] : 
+[authMiddleware] Stored token from DB: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoieWFzdTEwMEBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJ5YXN1MTAwIiwiaWF0IjoxNzY3MjczMDM1LCJleHAiOjE3NjczNTk0MzV9.Og5AuVwskH8Htka1UHzqiTFPtoCVcmSrBjyw8PkG2EQ[0m
