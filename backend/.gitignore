@@ -1,5 +1,7 @@
 
 node_modules
 .env
+src/logs/
 src/logs/*.log
 src/logs/sql-*.log
+src/logs/*.json
