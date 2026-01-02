@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Add SQL log file and src/logs directory
+src/logs/
+sql.log
+
 node_modules
 dist
 dist-ssr
