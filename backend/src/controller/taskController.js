@@ -1,11 +1,11 @@
 import logger from "../helper/logger.js";
-import { Task } from "../nosql/taskModel.js";
 import { successMessage } from "../helper/response.js";
+import { listTasks as listTasksRepo, createTask as createTaskRepo, deleteTaskById } from "../services/task/taskRepository.js";
 
 export const getTasks = async (req, res, next) => {
   try {
     const userId = req.auth?.user?.id;
-    const tasks = await Task.find({ userId });
+    const tasks = await listTasksRepo({ userId });
     if (!tasks) {
       return res.status(404).json({ error: "No tasks found" });
     }
@@ -21,7 +21,7 @@ export const addTask = async (req, res, next) => {
   try {
     const { title, status } = req.body;
     const userId = req.auth?.user?.id;
-    const task = await Task.create({ title, status: status || "pending", userId });
+    const task = await createTaskRepo({ title, status: status || "pending", userId });
     const response = await successMessage({ data: { task } });
     res.status(201).json(response);
   } catch (err) {
@@ -40,9 +40,9 @@ export const createTask = async (req, res, next) => {
     if (!title || typeof title !== "string") {
       return res.status(400).json({ error: "Validation error: title is required" });
     }
-    const task = await Task.create({ title: title, description, status, userId });
+    const task = await createTaskRepo({ title, description, status, userId });
     logger.info( `[createTask] Task created | taskId=${task.taskId} | userId=${userId}` );
-    const response = await successMessage({ data: { task: { ...task.get({ plain: true }), id: task.taskId, } } });
+    const response = await successMessage({ data: { task } });
     return res.status(201).json(response);
   } catch (error) {
     logger.error("[createTask] Error creating task", { message: error.message, stack: error.stack});
@@ -53,10 +53,8 @@ export const createTask = async (req, res, next) => {
 export const deleteTask = async (req, res, next) => {
   try {
     const { taskId } = req.params;
-    console.log('iddiddididid', taskId);
-    
-    const deleted = await Task.destroy({ where: { taskId } });
-    if (deleted) {
+    const ok = await deleteTaskById({ taskId: Number(taskId) });
+    if (ok) {
       const response = await successMessage({ data: { message: "Task deleted successfully" }, });
       res.json(response);
     } else {
