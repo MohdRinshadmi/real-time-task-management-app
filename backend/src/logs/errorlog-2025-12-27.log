@@ -1,9 +1,0 @@
-[38;5;160m[Sat Dec 27 2025 17:55:19 GMT+0530] : 
-delete task error Truncated incorrect DOUBLE value: 'undefined'
-Error
-    at Query.run (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/mysql/query.js:52:25)
-    at /Users/ioss/Documents/node_modules/sequelize/lib/sequelize.js:315:28
-    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
-    at async MySQLQueryInterface.bulkDelete (/Users/ioss/Documents/node_modules/sequelize/lib/dialects/abstract/query-interface.js:403:12)
-    at async Task.destroy (/Users/ioss/Documents/node_modules/sequelize/lib/model.js:1838:16)
-    at async deleteTask (file:///Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/controller/taskController.js:64:21)[0m
