@@ -2,9 +2,12 @@ import { DataTypes } from "sequelize";
 import sequelize from "../config/db.js";
 
 
-const CommonSetting = sequelize.define("CommonSetting",{
+const CommonSettings = sequelize.define("CommonSetting",{
     logoutTime: DataTypes.INTEGER,
     active: DataTypes.INTEGER
+}, 
+{
+    timestamps: false,
 })
 
-export default CommonSetting
+export default CommonSettings
