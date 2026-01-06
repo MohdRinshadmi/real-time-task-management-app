@@ -4,10 +4,9 @@ import { toast, ToastContainer } from 'react-toastify';
 import { useEffect } from 'react';
 import AddTaskModal from './AddTaskModal';
 import TaskStatCard from './TaskStatCard';
-import axios from 'axios';
 import { CheckCircle, Delete } from '@mui/icons-material';
 import anime from 'animejs';
-import API from '../../api/api';
+import ApiHook from '../../hooks/apiHook';
 
 const TaskBoard = () => {
   const [newTask, setNewTask] = useState("");
@@ -19,10 +18,25 @@ const TaskBoard = () => {
   });
   const [tasks, setTasks] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   useEffect(() => {
-    fetchTasks();
+    ApiHook.fetchTasks({ setTasks, setLoading });
   }, []);
+
+  const addTask = async () => {
+    await ApiHook.addTask({ newTask, tasks, setTasks, setNewTask });
+  };
+
+  const createDetailedTask = async () => {
+    await ApiHook.createDetailedTask({ taskForm, tasks, setTasks, setIsModalOpen, setTaskForm });
+  };
+
+  const markComplete = async (task) => {
+    await ApiHook.markComplete({ task, tasks, setTasks });
+  };
+
+  const deleteTask = async (task) => {
+    await ApiHook.deleteTask({ task, tasks, setTasks });
+  };
 
   useEffect(() => {
     if (tasks.length > 0) {
@@ -36,81 +50,6 @@ const TaskBoard = () => {
       });
     }
   }, [tasks]);
-
-  const fetchTasks = async () => {
-    try {
-      const res = await API.get(`/get-tasks`);
-      console.log('fetch taskkk', res);
-      
-      setTasks(res.data.data.tasks || []);
-      setLoading(false);
-    } catch (error) {
-      console.log('Error fetching tasks:', error);
-      toast.error('Failed to fetch tasks');
-      setLoading(false);
-    }
-  };
-
-  const addTask = async () => {
-    if (!newTask.trim()) {
-      toast.warning('Please enter a task title');
-      return;
-    }
-
-    try {
-      const res = await API.post(`/add-task`, {
-        title: newTask,
-        status: 'pending',
-      });
-      setTasks([...tasks, res.data.data.task]);
-      setNewTask('');
-      toast.success('Task added successfully!');
-    } catch (error) {
-      console.error('Error adding task:', error);
-      toast.error('Failed to add task');
-    }
-  };
-
-  const createDetailedTask = async () => {
-    try {
-      const res = await API.post(`/create-tasks`, taskForm);
-      console.log('create detaikled task response', res);
-      
-      setTasks([...tasks, res.data.data.task]);
-      setIsModalOpen(false);
-      setTaskForm({ title: '', description: '', status: 'pending' });
-      toast.success('Task created successfully!');
-    } catch (error) {
-      console.error('Error creating task:', error);
-      toast.error('Failed to create task');
-    }
-  };
-
-  const markComplete = async (task) => {
-    try {
-      const res = await axios.put(`${API_URL}/api/tasks/${task.id || task._id}`, {
-        ...task,
-        status: 'completed',
-      });
-      setTasks(tasks.map((t) => (t.id === task.id || t._id === task._id ? res.data.task : t)));
-      toast.success('Task marked as complete!');
-    } catch (error) {
-      console.error('Error updating task:', error);
-      toast.error('Failed to update task');
-    }
-  };
-
-  const deleteTask = async (task) => {
-    console.log('task id for deleting task', task);
-    try {
-      await API.delete(`/delete-task/${task.taskId}`);
-      setTasks(tasks.filter((t) => t.id !== task.id && t._id !== task._id));
-      toast.success('Task deleted successfully!');
-    } catch (error) {
-      console.error('Error deleting task:', error);
-      toast.error('Failed to delete task');
-    }
-  };
 
   return (
     <div
@@ -274,7 +213,12 @@ const TaskBoard = () => {
                 placeholder="What needs to be done?"
                 value={newTask}
                 onChange={(e) => setNewTask(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && addTask()}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addTask();
+                  }
+                }}
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     borderRadius: 3,
@@ -293,7 +237,7 @@ const TaskBoard = () => {
 
               <Box sx={{ display: 'flex', gap: 2, flexDirection: { xs: 'row', sm: 'row' } }}>
                 <button
-                  onClick={addTask}
+                  onClick={() => addTask()}
                   style={{
                     background: '#2563EB',
                     border: 'none',
@@ -382,8 +326,8 @@ const TaskBoard = () => {
                     border: '1px solid rgba(229, 231, 235, 0.5)',
                     boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
                     transition: 'all 0.2s ease',
-                    '&:hover': { 
-                      borderColor: 'rgba(209, 213, 219, 0.8)', 
+                    '&:hover': {
+                      borderColor: 'rgba(209, 213, 219, 0.8)',
                       boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
                       transform: 'translateY(-2px)'
                     },
@@ -397,12 +341,12 @@ const TaskBoard = () => {
                             {task.title}
                           </Typography>
                           <Chip
-                            label={task.status.replace('_', ' ')}
+                            label={typeof task.status === 'string' ? task.status.replace('_', ' ') : ''}
                             size="small"
-                            sx={{ 
-                              textTransform: 'capitalize', 
-                              fontWeight: 600, 
-                              fontSize: '0.75rem', 
+                            sx={{
+                              textTransform: 'capitalize',
+                              fontWeight: 600,
+                              fontSize: '0.75rem',
                               borderRadius: 1.5,
                               height: '24px',
                               bgcolor: task.status === 'completed' ? 'rgba(16, 185, 129, 0.1)' : task.status === 'in_progress' ? 'rgba(59, 130, 246, 0.1)' : 'rgba(245, 158, 11, 0.1)',
@@ -421,10 +365,10 @@ const TaskBoard = () => {
                       <Box sx={{ display: 'flex', gap: 1, flexShrink: 0 }}>
                         <IconButton
                           onClick={() => markComplete(task)}
-                          sx={{ 
+                          sx={{
                             color: '#10B981',
                             bgcolor: 'rgba(16, 185, 129, 0.05)',
-                            '&:hover': { bgcolor: 'rgba(16, 185, 129, 0.15)', transform: 'scale(1.05)' }, 
+                            '&:hover': { bgcolor: 'rgba(16, 185, 129, 0.15)', transform: 'scale(1.05)' },
                             transition: 'all 0.2s',
                             borderRadius: 2,
                             p: 1
@@ -435,10 +379,10 @@ const TaskBoard = () => {
 
                         <IconButton
                           onClick={() => deleteTask(task)}
-                          sx={{ 
+                          sx={{
                             color: '#EF4444',
                             bgcolor: 'rgba(239, 68, 68, 0.05)',
-                            '&:hover': { bgcolor: 'rgba(239, 68, 68, 0.15)', transform: 'scale(1.05)' }, 
+                            '&:hover': { bgcolor: 'rgba(239, 68, 68, 0.15)', transform: 'scale(1.05)' },
                             transition: 'all 0.2s',
                             borderRadius: 2,
                             p: 1
@@ -457,15 +401,15 @@ const TaskBoard = () => {
       </Box>
 
 
-          <AddTaskModal
-            isModalOpen={isModalOpen}
-            setIsModalOpen={setIsModalOpen}
-            taskForm={taskForm}
-            setTaskForm={setTaskForm}
-            createDetailedTask={createDetailedTask}
-          />
-        </div>
-      );
-    };
+      <AddTaskModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+        taskForm={taskForm}
+        setTaskForm={setTaskForm}
+        createDetailedTask={createDetailedTask}
+      />
+    </div>
+  );
+};
 
 export default TaskBoard;

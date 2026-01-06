@@ -10,6 +10,10 @@ backend/src/logs/
 *.audit.json
 
 
+# Add SQL log file and src/logs directory
+src/logs/
+sql.log
+
 node_modules
 dist
 dist-ssr
