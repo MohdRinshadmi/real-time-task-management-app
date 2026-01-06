@@ -20,10 +20,12 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.20.1",
     "mysql2": "^3.15.3",
-    "nodemon": "^3.1.11",
     "sequelize": "^6.37.7",
     "socket.io": "^4.8.1",
     "winston": "^3.19.0",
     "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }

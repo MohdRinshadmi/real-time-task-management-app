@@ -1,0 +1,9 @@
+MYSQL_DB=your_database_name
+MYSQL_USER=your_username
+MYSQL_PASS=your_password
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MONGODB_URI="mongodb://localhost"
+PORT=""
+FRONTEND_URL= http://localhost/
+JWT_SECRET=""
