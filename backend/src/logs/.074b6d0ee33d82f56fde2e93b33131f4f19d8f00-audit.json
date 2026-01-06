@@ -1,0 +1,45 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 7
+    },
+    "auditLog": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/.074b6d0ee33d82f56fde2e93b33131f4f19d8f00-audit.json",
+    "files": [
+        {
+            "date": 1766468997977,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2025-12-23.log",
+            "hash": "44bf1eb3dcdef1f59d9289f1ee655c9d3d9ab56818540616c211fc9a502155b5"
+        },
+        {
+            "date": 1766555924897,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2025-12-24.log",
+            "hash": "3ebc1e51a5a7575f51e153f877d0792f72a5fbcde802ccb5cff2ddafa00ab4b4"
+        },
+        {
+            "date": 1766729110934,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2025-12-26.log",
+            "hash": "5195c04520a3cafaacb79663a84bc43fa5448a356a2887c8742c1a008d853c80"
+        },
+        {
+            "date": 1766813341217,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2025-12-27.log",
+            "hash": "9f86fa15c7858c34074a41565e66bc5e56d493b0bf19cebfe79a6cc1842d473e"
+        },
+        {
+            "date": 1766997690772,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2025-12-29.log",
+            "hash": "494bc7479cb1cb7ec9f09bc51cbd517efb7055dbc842c981f027e8116381c4ad"
+        },
+        {
+            "date": 1767094588595,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2025-12-30.log",
+            "hash": "d0b376c326a35325fb26c21edeaa64958f13a3c88d856ce59b0f3c44eb89c301"
+        },
+        {
+            "date": 1767273700277,
+            "name": "/Users/ioss/Documents/StudyProjects/full-stack/real-time-task-collab/backend/src/logs/errorlog-2026-01-01.log",
+            "hash": "3147116607457c921a84676cd5d70ae94c08888ab4a4bafe66d559a60616c8a1"
+        }
+    ],
+    "hashType": "sha256"
+}
