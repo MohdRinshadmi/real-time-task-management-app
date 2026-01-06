@@ -11,7 +11,5 @@ export const loginService = async (email, password) => {
     } else {
       console.error('Login failed:', error);
     }
-    // Optionally, return a default value or a more descriptive error object
-    return { success: false, error: error?.message || 'Unknown error' };
   }
 };
