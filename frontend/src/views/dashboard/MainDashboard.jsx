@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 const MainDashboard = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-
   const showHeader = !isLoggedIn;
 
   return (
