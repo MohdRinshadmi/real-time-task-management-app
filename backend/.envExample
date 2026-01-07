@@ -7,3 +7,4 @@ MONGODB_URI="mongodb://localhost"
 PORT=""
 FRONTEND_URL= http://localhost/
 JWT_SECRET=""
+TOKEN_EXPIRY=""
