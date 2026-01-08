@@ -1,7 +1,9 @@
+
 import bcrypt from 'bcryptjs';
 import { User } from '../models/index.js';
 import logger from '../helper/logger.js';
 import { getJwtToken, setJwtToken } from '../utils/jwtToken.js';
+import errorCode from '../helper/errorCode.js';
 
 export const register = async (req, res) => {
   try {
@@ -53,5 +55,21 @@ export const login = async (req, res) => {
   } catch (err) {
     logger.error('Login error:', err);
     return res.status(500).json({ message: 'Internal server error', isLoggedIn: false });
+  }
+};
+
+// Google OAuth controller
+export const googleAuthController = async (req, res) => {
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: errorCode[1077] });
+    }
+    const tokenPayload = { id: req.user.id || req.user.userId, email: req.user.email, firstName: req.user.firstName || req.user.username };
+    const token = await getJwtToken(tokenPayload);
+    await setJwtToken(token, tokenPayload.id);
+    return res.status(200).json({ status: true, data: { token, user: req.user } });
+  } catch (err) {
+    logger.error('Google Auth error:', err);
+    return res.status(500).json({ message: errorCode[1077] });
   }
 };
