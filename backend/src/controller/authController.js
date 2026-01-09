@@ -7,10 +7,14 @@ import errorCode from '../helper/errorCode.js';
 
 export const register = async (req, res) => {
   try {
-    const { firstName, email, phoneNumber, password } = req.body;
+    const { firstName, email, phoneNumber, password, privacyAccepted } = req.body;
 
     if (!email || !password) {
       return res.status(400).json({ message: 'Email and password are required' });
+    }
+
+    if (String(privacyAccepted) !== "true") {
+      return res.status(400).json({ message: 'You must accept the privacy policy to register' });
     }
 
     const existingUser = await User.findOne({ where: { email } });
@@ -19,7 +23,7 @@ export const register = async (req, res) => {
     }
 
     const hash = await bcrypt.hash(password, 10);
-    const user = await User.create({ firstName, email, phoneNumber, password: hash });
+    const user = await User.create({ firstName, email, phoneNumber, password: hash, privacyAccepted });
 
     return res.status(201).json({ status: true, data: { id: user.userId, firstName: user.firstName, email: user.email, phoneNumber: user.phoneNumber } });
   } catch (err) {

@@ -12,11 +12,12 @@ import {
   Grid,
   Avatar,
 } from '@mui/material';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Visibility, VisibilityOff, Google, Facebook, Apple } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../../services/auth/authService';
 import { LogoIcon } from '../../assets/svgIcon/headerIcon';
 import { toast } from 'react-toastify';
+import { validateRegistrationFields } from '../../validator/emailField';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -32,22 +33,6 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
 
-  // Centralized validation function
-  const validateFields = (fields) => {
-    const newErrors = {};
-    Object.entries(fields).forEach(([key, value]) => {
-      if (key === 'firstName' && !value.trim()) newErrors.firstName = 'First name is required';
-      if (key === 'email') {
-        if (!value.trim() || value === '') newErrors.email = 'Email is required';
-        else if (!/\S+@\S+\.\S+/.test(value)) newErrors.email = 'Email is invalid';
-      }
-      if (key === 'password' && (!value || value.length < 6)) newErrors.password = 'Password must be at least 6 characters';
-      if (key === 'phoneNumber' && !value.trim()) newErrors.phoneNumber = 'Phone number is required';
-      if (key === 'privacyAccepted' && !value) newErrors.privacyAccepted = 'You must accept the privacy policy';
-    });
-    return newErrors;
-  };
-
   const handleChange = (e) => {
     const { name, type, value, checked } = e.target;
     const fieldValue = type === 'checkbox' ? checked : value;
@@ -55,18 +40,14 @@ const Register = () => {
     setFormData(updatedFormData);
 
     // Validate only the changed field
-    const fieldError = validateFields({ [name]: fieldValue });
+    const fieldError = validateRegistrationFields({ [name]: fieldValue });
     setErrors({ ...errors, [name]: fieldError[name] || '' });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newErrors = validateFields(formData);
+    const newErrors = validateRegistrationFields(formData);
     setErrors(newErrors);
-    // if (Object.keys(newErrors).length > 0) {
-    //   toast.error('Please fill in all required fields and accept the privacy policy');
-    //   return;
-    // }
     try {
       await registerUser(formData);
       toast.success('Registration successful!');
@@ -96,11 +77,10 @@ const Register = () => {
           boxShadow: '0 20px 40px rgba(91, 104, 244, 0.1)'
         }}
       >
-        {/* Left Side - Dark Branding */}
         <Box
           sx={{
             flex: 1,
-            bgcolor: '#0F172A', // Dark Slate (Matches Dashboard Title Color)
+            bgcolor: '#0F172A',
             color: 'white',
             p: { xs: 4, md: 8 },
             display: 'flex',
@@ -110,17 +90,15 @@ const Register = () => {
             backgroundImage: 'radial-gradient(circle at top right, #1E293B 0%, #0F172A 40%)'
           }}
         >
-          {/* Logo */}
           <Box sx={{ display: 'flex', items: 'center', gap: 2, mb: 4 }}>
             <div className="flex items-center justify-center w-10 h-10 bg-blue-600 rounded-xl text-white">
-               <LogoIcon className="w-6 h-6" />
+              <LogoIcon className="w-6 h-6" />
             </div>
             <Typography variant="h6" fontWeight="bold" sx={{ letterSpacing: '0.5px' }}>
               CollabNow
             </Typography>
           </Box>
 
-          {/* Main Text */}
           <Box sx={{ mb: 8, position: 'relative', zIndex: 2 }}>
             <Typography variant="h2" fontWeight="600" sx={{ mb: 3, lineHeight: 1.2, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
               Manage your Tasks <br />
@@ -132,7 +110,6 @@ const Register = () => {
             </Typography>
           </Box>
 
-          {/* Testimonial Card */}
           <Box
             sx={{
               bgcolor: 'rgba(30, 41, 59, 0.6)',
@@ -155,7 +132,6 @@ const Register = () => {
             </Box>
           </Box>
 
-          {/* Decorative Circles */}
           <Box sx={{
             position: 'absolute',
             top: '20%',
@@ -168,7 +144,6 @@ const Register = () => {
           }} />
         </Box>
 
-        {/* Right Side - Registration Form */}
         <Box
           sx={{
             flex: 1,
@@ -184,40 +159,6 @@ const Register = () => {
             <Typography variant="h4" fontWeight="bold" sx={{ mb: 4, textAlign: 'center', color: '#111827' }}>
               Create an account
             </Typography>
-
-            {/* Account Type Toggle */}
-            {/* <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
-              <ToggleButtonGroup
-                value={accountType}
-                exclusive
-                onChange={handleAccountTypeChange}
-                aria-label="account type"
-                sx={{
-                  bgcolor: '#F1F5F9',
-                  borderRadius: '12px',
-                  p: 0.5,
-                  '& .MuiToggleButton-root': {
-                    border: 'none',
-                    borderRadius: '10px',
-                    px: 4,
-                    py: 1,
-                    textTransform: 'none',
-                    fontWeight: 600,
-                    color: '#64748B',
-                    '&.Mui-selected': {
-                      bgcolor: '#000',
-                      color: 'white',
-                      '&:hover': {
-                        bgcolor: '#333',
-                      }
-                    }
-                  }
-                }}
-              >
-                <ToggleButton value="merchant">Merchant</ToggleButton>
-                <ToggleButton value="agent">Agent</ToggleButton>
-              </ToggleButtonGroup>
-            </Box> */}
 
             <form onSubmit={handleSubmit}>
               <Grid container spacing={2}>
@@ -301,7 +242,7 @@ const Register = () => {
                         sx={{
                           color: '#CBD5E1',
                           '&.Mui-checked': {
-                            color: '#5B68F4', // Brand Blue
+                            color: '#5B68F4',
                           },
                         }}
                       />
@@ -313,7 +254,7 @@ const Register = () => {
                     }
                   />
                   {errors.privacyAccepted && (
-                    <Typography variant="body2" color="error" sx={{  ml: 1.5, fontSize: '0.750rem', mt: 0.5 }}>
+                    <Typography variant="body2" color="error" sx={{ ml: 1.5, fontSize: '0.750rem', mt: 0.5 }}>
                       {errors.privacyAccepted}
                     </Typography>
                   )}
@@ -327,7 +268,7 @@ const Register = () => {
                       mt: 2,
                       py: 1.8,
                       borderRadius: 3,
-                      bgcolor: '#000', // Black button to match Dashboard
+                      bgcolor: '#000',
                       color: 'white',
                       textTransform: 'none',
                       fontSize: '1rem',
@@ -343,6 +284,55 @@ const Register = () => {
                   >
                     Create an Account
                   </Button>
+                </Grid>
+                <Grid item xs={12}>
+                  <Box sx={{ mt: 3, mb: 1, display: 'flex', alignItems: 'center' }}>
+                    <Box sx={{ flex: 1, height: '1px', bgcolor: '#E2E8F0' }} />
+                    <Typography variant="caption" sx={{ px: 2, color: '#94A3B8', fontWeight: 500 }}>
+                      Or sign in with
+                    </Typography>
+                    <Box sx={{ flex: 1, height: '1px', bgcolor: '#E2E8F0' }} />
+                  </Box>
+
+                  <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', mt: 2 }}>
+                    {[
+                      {
+                        icon: (
+                          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                            <path d="M5.84 14.12c-.22-.66-.35-1.36-.35-2.12s.13-1.46.35-2.12V7.04H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.96l3.66-2.84z" fill="#FBBC05" />
+                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.04l3.66 2.84c.87-2.6 3.3-4.5 6.16-4.5z" fill="#EA4335" />
+                          </svg>
+                        ),
+                        name: 'Google'
+                      },
+                      { icon: <Facebook sx={{ fontSize: 24, color: '#1877F2' }} />, name: 'Facebook' },
+                      { icon: <Apple sx={{ fontSize: 24, color: 'black' }} />, name: 'Apple' },
+                    ].map((provider) => (
+                      <Button
+                        key={provider.name}
+                        sx={{
+                          flex: 1,
+                          py: 1.5,
+                          borderRadius: 3,
+                          bgcolor: 'rgba(255, 255, 255, 0.8)',
+                          border: '1px solid rgba(226, 232, 240, 0.8)',
+                          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+                          backdropFilter: 'blur(8px)',
+                          transition: 'all 0.3s ease',
+                          '&:hover': {
+                            transform: 'translateY(-2px)',
+                            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04)',
+                            bgcolor: 'rgba(255, 255, 255, 0.95)',
+                            borderColor: provider.name === 'Google' ? '#DB4437' : provider.name === 'Facebook' ? '#1877F2' : 'black',
+                          },
+                        }}
+                      >
+                        {provider.icon}
+                      </Button>
+                    ))}
+                  </Box>
                 </Grid>
               </Grid>
 

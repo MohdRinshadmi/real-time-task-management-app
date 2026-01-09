@@ -14,6 +14,11 @@ const User = sequelize.define("User", {
     },
     phoneNumber: DataTypes.STRING(20),
     password: DataTypes.STRING(255),
+    privacyAccepted: {
+      type: DataTypes.STRING(255),
+      defaultValue: "false",
+      allowNull: false
+    },
   },
   {
     sequelize,
