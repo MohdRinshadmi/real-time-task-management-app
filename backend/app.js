@@ -3,7 +3,6 @@ import express from 'express';
 import compression from 'compression';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
 import { connectMongoDB } from './src/config/mongo.js';
 import authRouter from './src/routes/authRoutes.js';
 import taskRouter from './src/routes/taskRoutes.js';
@@ -30,9 +29,7 @@ app.use('/api', taskRouter);  // protected routes will use authMiddleware inside
 
 // Fallback route (should be 404)
 app.use((req, res) => {
-  return res
-    .status(404)
-    .json({ message: 'Welcome to the application. No such API' });
+  return res.status(404).json({ message: 'Welcome to the application. No such API' });
 });
 
 app.listen(PORT, () => {

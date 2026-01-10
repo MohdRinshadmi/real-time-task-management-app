@@ -67,12 +67,12 @@ export const sqlQueryLogger = createLogger({
         // format.error({ stack: true }),
     ),
     transports: [
-        new transports.DailyRotateFile({
-            level:"silly",
-            filename:path.join(__dirname, "..", "/logs", "sql-%DATE%.log"),
-            datePattern: "YYYY-MM-DD",
-            maxFiles:7
-        }),
+        // new transports.DailyRotateFile({
+        //     level:"silly",
+        //     filename:path.join(__dirname, "..", "/logs", "sql-%DATE%.log"),
+        //     datePattern: "YYYY-MM-DD",
+        //     maxFiles:7
+        // }),
         new transports.Console({
             format:format.combine(
                 // format.colorize(),
