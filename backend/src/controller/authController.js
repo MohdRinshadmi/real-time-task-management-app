@@ -1,4 +1,3 @@
-
 import bcrypt from 'bcryptjs';
 import { User } from '../models/index.js';
 import logger from '../helper/logger.js';
@@ -74,6 +73,22 @@ export const googleAuthController = async (req, res) => {
     return res.status(200).json({ status: true, data: { token, user: req.user } });
   } catch (err) {
     logger.error('Google Auth error:', err);
+    return res.status(500).json({ message: errorCode[1077] });
+  }
+};
+
+// Facebook OAuth controller
+export const facebookAuthController = async (req, res) => {
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: errorCode[1078] });
+    }
+    const tokenPayload = { id: req.user.id || req.user.userId, email: req.user.email, firstName: req.user.firstName || req.user.username };
+    const token = await getJwtToken(tokenPayload);
+    await setJwtToken(token, tokenPayload.id);
+    return res.status(200).json({ status: true, data: { token, user: req.user } });
+  } catch (err) {
+    logger.error('Facebook Auth error:', err);
     return res.status(500).json({ message: errorCode[1077] });
   }
 };
