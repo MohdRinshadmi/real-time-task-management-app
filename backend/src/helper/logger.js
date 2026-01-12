@@ -8,7 +8,6 @@ const __dirname = dirname(__filename);
 import { createLogger, format, transports } from "winston";
 import "winston-daily-rotate-file";
 
-
 const customFormat = format.printf((info) => {
     let logMessage;
     let { timestamp, level, message, stack } = info;
@@ -94,18 +93,18 @@ const logger = createLogger({
     ),
     transports: [
         // new transports.File({filename:path.join(__dirname,"..","/logs","error.log"),level:"error"}),
-        new transports.DailyRotateFile({
-            level:"error",
-            filename:path.join(__dirname, "..", "/logs", "errorlog-%DATE%.log"),
-            datePattern: "YYYY-MM-DD",
-            maxFiles:7
-        }),
-        new transports.DailyRotateFile({
-            level:"debug",
-            filename:path.join(__dirname, "..", "/logs", "logfile-%DATE%.log"),
-            datePattern: "YYYY-MM-DD",
-            maxFiles:7
-        }),
+        // new transports.DailyRotateFile({
+        //     level:"error",
+        //     filename:path.join(__dirname, "..", "/logs", "errorlog-%DATE%.log"),
+        //     datePattern: "YYYY-MM-DD",
+        //     maxFiles:7
+        // }),
+        // new transports.DailyRotateFile({
+        //     level:"debug",
+        //     filename:path.join(__dirname, "..", "/logs", "logfile-%DATE%.log"),
+        //     datePattern: "YYYY-MM-DD",
+        //     maxFiles:7
+        // }),
         new transports.Console({
             format:format.combine(
                 // format.colorize(),

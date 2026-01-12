@@ -61,14 +61,17 @@ async function(accessToken, refreshToken, profile, done) {
 }
 ));
 
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
+passport.serializeUser((user, done) => {
+  done(null, user.id || user.userId);
 });
 
-passport.deserializeUser(function(id, done) {
-  User.findById(id, function (err, user) {
-    done(err, user);
-  });
+passport.deserializeUser(async (id, done) => {
+  try {
+    const user = await User.findOne({ where: { id } }); // or userId, depending on your model
+    done(null, user);
+  } catch (err) {
+    done(err);
+  }
 });
 
 export default passport;

@@ -7,6 +7,8 @@ import { connectMongoDB } from './src/config/mongo.js';
 import authRouter from './src/routes/authRoutes.js';
 import taskRouter from './src/routes/taskRoutes.js';
 import { initDb } from './src/models/index.js';
+import session from 'express-session';
+import passport from 'passport';
 
 dotenv.config();
 
@@ -22,6 +24,15 @@ app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(compression());
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'your_secret_key',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false } // Set to true if using HTTPS
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Routers
 app.use('/api', authRouter);  // /api/register, /api/login (no auth middleware here)
