@@ -67,7 +67,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await User.findOne({ where: { id } }); // or userId, depending on your model
+    const user = await User.findOne({ where: { userId: id } }); // use userId, matching model definition
     done(null, user);
   } catch (err) {
     done(err);
