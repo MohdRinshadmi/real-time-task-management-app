@@ -14,6 +14,10 @@ import {
   createDetailedTaskService,
   updateTaskService,
 } from "../services/task/taskExtraService";
+import {
+  googleLoginService,
+  googleCallbackService,
+} from "../services/auth/googleService";
 
 export const ApiHook = {
   // ---------------------------------------- Login -----------------------------------------
@@ -44,6 +48,44 @@ export const ApiHook = {
       },
       onError: (error) => {
         console.log("login error", error);
+      },
+    });
+  },
+
+  // ---------------------------------------- Google OAuth -----------------------------------------
+  CallGoogleLogin: () => {
+    // This will redirect to Google OAuth
+    return async () => {
+      try {
+        // Backend should redirect, but for SPA, you may want to get the URL and window.location.assign
+        window.location.href = `${import.meta.env.VITE_BASE_URL}/auth-google`;
+      } catch (error) {
+        console.error("Google login redirect failed", error);
+        toast.error("Google login failed");
+      }
+    };
+  },
+
+  HandleGoogleCallback: () => {
+    // This should be called on the callback route after Google redirects back
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    return useMutation({
+      mutationFn: async (query) => {
+        // query is the search string from the callback URL (e.g., ?code=...&state=...)
+        const data = await googleCallbackService(query);
+        return data;
+      },
+      onSuccess: (data) => {
+        if (data && data.data.token) {
+          setAccessToken(data.data.token);
+          dispatch(setLoggedIn(true));
+          toast.success("Google login successful!");
+          navigate("/dashboard");
+        }
+      },
+      onError: (error) => {
+        toast.error("Google login failed");
       },
     });
   },
