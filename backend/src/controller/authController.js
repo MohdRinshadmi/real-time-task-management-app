@@ -66,6 +66,7 @@ export const googleAuthController = async (req, res) => {
       return res.status(401).json({ message: errorCode[1077] });
     }
     let firstName = req.user.firstName;
+    logger.info('Google Auth user:', req.user);
     if (!firstName) {
       // Fetch user from DB if firstName is missing
       const dbUser = await User.findOne({ where: { email: req.user.email } });
