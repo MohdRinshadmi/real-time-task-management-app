@@ -14,6 +14,10 @@ import {
   createDetailedTaskService,
   updateTaskService,
 } from "../services/task/taskExtraService";
+import {
+  googleLoginService,
+  googleCallbackService,
+} from "../services/auth/googleService";
 
 export const ApiHook = {
   // ---------------------------------------- Login -----------------------------------------
@@ -44,6 +48,45 @@ export const ApiHook = {
       },
       onError: (error) => {
         console.log("login error", error);
+      },
+    });
+  },
+
+  // ---------------------------------------- Google OAuth -----------------------------------------
+  CallGoogleLogin: () => {
+    // SPA redirect to Google OAuth using window.location.assign
+    return () => {
+      try {
+        window.location.assign(`${import.meta.env.VITE_BASE_URL}/auth-google`);
+      } catch (error) {
+        console.error("Google login redirect failed", error);
+        toast.error("Google login failed");
+      }
+    };
+  },
+
+  HandleGoogleCallback: () => {
+    // This should be called on the callback route after Google redirects back
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    return useMutation({
+      mutationFn: async (query) => {
+        // query is the search string from the callback URL (e.g., ?code=...&state=...)
+        const data = await googleCallbackService(query);
+        return data;
+      },
+      onSuccess: (data) => {
+        console.log('google call back response', data);
+        
+        if (data && data.data.token) {
+          setAccessToken(data.data.token);
+          dispatch(setLoggedIn(true));
+          toast.success("Google login successful!");
+          navigate("/dashboard");
+        }
+      },
+      onError: (error) => {
+        toast.error("Google login failed");
       },
     });
   },
@@ -135,7 +178,7 @@ export const ApiHook = {
     }
   },
 
-  // Fetch all tasks
+  // ---------------------------------------- Fetch Tasks -----------------------------------------
   fetchTasks: async ({ setTasks, setLoading }) => {
     setLoading(true);
     try {
@@ -150,7 +193,7 @@ export const ApiHook = {
     }
   },
 
-  // Create a detailed task
+  // ---------------------------------------- Create Detailed Task -----------------------------------------
   createDetailedTask: async ({
     taskForm,
     tasks,
@@ -169,7 +212,7 @@ export const ApiHook = {
     }
   },
 
-  // Mark a task as complete
+// ---------------------------------------- Mark Complete -----------------------------------------
   markComplete: async ({ task, tasks, setTasks }) => {
     try {
       const res = await updateTaskService(task.id || task._id, {
@@ -187,7 +230,7 @@ export const ApiHook = {
     }
   },
 
-  // Delete a task
+// ---------------------------------------- Delete Task -----------------------------------------
   deleteTask: async ({ task, tasks, setTasks }) => {
     console.log("delete raskkk apiiiiii", task);
 

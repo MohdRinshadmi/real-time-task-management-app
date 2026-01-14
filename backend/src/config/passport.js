@@ -3,6 +3,7 @@ import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as FacebookStrategy } from 'passport-facebook';
 import { User } from '../models/index.js';
+import logger from '../helper/logger.js';
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
@@ -22,11 +23,13 @@ passport.use(new GoogleStrategy({
 },
 async function (accessToken, refreshToken, profile, done) {
   try {
+    logger.info('Full Google profile:',profile.emails[0].value);
     let user = await User.findOne({ googleId: profile.id });
     if (user) {
       return done(null, user);
     }
-    const email = profile.emails && profile.emails[0].value;
+    const email = profile.emails[0].value;
+    logger.info('Google profile email:', email);
     const newUser = await User.create({ username: profile.displayName, googleId: profile.id, email: email });
     return done(null, newUser);
   } catch (error) {
