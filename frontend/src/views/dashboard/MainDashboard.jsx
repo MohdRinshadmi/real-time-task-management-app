@@ -1,7 +1,7 @@
 import React from 'react';
 import Dashboard from '../../components/dashboard/Dashboard';
 import Header from '../../components/header/Header';
-import TaskBoard from '../../components/taskBoard/TaskBoard';
+import TaskBoardLayout from '../../components/glassDashboard/TaskBoardLayout';
 import { useSelector } from 'react-redux';
 
 const MainDashboard = () => {
@@ -17,7 +17,7 @@ const MainDashboard = () => {
       )}
 
       <main>
-        {isLoggedIn ? <TaskBoard /> : <Dashboard />}
+        {isLoggedIn ? <TaskBoardLayout /> : <Dashboard />}
       </main>
     </div>
   );

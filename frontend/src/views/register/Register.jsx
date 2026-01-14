@@ -19,9 +19,12 @@ import { LogoIcon } from '../../assets/svgIcon/headerIcon';
 import { toast } from 'react-toastify';
 import { validateRegistrationFields } from '../../validator/emailField';
 import { ApiHook } from '../../hooks/apiHook';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../store/store';
 
 const Register = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const googleLogin = ApiHook.CallGoogleLogin();
   const [formData, setFormData] = useState({
     firstName: '',
@@ -51,9 +54,13 @@ const Register = () => {
     const newErrors = validateRegistrationFields(formData);
     setErrors(newErrors);
     try {
-      await registerUser(formData);
+      const response = await registerUser(formData);
       toast.success('Registration successful!');
-      navigate('/login');
+      // Store user details in Redux
+      if (response && response.data && response.data.user) {
+        dispatch(setUser(response.data.user));
+      }
+      navigate('/dashboard');
     } catch (error) {
       console.log('Registration failed:', error);
     }

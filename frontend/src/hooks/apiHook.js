@@ -54,11 +54,10 @@ export const ApiHook = {
 
   // ---------------------------------------- Google OAuth -----------------------------------------
   CallGoogleLogin: () => {
-    // This will redirect to Google OAuth
-    return async () => {
+    // SPA redirect to Google OAuth using window.location.assign
+    return () => {
       try {
-        // Backend should redirect, but for SPA, you may want to get the URL and window.location.assign
-        window.location.href = `${import.meta.env.VITE_BASE_URL}/auth-google`;
+        window.location.assign(`${import.meta.env.VITE_BASE_URL}/auth-google`);
       } catch (error) {
         console.error("Google login redirect failed", error);
         toast.error("Google login failed");
@@ -77,6 +76,8 @@ export const ApiHook = {
         return data;
       },
       onSuccess: (data) => {
+        console.log('google call back response', data);
+        
         if (data && data.data.token) {
           setAccessToken(data.data.token);
           dispatch(setLoggedIn(true));
@@ -177,7 +178,7 @@ export const ApiHook = {
     }
   },
 
-  // Fetch all tasks
+  // ---------------------------------------- Fetch Tasks -----------------------------------------
   fetchTasks: async ({ setTasks, setLoading }) => {
     setLoading(true);
     try {
@@ -192,7 +193,7 @@ export const ApiHook = {
     }
   },
 
-  // Create a detailed task
+  // ---------------------------------------- Create Detailed Task -----------------------------------------
   createDetailedTask: async ({
     taskForm,
     tasks,
@@ -211,7 +212,7 @@ export const ApiHook = {
     }
   },
 
-  // Mark a task as complete
+// ---------------------------------------- Mark Complete -----------------------------------------
   markComplete: async ({ task, tasks, setTasks }) => {
     try {
       const res = await updateTaskService(task.id || task._id, {
@@ -229,7 +230,7 @@ export const ApiHook = {
     }
   },
 
-  // Delete a task
+// ---------------------------------------- Delete Task -----------------------------------------
   deleteTask: async ({ task, tasks, setTasks }) => {
     console.log("delete raskkk apiiiiii", task);
 
