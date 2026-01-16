@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="border-b border-gray-100 mx-4 sm:mx-8 lg:mx-52 bg-white mt-3.5 rounded-[60px]">
+    <header className="border-b border-gray-100 w-[90%] max-w-[1200px] mx-auto bg-white mt-3.5 rounded-[60px]">
       <nav className="relative mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4 min-h-[64px]">
         {/* Left: Logo Section */}
         <div className="flex items-center">
@@ -29,11 +29,11 @@ const Header = () => {
         </div>
 
         {/* Center: Navigation Links (Desktop) */}
-        <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2"> 
+        <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path} 
+            <Link
+              key={link.name}
+              to={link.path}
               className="text-[14px] font-semibold transition-colors duration-200 hover:text-blue-600 text-[#444]"
             >
               {link.name}
@@ -48,7 +48,7 @@ const Header = () => {
           </Link>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden text-gray-500 hover:text-gray-900 p-2"
             aria-label="Toggle menu"
@@ -63,17 +63,17 @@ const Header = () => {
         <div className="lg:hidden border-t border-gray-100">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                to={link.path} 
+              <Link
+                key={link.name}
+                to={link.path}
                 className="block text-[14px] font-semibold py-2 transition-colors duration-200 hover:text-blue-600 text-[#444]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
               </Link>
             ))}
-            <Link 
-              to="/register" 
+            <Link
+              to="/register"
               className="sm:hidden block w-full text-center bg-black hover:bg-gray-800 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-300 shadow-md"
               onClick={() => setIsMobileMenuOpen(false)}
             >

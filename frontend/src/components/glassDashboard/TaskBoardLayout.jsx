@@ -2,16 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import Sidebar from './Sidebar';
-import Header from './Header';
+import Header from '../header/Header';
 import TaskColumn from './TaskColumn';
 import ApiHook from '../../hooks/apiHook';
 import AddTaskModal from '../taskBoard/AddTaskModal';
 
 const TaskBoardLayout = () => {
     const theme = useTheme();
-    // State management
     const [tasks, setTasks] = useState([]);
-    // eslint-disable-next-line no-unused-vars
     const [loading, setLoading] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [taskForm, setTaskForm] = useState({
@@ -20,19 +18,15 @@ const TaskBoardLayout = () => {
         status: 'pending',
     });
 
-    // Fetch tasks
     useEffect(() => {
         ApiHook.fetchTasks({ setTasks, setLoading });
     }, []);
-
-    // Create task handlers reuse from ApiHook for now, passing necessary setters
     const createDetailedTask = async () => {
         await ApiHook.createDetailedTask({ taskForm, tasks, setTasks, setIsModalOpen, setTaskForm });
     };
 
-    // Filter tasks for columns
-    const inProgressTasks = tasks.filter(t => t.status === 'pending' || t.status === 'in_progress');
-    const inReviewTasks = tasks.filter(t => t.status === 'in_review'); // Assuming this might exist or will be 0
+    const inPendingTasks = tasks.filter(t => t.status === 'pending');
+    const inProgressTasks = tasks.filter(t => t.status === 'in_progress');
     const doneTasks = tasks.filter(t => t.status === 'completed');
 
     return (
@@ -44,7 +38,6 @@ const TaskBoardLayout = () => {
                     flex: 1,
                     display: 'flex',
                     flexDirection: 'column',
-                    // Gradient background matching the design
                     background: 'linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%)',
                     overflowY: 'auto',
                     height: '100vh'
@@ -53,7 +46,6 @@ const TaskBoardLayout = () => {
                 <Box sx={{ p: { xs: 2, md: 5 }, maxWidth: 1600, mx: 'auto', width: '100%' }}>
                     <Header />
 
-                    {/* Kanban Board */}
                     <Box
                         sx={{
                             display: 'grid',
@@ -63,9 +55,9 @@ const TaskBoardLayout = () => {
                         }}
                     >
                         <TaskColumn
-                            title="In Progress"
-                            count={inProgressTasks.length}
-                            tasks={inProgressTasks}
+                            title="In Pending"
+                            count={inPendingTasks.length}
+                            tasks={inPendingTasks}
                             statusColor={theme.palette.primary.main}
                             onAddTask={() => {
                                 setTaskForm({ ...taskForm, status: 'pending' });
@@ -74,12 +66,12 @@ const TaskBoardLayout = () => {
                         />
 
                         <TaskColumn
-                            title="In Review"
-                            count={inReviewTasks.length}
-                            tasks={inReviewTasks}
+                            title="In Progress"
+                            count={inProgressTasks.length}
+                            tasks={inProgressTasks}
                             statusColor={theme.palette.warning.main}
                             onAddTask={() => {
-                                setTaskForm({ ...taskForm, status: 'in_review' });
+                                setTaskForm({ ...taskForm, status: 'in_progress' });
                                 setIsModalOpen(true);
                             }}
                         />
@@ -88,7 +80,7 @@ const TaskBoardLayout = () => {
                             title="Done"
                             count={doneTasks.length}
                             tasks={doneTasks}
-                            statusColor={theme.palette.secondary.main} // Using secondary (green/purple) or success if preferred. Design used green for done.
+                            statusColor={theme.palette.secondary.main}
                             onAddTask={() => {
                                 setTaskForm({ ...taskForm, status: 'completed' });
                                 setIsModalOpen(true);
@@ -98,7 +90,6 @@ const TaskBoardLayout = () => {
                 </Box>
             </Box>
 
-            {/* Reuse existing Modal for functionality */}
             <AddTaskModal
                 isModalOpen={isModalOpen}
                 setIsModalOpen={setIsModalOpen}

@@ -3,21 +3,16 @@ import Dashboard from '../../components/dashboard/Dashboard';
 import Header from '../../components/header/Header';
 import TaskBoardLayout from '../../components/glassDashboard/TaskBoardLayout';
 import { useSelector } from 'react-redux';
+import LandingPage from '../LandingPage/LandingPage';
 
 const MainDashboard = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-  const showHeader = !isLoggedIn;
+
 
   return (
     <div>
-      {showHeader && (
-        <header>
-          <Header />
-        </header>
-      )}
-
       <main>
-        {isLoggedIn ? <TaskBoardLayout /> : <Dashboard />}
+        {isLoggedIn ? <TaskBoardLayout /> : <LandingPage />}
       </main>
     </div>
   );
