@@ -12,7 +12,7 @@ import { Task, TaskForm } from '../../types';
 const TaskBoardLayout = () => {
     const theme = useTheme();
     const [tasks, setTasks] = useState<Task[]>([]);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [taskForm, setTaskForm] = useState<TaskForm>({
         title: '',
         description: '',
