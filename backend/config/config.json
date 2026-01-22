@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "taskuser",
-    "password": "Task@2025",
+    "password": "TaskUserPass123!",
     "database": "taskcollab",
     "host": "192.168.12.28",
     "port": 8001,
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "taskuser",
-    "password": "Task@2025",
+    "password": "TaskUserPass123!",
     "database": "taskcollab",
     "host": "192.168.12.28",
     "port": 8001,

@@ -26,17 +26,7 @@ export const register = async (req, res) => {
 
     return res.status(201).json({
       status: true,
-      data: {
-        user: {
-          userId: user.userId,
-          firstName: user.firstName,
-          email: user.email,
-          phoneNumber: user.phoneNumber,
-          privacyAccepted: user.privacyAccepted,
-        },
-        firstName: user.firstName,
-        email: user.email,
-      }
+      data: { user: { userId: user.userId, firstName: user.firstName, email: user.email, phoneNumber: user.phoneNumber, privacyAccepted: user.privacyAccepted } }
     });
   } catch (err) {
     logger.error('Registration error:', err);
@@ -71,14 +61,7 @@ export const login = async (req, res) => {
       data: {
         token,
         isLoggedIn: true,
-        user: {
-          userId: user.userId,
-          firstName: user.firstName,
-          email: user.email,
-          phoneNumber: user.phoneNumber,
-        },
-        firstName: user.firstName,
-        email: user.email,
+        user: { userId: user.userId, firstName: user.firstName, email: user.email, phoneNumber: user.phoneNumber },
       }
     });
   } catch (err) {
@@ -115,8 +98,6 @@ export const googleAuthController = async (req, res) => {
           email: req.user.email,
           phoneNumber: dbUser ? dbUser.phoneNumber : req.user.phoneNumber,
         },
-        firstName,
-        email: req.user.email,
       }
     });
   } catch (err) {

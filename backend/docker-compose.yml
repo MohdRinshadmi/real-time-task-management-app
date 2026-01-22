@@ -18,10 +18,10 @@ services:
   mysql:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DB}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: taskcollab
+      MYSQL_USER: taskuser
+      MYSQL_PASSWORD: TaskUserPass123!
     ports:
       - "3307:3306"  # Expose for local tools if needed
     volumes:
