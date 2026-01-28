@@ -1,10 +1,15 @@
 import api from '../../api/api';
 import { Task } from '../../types';
 
+
 interface TaskResponse {
   data: {
-    tasks: Task[];
-    task?: Task;
+    data: {
+      tasks: Task[];
+      task?: Task;
+    };
+    status: boolean;
+    message?: string;
   };
   status: boolean;
   message?: string;

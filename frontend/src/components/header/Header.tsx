@@ -16,7 +16,6 @@ const Header = () => {
   return (
     <header className="border-b border-gray-100 w-[90%] max-w-[1200px] mx-auto bg-white mt-3.5 rounded-[60px]">
       <nav className="relative mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10 py-4 min-h-[64px]">
-        {/* Left: Logo Section */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2 group">
             <div className="relative flex items-center justify-center w-8 h-8 bg-blue-600 rounded-xl text-white">
@@ -28,7 +27,6 @@ const Header = () => {
           </Link>
         </div>
 
-        {/* Center: Navigation Links (Desktop) */}
         <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
@@ -41,13 +39,11 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Right: CTA Button & Mobile Menu */}
         <div className="flex items-center gap-4">
           <Link to="/register" className="hidden sm:block bg-black hover:bg-gray-800 text-white text-sm font-semibold py-2 sm:py-2.5 px-4 sm:px-6 rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
             Register
           </Link>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden text-gray-500 hover:text-gray-900 p-2"
@@ -58,7 +54,6 @@ const Header = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-100">
           <div className="px-4 py-4 space-y-3">

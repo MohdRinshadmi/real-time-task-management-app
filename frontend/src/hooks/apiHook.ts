@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { loginService } from "../services/auth/loginService";
-import { setLoggedIn } from "../store/store";
 import { setAccessToken } from "../global/localStorage";
 import {
   addTaskService,
@@ -18,11 +17,13 @@ import {
   googleCallbackService,
 } from "../services/auth/googleService";
 import { Task } from "../types";
+import { setLoggedIn } from "../store/store";
 
 export const ApiHook = {
   // ---------------------------------------- Login -----------------------------------------
   CallLoginUser: () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     return useMutation({
       mutationFn: async ({ email, password }: { email: string; password: string }) => {
@@ -39,11 +40,9 @@ export const ApiHook = {
         if (data && data.data.token) {
           setAccessToken(data.data.token);
         }
-        if (typeof data.data.isLoggedIn !== "undefined") {
-          dispatch(setLoggedIn(data.data.isLoggedIn));
-        }
+        dispatch(setLoggedIn(data.data.isLoggedIn));
         toast.success("Login successful!");
-        // navigate("/dashboard");
+        navigate("/dashboard");
       },
       onError: (error) => {
         console.log("login error", error);
@@ -192,7 +191,7 @@ export const ApiHook = {
       const data = await getTasksService();
       console.log("fetch takssss", data);
 
-      setTasks(data.data.tasks || []);
+      setTasks(data.data.data.tasks || []);
     } catch (error) {
       toast.error("Failed to fetch tasks");
     } finally {
@@ -216,6 +215,8 @@ export const ApiHook = {
   }) => {
     try {
       const res = await createDetailedTaskService(taskForm);
+      console.log('create detailed task', res);
+      
       setTasks([...tasks, res.data.data.task]);
       setIsModalOpen(false);
       setTaskForm({ title: "", description: "", status: "pending" });

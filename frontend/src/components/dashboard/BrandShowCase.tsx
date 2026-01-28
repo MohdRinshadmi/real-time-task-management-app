@@ -17,7 +17,6 @@ const BrandShowCase = () => {
         More than 10,000 teams are boosting productivity with CollabNow
       </Typography>
 
-      {/* Brand Logos Row */}
       <Box
         sx={{
           display: 'flex',
@@ -29,7 +28,6 @@ const BrandShowCase = () => {
           px: { xs: 2, md: 0 },
         }}
       >
-        {/* Discord */}
         <Box sx={{ opacity: 0.5, transition: 'opacity 0.3s', '&:hover': { opacity: 0.9 }, width: { xs: '80px', sm: '120px', md: '150px' } }}>
           <svg width="100%" height="40" viewBox="0 0 200 60" fill="none" preserveAspectRatio="xMidYMid meet">
             <g>
@@ -39,7 +37,6 @@ const BrandShowCase = () => {
           </svg>
         </Box>
 
-        {/* Evernote */}
         <Box sx={{ opacity: 0.5, transition: 'opacity 0.3s', '&:hover': { opacity: 0.9 }, width: { xs: '70px', sm: '100px', md: '140px' } }}>
           <svg width="100%" height="40" viewBox="0 0 169 40" fill="none" preserveAspectRatio="xMidYMid meet">
             <path d="M16.875 0C7.55859 0 0 7.55859 0 16.875C0 26.1914 7.55859 33.75 16.875 33.75C26.1914 33.75 33.75 26.1914 33.75 16.875C33.75 7.55859 26.1914 0 16.875 0ZM16.875 30.9375C9.11719 30.9375 2.8125 24.6328 2.8125 16.875C2.8125 9.11719 9.11719 2.8125 16.875 2.8125C24.6328 2.8125 30.9375 9.11719 30.9375 16.875C30.9375 24.6328 24.6328 30.9375 16.875 30.9375Z" fill="#00A82D" />
@@ -47,7 +44,6 @@ const BrandShowCase = () => {
           </svg>
         </Box>
 
-        {/* Airtable */}
         <Box sx={{ opacity: 0.5, transition: 'opacity 0.3s', '&:hover': { opacity: 0.9 }, width: { xs: '70px', sm: '100px', md: '140px' } }}>
           <svg width="100%" height="40" viewBox="0 0 200 40" fill="none" preserveAspectRatio="xMidYMid meet">
             <path d="M12.293 8.293a1 1 0 011.414 0l8 8a1 1 0 010 1.414l-8 8a1 1 0 01-1.414-1.414L19.586 17l-7.293-7.293a1 1 0 010-1.414z" fill="#FCB400" />
@@ -58,7 +54,6 @@ const BrandShowCase = () => {
           </svg>
         </Box>
 
-        {/* Dropbox */}
         <Box sx={{ opacity: 0.5, transition: 'opacity 0.3s', '&:hover': { opacity: 0.9 }, width: { xs: '70px', sm: '100px', md: '140px' } }}>
           <svg width="100%" height="40" viewBox="0 0 180 40" fill="none" preserveAspectRatio="xMidYMid meet">
             <path d="M10 6l8 6-8 6-8-6 8-6zm16 0l8 6-8 6-8-6 8-6zM2 24l8-6 8 6-8 6-8-6zm16 0l8-6 8 6-8 6-8-6z" fill="#0061FF" />
@@ -66,7 +61,6 @@ const BrandShowCase = () => {
           </svg>
         </Box>
 
-        {/* Square */}
         <Box sx={{ opacity: 0.5, transition: 'opacity 0.3s', '&:hover': { opacity: 0.9 }, width: { xs: '60px', sm: '90px', md: '120px' } }}>
           <svg width="100%" height="40" viewBox="0 0 150 40" fill="none" preserveAspectRatio="xMidYMid meet">
             <rect x="6" y="8" width="22" height="22" rx="4" fill="#3E4348" />
@@ -75,7 +69,6 @@ const BrandShowCase = () => {
           </svg>
         </Box>
 
-        {/* Notion */}
         <Box sx={{ opacity: 0.5, transition: 'opacity 0.3s', '&:hover': { opacity: 0.9 }, width: { xs: '60px', sm: '90px', md: '120px' } }}>
           <svg width="100%" height="40" viewBox="0 0 150 40" fill="none" preserveAspectRatio="xMidYMid meet">
             <path d="M8 6h18c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H8c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2z" fill="white" stroke="#000" strokeWidth="2" />

@@ -22,7 +22,7 @@ const TaskBoard = () => {
   useEffect(() => {
     ApiHook.fetchTasks({ setTasks, setLoading });
   }, []);
-
+console.log('tasks', tasks);
   const addTask = async () => {
     await ApiHook.addTask({ newTask, tasks, setTasks, setNewTask });
   };

@@ -9,7 +9,7 @@ import AddTaskModal from '../taskBoard/AddTaskModal';
 
 import { Task, TaskForm } from '../../types';
 
-const TaskBoardLayout = () => {
+const TaskBoardLayout = ({ isLoggedIn }: { isLoggedIn?: boolean }) => {
     const theme = useTheme();
     const [tasks, setTasks] = useState<Task[]>([]);
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -45,7 +45,7 @@ const TaskBoardLayout = () => {
                 }}
             >
                 <Box sx={{ p: { xs: 2, md: 5 }, maxWidth: 1600, mx: 'auto', width: '100%' }}>
-                    <Header />
+                    {!isLoggedIn && <Header />}
 
                     <Box
                         sx={{

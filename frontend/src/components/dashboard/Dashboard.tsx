@@ -8,11 +8,12 @@ import BrandShowCase from './BrandShowCase';
 import StatsSection from './StatsSection';
 import ApiHook from '../../hooks/apiHook';
 import HeroSection from './HeroSection';
+import { FileUploadIcon, CalendarIcon, VideoConferenceIcon, ProgressIcon } from '../../assets/svgIcon/dashboardIcon';
 
 const Dashboard = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPasswordField, setShowPasswordField] = useState(false);
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [showPasswordField, setShowPasswordField] = useState<boolean>(false);
   const loginMutation = ApiHook.CallLoginUser();
 
   const handleLogin = async () => {
@@ -24,39 +25,34 @@ const Dashboard = () => {
       <Box sx={{ width: { xs: '95%', sm: '90%', md: '80%' }, mx: 'auto', mt: { xs: 2, md: 6 }, px: { xs: 1, md: 0 } }}>
         <Box sx={{ textAlign: 'center', mb: { xs: 6, md: 10 } }}>
           <Box sx={{ position: 'relative', textAlign: 'center', mb: { xs: 6, md: 10 }, minHeight: { xs: 'auto', md: 320 } }}>
-            {/* Top left note */}
             <div className="hidden md:flex" style={{ position: 'absolute', left: 0, top: 30, display: 'flex', alignItems: 'center', zIndex: 2 }}>
-              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 8px 32px 0 rgba(91,104,244,0.10), 0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5976c2', border: '1px solid #e0e7ff', transform: 'translateY(-18px)', transition: 'box-shadow 0.3s, transform 0.3s' }}>
-                <span role="img" aria-label="file">📤</span> Sending a file project
+              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 8px 32px 0 rgba(91,104,244,0.10), 0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5976c2', border: '1px solid #e0e7ff', transform: 'translateY(-18px)', transition: 'box-shadow 0.3s, transform 0.3s', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <FileUploadIcon className="w-4 h-4" /> Sending a file project
               </div>
               <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" style={{ width: 32, height: 32, borderRadius: '50%', marginLeft: 8, border: '2px solid #fff', boxShadow: '0 1px 4px #c7d2fe' }} />
             </div>
 
-            {/* Top right note */}
             <div className="hidden md:flex" style={{ position: 'absolute', right: 0, top: 40, display: 'flex', alignItems: 'center', zIndex: 2 }}>
-              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5B68F4', border: '1px solid #e0e7ff' }}>
-                <span role="img" aria-label="calendar">📅</span> Schedule a meeting
+              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5B68F4', border: '1px solid #e0e7ff', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <CalendarIcon className="w-4 h-4" /> Schedule a meeting
               </div>
               <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="avatar" style={{ width: 32, height: 32, borderRadius: '50%', marginLeft: 8, border: '2px solid #fff', boxShadow: '0 1px 4px #c7d2fe' }} />
             </div>
 
-            {/* Bottom left note */}
             <div className="hidden md:flex" style={{ position: 'absolute', left: 40, bottom: 10, display: 'flex', alignItems: 'center', zIndex: 2 }}>
-              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5B68F4', border: '1px solid #e0e7ff' }}>
-                <span role="img" aria-label="video">💻</span> Virtual conferencing
+              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5B68F4', border: '1px solid #e0e7ff', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <VideoConferenceIcon className="w-4 h-4" /> Virtual conferencing
               </div>
               <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="avatar" style={{ width: 32, height: 32, borderRadius: '50%', marginLeft: 8, border: '2px solid #fff', boxShadow: '0 1px 4px #c7d2fe' }} />
             </div>
 
-            {/* Bottom right note */}
             <div className="hidden md:flex" style={{ position: 'absolute', right: 40, bottom: 20, display: 'flex', alignItems: 'center', zIndex: 2 }}>
-              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5B68F4', border: '1px solid #e0e7ff' }}>
-                <span role="img" aria-label="progress">📈</span> Tracking the progress of a project
+              <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 2px 8px #e0e7ff', padding: '6px 16px', fontSize: 14, fontWeight: 500, color: '#5B68F4', border: '1px solid #e0e7ff', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <ProgressIcon className="w-4 h-4" /> Tracking the progress of a project
               </div>
               <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="avatar" style={{ width: 32, height: 32, borderRadius: '50%', marginLeft: 8, border: '2px solid #fff', boxShadow: '0 1px 4px #c7d2fe' }} />
             </div>
 
-            {/* Center lines (decorative) */}
             <svg className="hidden md:block" width="100%" height="320" style={{ position: 'absolute', left: 0, top: 0, zIndex: 1, pointerEvents: 'none' }}>
               <line x1="10%" y1="60" x2="50%" y2="100" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="6 6" />
               <line x1="90%" y1="80" x2="50%" y2="100" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="6 6" />
@@ -64,7 +60,6 @@ const Dashboard = () => {
               <line x1="85%" y1="290" x2="50%" y2="180" stroke="#c7d2fe" strokeWidth="2" strokeDasharray="6 6" />
             </svg>
 
-            {/* Title Line 1 */}
             <Typography
               variant="h3"
               sx={{
@@ -115,7 +110,6 @@ const Dashboard = () => {
                   Seamless
                 </Typography>
 
-                {/* Curved arrow icon - bottom left corner - hidden on mobile */}
                 <Box
                   component="svg"
                   viewBox="0 0 32 32"
@@ -214,7 +208,7 @@ const Dashboard = () => {
                   placeholder="Enter your email address"
                   type="email"
                   value={email}
-                  onChange={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     setEmail(e.target.value);
                     if (e.target.value.trim() !== '') {
                       setShowPasswordField(true);
@@ -305,7 +299,7 @@ const Dashboard = () => {
                     type="password"
                     autoComplete="current-password"
                     value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                     sx={{
                       '& .MuiOutlinedInput-root': {
                         borderRadius: '24px',
@@ -319,7 +313,7 @@ const Dashboard = () => {
                         fontSize: { xs: '0.875rem', sm: '0.95rem' },
                       },
                     }}
-                    onKeyDown={(e) => {
+                    onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
                       if (e.key === 'Enter') handleLogin();
                     }}
                     disabled={loginMutation.isPending}
