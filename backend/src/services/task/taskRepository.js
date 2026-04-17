@@ -1,5 +1,3 @@
-// A thin repository that switches between MongoDB (default) and MySQL via env TASK_STORE
-
 const isSql = () => (process.env.TASK_STORE || '').toLowerCase() === 'sql';
 
 // Resolve SQL Task model from various possible folder layouts

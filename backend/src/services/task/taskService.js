@@ -1,3 +1,4 @@
+import logger from '../../helper/logger.js';
 import { Task } from '../../nosql/taskModel.js';
 
 
@@ -6,7 +7,7 @@ export const getTasksService = async () => {
     const tasks = await Task.find();
     return { status: true, data: tasks };
   } catch (error) {
-    console.error('Error fetching tasks:', error);
+    logger.error('Error fetching tasks:', error);
     return { status: false, error: error.message };
   }
 };
@@ -25,7 +26,7 @@ export const addTaskService = async ({ title, description, status, assigneeId })
     });
     return { status: true, data: newTask };
   } catch (error) {
-    console.error('Error creating task:', error);
+    logger.error('Error creating task:', error);
     return { status: false, error: error.message };
   }
 };
@@ -40,7 +41,7 @@ export const deleteTaskService = async (id) => {
       return { status: false, error: 'Task not found.' };
     }
   } catch (error) {
-    console.error('Error deleting task:', error);
+    logger.error('Error deleting task:', error);
     return { status: false, error: error.message };
   }
 };
@@ -61,7 +62,7 @@ export const updateTaskService = async (id, updateData) => {
       return { status: false, error: 'Task not found or not updated.' };
     }
   } catch (error) {
-    console.error('Error updating task:', error);
+    logger.error('Error updating task:', error);
     return { status: false, error: error.message };
   }
 };

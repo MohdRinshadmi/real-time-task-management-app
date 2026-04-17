@@ -19,4 +19,6 @@ export default {
     1056 : "invalidBoard",
     1062 : "emailAlreadyExists",
     1076 : "tokenExpired",
+    1077: 'Google authentication failed',
+    1078: 'Facebook authentication failed',
 }

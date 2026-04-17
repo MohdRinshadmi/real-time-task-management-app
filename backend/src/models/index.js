@@ -4,27 +4,15 @@ import User from "./userModel.js";
 import Task from "./taskModel.js";
 
 const initAssociations = () => {
-  User.hasMany(Task, {
-    foreignKey: "assigneeId",
-    sourceKey: "userId",
-    as: "tasks",
-  });
-
-  Task.belongsTo(User, {
-    foreignKey: "assigneeId",
-    targetKey: "userId",
-    as: "assignee",
-  });
+  User.hasMany(Task, { foreignKey: "assigneeId", sourceKey: "userId", as: "tasks" });
+  Task.belongsTo(User, { foreignKey: "assigneeId", targetKey: "userId", as: "assignee" });
 };
-
 
 export const initDb = async () => {
   try {
     initAssociations();
-
     await sequelize.authenticate();
     logger.info("Database connection established");
-
     await sequelize.sync({ alter: false });
     logger.info("MySQL models synced successfully");
   } catch (error) {

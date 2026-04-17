@@ -1,7 +1,4 @@
 import { Sequelize } from "sequelize";
-import dotenv from "dotenv";
-
-// dotenv.config();
 
 const sequelize = new Sequelize(
   process.env.MYSQL_DB,
@@ -10,7 +7,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.MYSQL_HOST, // Use IPv4 explicitly
     dialect: "mysql",
-    port: process.env.MYSQL_PORT || 8001,
+    port: process.env.MYSQL_PORT,
     logging: false, // disable or customize logging
     pool: {
       max: 10,

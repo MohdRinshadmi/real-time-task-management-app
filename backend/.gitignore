@@ -1,7 +1,30 @@
-
 node_modules
+
+# Security
 .env
+.env.*
+*.pem
+*.key
+*.crt
+*.cert
+
+# Logs
 src/logs/
 src/logs/*.log
 src/logs/sql-*.log
 src/logs/*.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Build
+dist/
+coverage/
+build/

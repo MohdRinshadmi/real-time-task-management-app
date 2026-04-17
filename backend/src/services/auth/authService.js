@@ -13,10 +13,10 @@ class AuthService {
     return await bcrypt.compare(password, hash);
   }
 
-  async generateToken(user) {
-    const tokenData = { id: user.userId || user.id, email: user.email, username: user.username, sessionId: randomUUID() };
-    return getJwtToken(tokenData);
-  }
+  // async generateToken(user) {
+  //   const tokenData = { id: user.userId || user.id, email: user.email, username: user.username, sessionId: randomUUID() };
+  //   return getJwtToken(tokenData);
+  // }
 }
 
 export default new AuthService();
