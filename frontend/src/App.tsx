@@ -10,6 +10,7 @@ import ShimmerLoader from './components/ShimmerLoader';
 const MainDashboard = lazy(() => import('./views/dashboard/MainDashboard'));
 const Register = lazy(() => import('./views/register/Register'));
 const LandingPage = lazy(() => import('./views/LandingPage/LandingPage'));
+const MailPage = lazy(() => import('./views/mail/MailPage'));
 
 function App(): React.ReactElement {
   const token: string | null = getAccessToken();
@@ -23,6 +24,7 @@ function App(): React.ReactElement {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/dashboard" element={<MainDashboard />} />
+            <Route path="/mail" element={<MailPage />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

@@ -3,8 +3,6 @@ import moment from "moment-timezone";
 import { fileURLToPath } from "url";
 import path, { dirname } from "path";
 import util from "util";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 import { createLogger, format, transports } from "winston";
 import "winston-daily-rotate-file";
 

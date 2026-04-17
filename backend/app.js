@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import { connectMongoDB } from './src/config/mongo.js';
 import authRouter from './src/routes/authRoutes.js';
 import taskRouter from './src/routes/taskRoutes.js';
+import mailRouter from './src/routes/mailRoutes.js';
 import { initDb } from './src/models/index.js';
 import session from 'express-session';
 import passport from 'passport';
@@ -37,6 +38,7 @@ app.use(passport.session());
 // Routers
 app.use('/api', authRouter);  // /api/register, /api/login (no auth middleware here)
 app.use('/api', taskRouter);  // protected routes will use authMiddleware inside taskRoutes
+app.use('/api', mailRouter);  // protected routes for mail functionality
 
 // Fallback route (should be 404)
 app.use((req, res) => {

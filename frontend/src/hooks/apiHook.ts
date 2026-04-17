@@ -169,8 +169,10 @@ export const ApiHook = {
         status: "pending",
       });
       console.log("taskkkkkk add taskkkkkk", response);
-      if (response.status && response.data.task) {
-        setTasks([...tasks, response.data.task]);
+      // Fix: access the nested data structure for the new task
+      const addedTask = response.data?.data?.task;
+      if (response.status && addedTask) {
+        setTasks([...tasks, addedTask]);
         setNewTask("");
         toast.success("Task added successfully!");
       } else {

@@ -17,7 +17,9 @@ import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../../services/auth/authService';
 import { LogoIcon } from '../../assets/svgIcon/headerIcon';
 import { toast } from 'react-toastify';
-import { validateRegistrationFields, RegistrationFields, Errors } from '../../validator/emailField';
+import { registerSchema } from '../../validator/validationSchemas';
+import { RegistrationFields, Errors } from '../../validator/emailField';
+import * as yup from 'yup';
 import { ApiHook } from '../../hooks/apiHook';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../store/store';
@@ -38,22 +40,29 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState<Errors>({});
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, type, value, checked } = e.target;
     const fieldValue = type === 'checkbox' ? checked : value;
     const updatedFormData = { ...formData, [name]: fieldValue };
     setFormData(updatedFormData);
 
     // Validate only the changed field
-    const fieldError = validateRegistrationFields({ [name]: fieldValue });
-    setErrors({ ...errors, [name]: fieldError[name] || '' });
+    try {
+      await registerSchema.validateAt(name, updatedFormData);
+      setErrors((prev) => ({ ...prev, [name]: '' }));
+    } catch (error) {
+      if (error instanceof yup.ValidationError) {
+        setErrors((prev) => ({ ...prev, [name]: error.message }));
+      }
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const newErrors = validateRegistrationFields(formData);
-    setErrors(newErrors);
     try {
+      await registerSchema.validate(formData, { abortEarly: false });
+      setErrors({});
+
       const response = await registerUser(formData);
       toast.success('Registration successful!');
       // Store user details in Redux
@@ -62,7 +71,17 @@ const Register = () => {
       }
       navigate('/dashboard');
     } catch (error) {
-      console.log('Registration failed:', error);
+      if (error instanceof yup.ValidationError) {
+        const newErrors: Errors = {};
+        error.inner.forEach((err) => {
+          if (err.path) {
+            newErrors[err.path] = err.message;
+          }
+        });
+        setErrors(newErrors);
+      } else {
+        console.log('Registration failed:', error);
+      }
     }
   };
 

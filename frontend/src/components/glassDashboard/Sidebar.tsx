@@ -11,14 +11,16 @@ import {
     Bolt
 } from '@mui/icons-material';
 import { Box, Typography } from '@mui/material';
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
     const theme = useTheme();
+    const location = useLocation();
 
 
     const menuItems = [
-        { icon: <DashboardIcon fontSize="small" />, label: 'Dashboard', active: false },
-        { icon: <Inbox fontSize="small" />, label: 'Inbox', badge: 5, active: false },
+        { icon: <DashboardIcon fontSize="small" />, label: 'Dashboard', path: '/dashboard', active: false },
+        { icon: <Inbox fontSize="small" />, label: 'Inbox', path: '/mail', badge: 5, active: false },
     ];
 
     const generalItems = [
@@ -67,51 +69,59 @@ const Sidebar = () => {
 
             {/* Main Menu */}
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1, mb: 4 }}>
-                {menuItems.map((item) => (
-                    <Box
-                        key={item.label}
-                        sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'space-between',
-                            p: 1.5,
-                            borderRadius: 3,
-                            cursor: 'pointer',
-                            color: item.active ? theme.palette.primary.main : theme.palette.text.secondary,
-                            bgcolor: item.active ? alpha(theme.palette.primary.main, 0.08) : 'transparent',
-                            transition: 'all 0.2s',
-                            '&:hover': {
-                                bgcolor: alpha(theme.palette.primary.main, 0.05),
-                                color: theme.palette.text.primary
-                            }
-                        }}
-                    >
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                            {item.icon}
-                            <Typography sx={{ fontSize: '0.9375rem', fontWeight: 500, fontFamily: 'Inter, sans-serif' }}>
-                                {item.label}
-                            </Typography>
-                        </Box>
-                        {item.badge && (
+                {menuItems.map((item) => {
+                    const isActive = location.pathname === item.path;
+                    return (
+                        <Link
+                            key={item.label}
+                            to={item.path}
+                            style={{ textDecoration: 'none' }}
+                        >
                             <Box
                                 sx={{
-                                    bgcolor: '#FF5C5C',
-                                    color: 'white',
-                                    fontSize: '0.75rem',
-                                    fontWeight: 600,
-                                    width: 20,
-                                    height: 20,
-                                    borderRadius: '50%',
                                     display: 'flex',
                                     alignItems: 'center',
-                                    justifyContent: 'center'
+                                    justifyContent: 'space-between',
+                                    p: 1.5,
+                                    borderRadius: 3,
+                                    cursor: 'pointer',
+                                    color: isActive ? theme.palette.primary.main : theme.palette.text.secondary,
+                                    bgcolor: isActive ? alpha(theme.palette.primary.main, 0.08) : 'transparent',
+                                    transition: 'all 0.2s',
+                                    '&:hover': {
+                                        bgcolor: alpha(theme.palette.primary.main, 0.05),
+                                        color: theme.palette.text.primary
+                                    }
                                 }}
                             >
-                                {item.badge}
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+                                    {item.icon}
+                                    <Typography sx={{ fontSize: '0.9375rem', fontWeight: 500, fontFamily: 'Inter, sans-serif' }}>
+                                        {item.label}
+                                    </Typography>
+                                </Box>
+                                {item.badge && (
+                                    <Box
+                                        sx={{
+                                            bgcolor: '#FF5C5C',
+                                            color: 'white',
+                                            fontSize: '0.75rem',
+                                            fontWeight: 600,
+                                            width: 20,
+                                            height: 20,
+                                            borderRadius: '50%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center'
+                                        }}
+                                    >
+                                        {item.badge}
+                                    </Box>
+                                )}
                             </Box>
-                        )}
-                    </Box>
-                ))}
+                        </Link>
+                    );
+                })}
             </Box>
 
             {/* General */}
